@@ -1,7 +1,8 @@
 import { createHash } from 'node:crypto';
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promises';
 import { basename, dirname, extname, join, relative } from 'node:path';
+import { execFileSync } from 'node:child_process';
 
 const STORAGE_WORKDIR = process.env.STORAGE_WORKDIR || '.';
 const STORAGE_BASE_URL = (process.env.STORAGE_BASE_URL || 'https://cha-amu.github.io/storage').replace(/\/$/, '');
@@ -97,6 +98,33 @@ function excerpt(value, maxLength = 120) {
 
 function hash(value) {
   return createHash('sha256').update(value).digest('hex');
+}
+
+function readJsonFile(path, fallback) {
+  try {
+    return JSON.parse(readFileSync(path, 'utf8'));
+  } catch (_) {
+    return fallback;
+  }
+}
+
+function changedPaths() {
+  if (process.env.GITHUB_EVENT_NAME !== 'push') return undefined;
+  try {
+    return new Set(
+      execFileSync('git', ['diff', '--name-only', 'HEAD~1', 'HEAD'], { cwd: STORAGE_WORKDIR, encoding: 'utf8' })
+        .split('\n')
+        .map((path) => path.trim())
+        .filter(Boolean)
+    );
+  } catch (_) {
+    return null;
+  }
+}
+
+function pathChanged(changes, path) {
+  if (changes === null) return true;
+  return Boolean(changes && changes.has(path));
 }
 
 function timeValue(value) {
@@ -212,7 +240,9 @@ async function scanStoragePosts() {
   return posts.sort((a, b) => String(b.publishedAt || b.createdAt).localeCompare(String(a.publishedAt || a.createdAt)) || a.path.localeCompare(b.path));
 }
 
-async function scanStorageAssets() {
+async function scanStorageAssets(changes = changedPaths()) {
+  const previousManifest = readJsonFile(join(STORAGE_WORKDIR, 'manifests/assets.json'), { assets: [] });
+  const previousByPath = new Map((Array.isArray(previousManifest.assets) ? previousManifest.assets : []).map((asset) => [String(asset.path), asset]));
   const allFiles = await walk(join(STORAGE_WORKDIR, 'assets'));
   const assetStems = new Set(
     allFiles
@@ -241,11 +271,12 @@ async function scanStorageAssets() {
     const sidecar = hasSidecar ? parseFrontmatter(sidecarText) : { meta: {}, body: '' };
     const sidecarRelativePath = hasSidecar ? relative(STORAGE_WORKDIR, sidecarPath).replace(/\\/g, '/') : '';
     const sidecarInfo = hasSidecar ? await stat(sidecarPath) : null;
+    const previous = previousByPath.get(path);
+    const unchanged = previous && !pathChanged(changes, path) && (!sidecarRelativePath || !pathChanged(changes, sidecarRelativePath)) && previous.size === info.size;
     const title = sidecar.meta.title || nameMeta.title || nameMeta.description || fileName.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ');
     const tags = parseTags(sidecar.meta.tags || nameMeta.tags);
     const description = sidecar.meta.description || sidecar.meta.excerpt || sidecar.body.trim() || nameMeta.description;
-    const updatedAt = new Date(Math.max(info.mtime.getTime(), sidecarInfo ? sidecarInfo.mtime.getTime() : 0)).toISOString();
-    const content = hasSidecar ? Buffer.concat([await readFile(file), Buffer.from('\n'), Buffer.from(sidecarText)]) : await readFile(file);
+    const updatedAt = unchanged && previous.updatedAt ? previous.updatedAt : new Date(Math.max(info.mtime.getTime(), sidecarInfo ? sidecarInfo.mtime.getTime() : 0)).toISOString();
     assets.push({
       id: `asset:${path}`,
       path,
@@ -262,8 +293,7 @@ async function scanStorageAssets() {
       updatedAt,
       metadataPath: sidecarRelativePath || undefined,
       markdownBaseUrl: hasSidecar ? storageBaseUrlForPath(sidecarRelativePath) : undefined,
-      markdownRootUrl: STORAGE_BASE_URL,
-      contentHash: hash(content)
+      markdownRootUrl: STORAGE_BASE_URL
     });
   }
   return assets.sort((a, b) => a.path.localeCompare(b.path));
@@ -307,6 +337,7 @@ async function main() {
 
   const sheetPosts = DRY_RUN ? [] : await appsRequest('admin.post.list', { token });
   const sheetOverrides = DRY_RUN ? [] : await appsRequest('admin.assetOverride.list', { token });
+  const changes = changedPaths();
 
   let posts = await scanStoragePosts();
   const storageById = new Map(posts.map((post) => [String(post.id), post]));
@@ -322,13 +353,14 @@ async function main() {
   }
 
   posts = await scanStoragePosts();
-  const assets = await scanStorageAssets();
+  const assets = await scanStorageAssets(changes);
   const sheetPostsById = new Map(sheetPosts.map((post) => [String(post.id), post]));
   const sheetAssetIds = new Set(sheetOverrides.map((override) => String(override.assetId)));
 
   for (const post of posts) {
     const sheetPost = sheetPostsById.get(String(post.id));
-    if (!DRY_RUN && (SYNC_MODE === 'storage-first' || !sheetPost || !isSheetNewer(sheetPost, post))) await syncStoragePostToSheet(token, post);
+    const changedStoragePost = changes === undefined || pathChanged(changes, post.path);
+    if (!DRY_RUN && changedStoragePost && (SYNC_MODE === 'storage-first' || !sheetPost || !isSheetNewer(sheetPost, post))) await syncStoragePostToSheet(token, post);
   }
 
   for (const asset of assets) {
