@@ -1,5 +1,310 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-09T17:31:39.868Z",
-  "assets": []
+  "generatedAt": "2026-07-09T17:39:59.831Z",
+  "assets": [
+    {
+      "id": "asset:assets/images/2026/공유--아이콘+공유+연결--돌_질감_공유_노드.png",
+      "path": "assets/images/2026/공유--아이콘+공유+연결--돌_질감_공유_노드.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/공유--아이콘+공유+연결--돌_질감_공유_노드.png",
+      "kind": "image",
+      "fileName": "공유--아이콘+공유+연결--돌_질감_공유_노드.png",
+      "title": "공유",
+      "description": "돌 질감 공유 노드",
+      "tags": [
+        "아이콘",
+        "공유",
+        "연결"
+      ],
+      "status": "visible",
+      "size": 146161,
+      "updatedAt": "2026-07-09T17:39:51.248Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage",
+      "contentHash": "31425394bccbc7a84772a17653bdbf77450d7f6c89d1da3b47a4f3415c659996"
+    },
+    {
+      "id": "asset:assets/images/2026/도움말--아이콘+도움말+물음표--돌_질감_물음표.png",
+      "path": "assets/images/2026/도움말--아이콘+도움말+물음표--돌_질감_물음표.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/도움말--아이콘+도움말+물음표--돌_질감_물음표.png",
+      "kind": "image",
+      "fileName": "도움말--아이콘+도움말+물음표--돌_질감_물음표.png",
+      "title": "도움말",
+      "description": "돌 질감 물음표",
+      "tags": [
+        "아이콘",
+        "도움말",
+        "물음표"
+      ],
+      "status": "visible",
+      "size": 156571,
+      "updatedAt": "2026-07-09T17:39:51.249Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage",
+      "contentHash": "03dcc856b4cca2964e74e6c54b39d04ef6427de234684102cae54d9dd25305e8"
+    },
+    {
+      "id": "asset:assets/images/2026/돌화폐--아이콘+재화+돌--구멍_난_돌_동전.png",
+      "path": "assets/images/2026/돌화폐--아이콘+재화+돌--구멍_난_돌_동전.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/돌화폐--아이콘+재화+돌--구멍_난_돌_동전.png",
+      "kind": "image",
+      "fileName": "돌화폐--아이콘+재화+돌--구멍_난_돌_동전.png",
+      "title": "돌화폐",
+      "description": "구멍 난 돌 동전",
+      "tags": [
+        "아이콘",
+        "재화",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 208585,
+      "updatedAt": "2026-07-09T17:39:51.250Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage",
+      "contentHash": "060b51fe456e9448b13cd3c1684c3fa8e0aa5481bffbfa7c35b458dd66f6c448"
+    },
+    {
+      "id": "asset:assets/images/2026/메뉴--아이콘+햄버거+내비게이션--햄버거_돌_캐릭터.png",
+      "path": "assets/images/2026/메뉴--아이콘+햄버거+내비게이션--햄버거_돌_캐릭터.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/메뉴--아이콘+햄버거+내비게이션--햄버거_돌_캐릭터.png",
+      "kind": "image",
+      "fileName": "메뉴--아이콘+햄버거+내비게이션--햄버거_돌_캐릭터.png",
+      "title": "메뉴",
+      "description": "햄버거 돌 캐릭터",
+      "tags": [
+        "아이콘",
+        "햄버거",
+        "내비게이션"
+      ],
+      "status": "visible",
+      "size": 36713,
+      "updatedAt": "2026-07-09T17:39:51.250Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage",
+      "contentHash": "321804a90107096af35d8ecbfe7c6f2d0eed8072b315528c7b15c1b8c519bb08"
+    },
+    {
+      "id": "asset:assets/images/2026/방명록--아이콘+방명록+메시지--봉투와_돌_캐릭터.png",
+      "path": "assets/images/2026/방명록--아이콘+방명록+메시지--봉투와_돌_캐릭터.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/방명록--아이콘+방명록+메시지--봉투와_돌_캐릭터.png",
+      "kind": "image",
+      "fileName": "방명록--아이콘+방명록+메시지--봉투와_돌_캐릭터.png",
+      "title": "방명록",
+      "description": "봉투와 돌 캐릭터",
+      "tags": [
+        "아이콘",
+        "방명록",
+        "메시지"
+      ],
+      "status": "visible",
+      "size": 36398,
+      "updatedAt": "2026-07-09T17:39:51.251Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage",
+      "contentHash": "9e18b848023b8a8b7fcd5ba5e0070d97ad4cb103ff125483a8e48be2a1cece32"
+    },
+    {
+      "id": "asset:assets/images/2026/보관함--아이콘+저장소+상자--돌_보물상자.png",
+      "path": "assets/images/2026/보관함--아이콘+저장소+상자--돌_보물상자.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/보관함--아이콘+저장소+상자--돌_보물상자.png",
+      "kind": "image",
+      "fileName": "보관함--아이콘+저장소+상자--돌_보물상자.png",
+      "title": "보관함",
+      "description": "돌 보물상자",
+      "tags": [
+        "아이콘",
+        "저장소",
+        "상자"
+      ],
+      "status": "visible",
+      "size": 226777,
+      "updatedAt": "2026-07-09T17:39:51.251Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage",
+      "contentHash": "b91b3ca05215c6f3c38e62b7db5ceff77d0add33a87247ca47326e8de538e9ec"
+    },
+    {
+      "id": "asset:assets/images/2026/블로그--아이콘+문서+글--돌_캐릭터_글_목록.png",
+      "path": "assets/images/2026/블로그--아이콘+문서+글--돌_캐릭터_글_목록.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/블로그--아이콘+문서+글--돌_캐릭터_글_목록.png",
+      "kind": "image",
+      "fileName": "블로그--아이콘+문서+글--돌_캐릭터_글_목록.png",
+      "title": "블로그",
+      "description": "돌 캐릭터 글 목록",
+      "tags": [
+        "아이콘",
+        "문서",
+        "글"
+      ],
+      "status": "visible",
+      "size": 28000,
+      "updatedAt": "2026-07-09T17:39:51.252Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage",
+      "contentHash": "1e33a3df18f16fa7777e6d160fda7395a13ce32414ee3b7c394585ddcbfe6b43"
+    },
+    {
+      "id": "asset:assets/images/2026/뽑기기계--아이콘+가챠+게임--동전_뽑기_기계.png",
+      "path": "assets/images/2026/뽑기기계--아이콘+가챠+게임--동전_뽑기_기계.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/뽑기기계--아이콘+가챠+게임--동전_뽑기_기계.png",
+      "kind": "image",
+      "fileName": "뽑기기계--아이콘+가챠+게임--동전_뽑기_기계.png",
+      "title": "뽑기기계",
+      "description": "동전 뽑기 기계",
+      "tags": [
+        "아이콘",
+        "가챠",
+        "게임"
+      ],
+      "status": "visible",
+      "size": 43227,
+      "updatedAt": "2026-07-09T17:39:51.252Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage",
+      "contentHash": "4ef0f273b0f69f8824fc091175cd2cc8936bb413727df03ed265a910d9674b27"
+    },
+    {
+      "id": "asset:assets/images/2026/상품상자--아이콘+상품+상점--상자_속_돌_캐릭터.png",
+      "path": "assets/images/2026/상품상자--아이콘+상품+상점--상자_속_돌_캐릭터.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/상품상자--아이콘+상품+상점--상자_속_돌_캐릭터.png",
+      "kind": "image",
+      "fileName": "상품상자--아이콘+상품+상점--상자_속_돌_캐릭터.png",
+      "title": "상품상자",
+      "description": "상자 속 돌 캐릭터",
+      "tags": [
+        "아이콘",
+        "상품",
+        "상점"
+      ],
+      "status": "visible",
+      "size": 26575,
+      "updatedAt": "2026-07-09T17:39:51.252Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage",
+      "contentHash": "8340697a87f5e8f4de6db60fff883baf1d967ea82b570ecf102b5dff0dd9e13d"
+    },
+    {
+      "id": "asset:assets/images/2026/상품상자정면--아이콘+상품+상점--낮은_상자_속_돌_캐릭터.png",
+      "path": "assets/images/2026/상품상자정면--아이콘+상품+상점--낮은_상자_속_돌_캐릭터.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/상품상자정면--아이콘+상품+상점--낮은_상자_속_돌_캐릭터.png",
+      "kind": "image",
+      "fileName": "상품상자정면--아이콘+상품+상점--낮은_상자_속_돌_캐릭터.png",
+      "title": "상품상자정면",
+      "description": "낮은 상자 속 돌 캐릭터",
+      "tags": [
+        "아이콘",
+        "상품",
+        "상점"
+      ],
+      "status": "visible",
+      "size": 26572,
+      "updatedAt": "2026-07-09T17:39:51.253Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage",
+      "contentHash": "de03027a0f1aa63435a2e228f47adcd4357e1fa29c0fda589f1670804288e69d"
+    },
+    {
+      "id": "asset:assets/images/2026/설정--아이콘+설정+도구--돌_질감_톱니바퀴.png",
+      "path": "assets/images/2026/설정--아이콘+설정+도구--돌_질감_톱니바퀴.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/설정--아이콘+설정+도구--돌_질감_톱니바퀴.png",
+      "kind": "image",
+      "fileName": "설정--아이콘+설정+도구--돌_질감_톱니바퀴.png",
+      "title": "설정",
+      "description": "돌 질감 톱니바퀴",
+      "tags": [
+        "아이콘",
+        "설정",
+        "도구"
+      ],
+      "status": "visible",
+      "size": 237675,
+      "updatedAt": "2026-07-09T17:39:51.253Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage",
+      "contentHash": "5707164f7e06883fbdb4a1ccd9e06267e41eeb9355c2ad22145f41c369584f8d"
+    },
+    {
+      "id": "asset:assets/images/2026/성장돌--아이콘+돌+성장--쿠션_위_돌_캐릭터.png",
+      "path": "assets/images/2026/성장돌--아이콘+돌+성장--쿠션_위_돌_캐릭터.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/성장돌--아이콘+돌+성장--쿠션_위_돌_캐릭터.png",
+      "kind": "image",
+      "fileName": "성장돌--아이콘+돌+성장--쿠션_위_돌_캐릭터.png",
+      "title": "성장돌",
+      "description": "쿠션 위 돌 캐릭터",
+      "tags": [
+        "아이콘",
+        "돌",
+        "성장"
+      ],
+      "status": "visible",
+      "size": 26940,
+      "updatedAt": "2026-07-09T17:39:51.254Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage",
+      "contentHash": "615801d5e4db3785eb47cb9e5161fd4980a03fcd0b2f824edcbeb54eafd03b0b"
+    },
+    {
+      "id": "asset:assets/images/2026/실험실--아이콘+연구+실험--플라스크_속_돌_캐릭터.png",
+      "path": "assets/images/2026/실험실--아이콘+연구+실험--플라스크_속_돌_캐릭터.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/실험실--아이콘+연구+실험--플라스크_속_돌_캐릭터.png",
+      "kind": "image",
+      "fileName": "실험실--아이콘+연구+실험--플라스크_속_돌_캐릭터.png",
+      "title": "실험실",
+      "description": "플라스크 속 돌 캐릭터",
+      "tags": [
+        "아이콘",
+        "연구",
+        "실험"
+      ],
+      "status": "visible",
+      "size": 38990,
+      "updatedAt": "2026-07-09T17:39:51.254Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage",
+      "contentHash": "4f2f28820864dfad6dce7d44b3663397cd7ed73aa2b8bf9c48f62fb39c649e36"
+    },
+    {
+      "id": "asset:assets/images/2026/장바구니--아이콘+상점+구매--돌_캐릭터_카트.png",
+      "path": "assets/images/2026/장바구니--아이콘+상점+구매--돌_캐릭터_카트.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/장바구니--아이콘+상점+구매--돌_캐릭터_카트.png",
+      "kind": "image",
+      "fileName": "장바구니--아이콘+상점+구매--돌_캐릭터_카트.png",
+      "title": "장바구니",
+      "description": "돌 캐릭터 카트",
+      "tags": [
+        "아이콘",
+        "상점",
+        "구매"
+      ],
+      "status": "visible",
+      "size": 43908,
+      "updatedAt": "2026-07-09T17:39:51.254Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage",
+      "contentHash": "1f15d17ed7f77aa1f605d6983a044ebe0cb03e6a378a388ed7ac4f97ed1b1866"
+    },
+    {
+      "id": "asset:assets/images/2026/저장상자--아이콘+저장소+상자--돌_장식_보관상자.png",
+      "path": "assets/images/2026/저장상자--아이콘+저장소+상자--돌_장식_보관상자.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/저장상자--아이콘+저장소+상자--돌_장식_보관상자.png",
+      "kind": "image",
+      "fileName": "저장상자--아이콘+저장소+상자--돌_장식_보관상자.png",
+      "title": "저장상자",
+      "description": "돌 장식 보관상자",
+      "tags": [
+        "아이콘",
+        "저장소",
+        "상자"
+      ],
+      "status": "visible",
+      "size": 226802,
+      "updatedAt": "2026-07-09T17:39:51.255Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage",
+      "contentHash": "9639f5eff864b2b77c0ce97042cb9727ef5fc967626d03dc12eeec172d6289e2"
+    },
+    {
+      "id": "asset:assets/images/2026/정보검색--아이콘+정보+돋보기--돋보기_돌_캐릭터.png",
+      "path": "assets/images/2026/정보검색--아이콘+정보+돋보기--돋보기_돌_캐릭터.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/정보검색--아이콘+정보+돋보기--돋보기_돌_캐릭터.png",
+      "kind": "image",
+      "fileName": "정보검색--아이콘+정보+돋보기--돋보기_돌_캐릭터.png",
+      "title": "정보검색",
+      "description": "돋보기 돌 캐릭터",
+      "tags": [
+        "아이콘",
+        "정보",
+        "돋보기"
+      ],
+      "status": "visible",
+      "size": 28974,
+      "updatedAt": "2026-07-09T17:39:51.255Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage",
+      "contentHash": "52166bff40e38da6ee1af44c83f77ebcddacc96b18ba34c11f5dc13d4294b5e8"
+    }
+  ]
 }
