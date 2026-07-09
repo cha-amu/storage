@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-09T00:00:00.000Z",
+  "posts": [
+    {
+      "id": "post:posts/2026/example-draft.md",
+      "path": "posts/2026/example-draft.md",
+      "url": "https://cha-amu.github.io/storage/posts/2026/example-draft.md",
+      "title": "스토리지 포스트 예제",
+      "excerpt": "GitHub에서 직접 Markdown 포스트를 작성할 때 참고하는 미공개 예제입니다.",
+      "tags": ["예제", "작성양식"],
+      "status": "draft",
+      "createdAt": "2026-07-09",
+      "publishedAt": "2026-07-09"
+    }
+  ]
+}
