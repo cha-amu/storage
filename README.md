@@ -29,4 +29,4 @@ manifest.json
 
 The sync workflow runs in this storage repo. Pushes to `posts/` or `assets/` immediately copy storage content into Google Sheets through Apps Script. Scheduled/manual syncs also copy newer Google Sheets edits back into Markdown files, regenerate manifests, and commit the result with this repo's built-in `GITHUB_TOKEN`.
 
-See the site repo document `docs/storage-authoring.md` for the full authoring format.
+See `UPLOAD_GUIDE.md` for the direct GitHub upload format. The site repo document `docs/storage-authoring.md` has the same authoring rules from the main project side.
