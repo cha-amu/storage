@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-09T18:09:20.260Z",
+  "generatedAt": "2026-07-09T19:38:35.122Z",
   "posts": [
     {
       "id": "codex-smoke-5cae139",
@@ -280,12 +280,12 @@
       "markdownRootUrl": "https://cha-amu.github.io/storage"
     },
     {
-      "id": "asset:assets/images/2026/상품상자정면--아이콘+상품+상점--낮은_상자_속_돌_캐릭터.png",
-      "path": "assets/images/2026/상품상자정면--아이콘+상품+상점--낮은_상자_속_돌_캐릭터.png",
-      "url": "https://cha-amu.github.io/storage/assets/images/2026/상품상자정면--아이콘+상품+상점--낮은_상자_속_돌_캐릭터.png",
+      "id": "asset:assets/images/2026/상품상자2--아이콘+상품+상점--낮은_상자_속_돌_캐릭터.png",
+      "path": "assets/images/2026/상품상자2--아이콘+상품+상점--낮은_상자_속_돌_캐릭터.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/상품상자2--아이콘+상품+상점--낮은_상자_속_돌_캐릭터.png",
       "kind": "image",
-      "fileName": "상품상자정면--아이콘+상품+상점--낮은_상자_속_돌_캐릭터.png",
-      "title": "상품상자정면",
+      "fileName": "상품상자2--아이콘+상품+상점--낮은_상자_속_돌_캐릭터.png",
+      "title": "상품상자2",
       "description": "낮은 상자 속 돌 캐릭터",
       "tags": [
         "아이콘",
@@ -294,7 +294,7 @@
       ],
       "status": "visible",
       "size": 26572,
-      "updatedAt": "2026-07-09T17:39:51.253Z",
+      "updatedAt": "2026-07-09T19:38:24.211Z",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
     },
     {
