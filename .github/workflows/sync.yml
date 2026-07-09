@@ -2,6 +2,14 @@ name: Sync storage repo
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'posts/**'
+      - 'assets/**'
+      - 'scripts/sync-storage-repo.mjs'
+      - 'package.json'
+      - '.github/workflows/sync.yml'
   schedule:
     - cron: '17 18 * * 0'
 

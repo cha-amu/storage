@@ -7,6 +7,7 @@ const STORAGE_WORKDIR = process.env.STORAGE_WORKDIR || '.';
 const STORAGE_BASE_URL = (process.env.STORAGE_BASE_URL || 'https://cha-amu.github.io/storage').replace(/\/$/, '');
 const APPS_SCRIPT_URL = process.env.APPS_SCRIPT_URL || '';
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || '';
+const SYNC_MODE = process.env.STORAGE_SYNC_MODE || (process.env.GITHUB_EVENT_NAME === 'push' ? 'storage-first' : 'latest');
 
 const IMAGE_EXTENSIONS = new Set(['.avif', '.gif', '.jpg', '.jpeg', '.png', '.svg', '.webp']);
 const ASSET_EXTENSIONS = new Set([...IMAGE_EXTENSIONS, '.pdf', '.zip', '.txt', '.md', '.json', '.csv', '.mp3', '.mp4', '.webm']);
@@ -65,6 +66,19 @@ function hash(value) {
   return createHash('sha256').update(value).digest('hex');
 }
 
+function timeValue(value) {
+  const time = new Date(value || '').getTime();
+  return Number.isFinite(time) ? time : 0;
+}
+
+function postTime(post) {
+  return timeValue(post.updatedAt || post.publishedAt || post.createdAt);
+}
+
+function isSheetNewer(sheetPost, storagePost) {
+  return postTime(sheetPost) > postTime(storagePost);
+}
+
 function storageUrl(path) {
   return `${STORAGE_BASE_URL}/${path.replace(/^\/+/, '')}`;
 }
@@ -109,6 +123,9 @@ function postMarkdown(post) {
     `id: ${yamlValue(post.id)}`,
     `title: ${yamlValue(post.title || '(제목 없음)')}`,
     `date: ${yamlValue(date)}`,
+    post.createdAt ? `createdAt: ${yamlValue(post.createdAt)}` : '',
+    post.updatedAt ? `updatedAt: ${yamlValue(post.updatedAt)}` : '',
+    post.publishedAt ? `publishedAt: ${yamlValue(post.publishedAt)}` : '',
     `tags: ${yamlValue(post.tags || [])}`,
     `status: ${yamlValue(post.status || 'published')}`,
     post.excerpt ? `excerpt: ${yamlValue(post.excerpt)}` : '',
@@ -118,12 +135,10 @@ function postMarkdown(post) {
 }
 
 async function ensureStoragePostForSheetPost(post) {
-  if (post.storagePath) return post.storagePath;
   const year = String(post.publishedAt || post.createdAt || new Date().toISOString()).slice(0, 4) || 'undated';
   const slug = slugify(post.slug || post.title || post.id);
-  const path = `posts/${year}/${slug}.md`;
+  const path = post.storagePath || `posts/${year}/${slug}.md`;
   const fullPath = join(STORAGE_WORKDIR, path);
-  if (existsSync(fullPath)) return path;
   await mkdir(dirname(fullPath), { recursive: true });
   await writeFile(fullPath, postMarkdown(post));
   return path;
@@ -143,10 +158,11 @@ async function scanStoragePosts() {
       url: storageUrl(path),
       title,
       excerpt: meta.excerpt || excerpt(body),
+      body,
       tags: parseTags(meta.tags),
       status: meta.status || 'published',
       createdAt: meta.createdAt || meta.date || '',
-      updatedAt: meta.updatedAt || '',
+      updatedAt: meta.updatedAt || meta.publishedAt || meta.date || '',
       publishedAt: meta.publishedAt || meta.date || '',
       contentHash: hash(markdown)
     });
@@ -186,6 +202,32 @@ async function writeManifest(path, payload) {
   await writeFile(fullPath, `${JSON.stringify(payload, null, 2)}\n`);
 }
 
+function manifestPost(post) {
+  const { body, ...publicPost } = post;
+  return publicPost;
+}
+
+async function syncStoragePostToSheet(token, post) {
+  await appsRequest('admin.post.syncFromStorage', {
+    token,
+    post: {
+      id: post.id,
+      title: post.title,
+      excerpt: post.excerpt,
+      body: post.body,
+      tags: post.tags,
+      status: post.status,
+      createdAt: post.createdAt || new Date().toISOString(),
+      updatedAt: post.updatedAt || post.publishedAt || post.createdAt || new Date().toISOString(),
+      publishedAt: post.publishedAt || post.createdAt || new Date().toISOString(),
+      source: 'storage',
+      storagePath: post.path,
+      bodyUrl: post.url,
+      syncStatus: 'synced'
+    }
+  });
+}
+
 async function main() {
   assert(existsSync(STORAGE_WORKDIR), `Storage checkout not found: ${STORAGE_WORKDIR}`);
   const token = await login();
@@ -193,34 +235,27 @@ async function main() {
   const sheetPosts = await appsRequest('admin.post.list', { token });
   const sheetOverrides = await appsRequest('admin.assetOverride.list', { token });
 
-  for (const post of sheetPosts.filter((post) => post && post.status !== 'deleted' && post.body)) {
-    await ensureStoragePostForSheetPost(post);
+  let posts = await scanStoragePosts();
+  const storageById = new Map(posts.map((post) => [String(post.id), post]));
+  const storageByPath = new Map(posts.map((post) => [String(post.path), post]));
+
+  if (SYNC_MODE !== 'storage-first') {
+    for (const post of sheetPosts.filter((post) => post && post.status !== 'deleted' && post.body)) {
+      const storagePost = storageById.get(String(post.id)) || storageByPath.get(String(post.storagePath || ''));
+      if (!storagePost || isSheetNewer(post, storagePost)) {
+        await ensureStoragePostForSheetPost(post);
+      }
+    }
   }
 
-  const posts = await scanStoragePosts();
+  posts = await scanStoragePosts();
   const assets = await scanStorageAssets();
-  const sheetPostIds = new Set(sheetPosts.map((post) => String(post.id)));
+  const sheetPostsById = new Map(sheetPosts.map((post) => [String(post.id), post]));
   const sheetAssetIds = new Set(sheetOverrides.map((override) => String(override.assetId)));
 
   for (const post of posts) {
-    if (sheetPostIds.has(post.id)) continue;
-    await appsRequest('admin.post.save', {
-      token,
-      post: {
-        id: post.id,
-        title: post.title,
-        excerpt: post.excerpt,
-        body: '',
-        tags: post.tags,
-        status: post.status,
-        createdAt: post.createdAt || new Date().toISOString(),
-        publishedAt: post.publishedAt || post.createdAt || new Date().toISOString(),
-        source: 'storage',
-        storagePath: post.path,
-        bodyUrl: post.url,
-        syncStatus: 'linked'
-      }
-    });
+    const sheetPost = sheetPostsById.get(String(post.id));
+    if (SYNC_MODE === 'storage-first' || !sheetPost || !isSheetNewer(sheetPost, post)) await syncStoragePostToSheet(token, post);
   }
 
   for (const asset of assets) {
@@ -241,11 +276,12 @@ async function main() {
   }
 
   const generatedAt = new Date().toISOString();
-  await writeManifest('manifests/posts.json', { version: 1, generatedAt, posts });
+  const manifestPosts = posts.map(manifestPost);
+  await writeManifest('manifests/posts.json', { version: 1, generatedAt, posts: manifestPosts });
   await writeManifest('manifests/assets.json', { version: 1, generatedAt, assets });
-  await writeManifest('manifest.json', { version: 1, generatedAt, posts, assets });
+  await writeManifest('manifest.json', { version: 1, generatedAt, posts: manifestPosts, assets });
 
-  console.log(`Synced ${posts.length} storage posts and ${assets.length} storage assets.`);
+  console.log(`Synced ${posts.length} storage posts and ${assets.length} storage assets in ${SYNC_MODE} mode.`);
 }
 
 main().catch((error) => {
