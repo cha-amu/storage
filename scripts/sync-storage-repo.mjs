@@ -10,6 +10,10 @@ const APPS_SCRIPT_URL = process.env.APPS_SCRIPT_URL || '';
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || '';
 const SYNC_MODE = process.env.STORAGE_SYNC_MODE || (process.env.GITHUB_EVENT_NAME === 'push' ? 'storage-first' : 'latest');
 const DRY_RUN = process.env.STORAGE_SYNC_DRY_RUN === '1';
+const ADMIN_SESSION_REFRESH_MS = 20_000;
+
+let adminToken = '';
+let adminTokenRefreshedAt = 0;
 
 const IMAGE_EXTENSIONS = new Set(['.avif', '.gif', '.jpg', '.jpeg', '.png', '.svg', '.webp']);
 const ASSET_EXTENSIONS = new Set([...IMAGE_EXTENSIONS, '.pdf', '.zip', '.txt', '.md', '.json', '.csv', '.mp3', '.mp4', '.webm']);
@@ -183,7 +187,19 @@ async function login() {
   assert(ADMIN_PASSWORD, 'ADMIN_PASSWORD is required for storage sync.');
   const session = await appsRequest('admin.login', { password: ADMIN_PASSWORD });
   assert(session && session.token, 'Apps Script did not return an admin token.');
-  return session.token;
+  adminToken = session.token;
+  adminTokenRefreshedAt = Date.now();
+}
+
+async function adminRequest(action, payload = {}) {
+  assert(adminToken, 'Admin session is required for storage sync.');
+  if (Date.now() - adminTokenRefreshedAt >= ADMIN_SESSION_REFRESH_MS) {
+    const session = await appsRequest('admin.session.refresh', { token: adminToken });
+    assert(session && session.token, 'Apps Script did not refresh the admin token.');
+    adminToken = session.token;
+    adminTokenRefreshedAt = Date.now();
+  }
+  return appsRequest(action, { ...payload, token: adminToken });
 }
 
 function postMarkdown(post) {
@@ -310,9 +326,8 @@ function manifestPost(post) {
   return publicPost;
 }
 
-async function syncStoragePostToSheet(token, post) {
-  await appsRequest('admin.post.syncFromStorage', {
-    token,
+async function syncStoragePostToSheet(post) {
+  await adminRequest('admin.post.syncFromStorage', {
     post: {
       id: post.id,
       title: post.title,
@@ -333,10 +348,10 @@ async function syncStoragePostToSheet(token, post) {
 
 async function main() {
   assert(existsSync(STORAGE_WORKDIR), `Storage checkout not found: ${STORAGE_WORKDIR}`);
-  const token = DRY_RUN ? '' : await login();
+  if (!DRY_RUN) await login();
 
-  const sheetPosts = DRY_RUN ? [] : await appsRequest('admin.post.list', { token });
-  const sheetOverrides = DRY_RUN ? [] : await appsRequest('admin.assetOverride.list', { token });
+  const sheetPosts = DRY_RUN ? [] : await adminRequest('admin.post.list');
+  const sheetOverrides = DRY_RUN ? [] : await adminRequest('admin.assetOverride.list');
   const changes = changedPaths();
 
   let posts = await scanStoragePosts();
@@ -360,14 +375,13 @@ async function main() {
   for (const post of posts) {
     const sheetPost = sheetPostsById.get(String(post.id));
     const changedStoragePost = changes === undefined || pathChanged(changes, post.path);
-    if (!DRY_RUN && changedStoragePost && (SYNC_MODE === 'storage-first' || !sheetPost || !isSheetNewer(sheetPost, post))) await syncStoragePostToSheet(token, post);
+    if (!DRY_RUN && changedStoragePost && (SYNC_MODE === 'storage-first' || !sheetPost || !isSheetNewer(sheetPost, post))) await syncStoragePostToSheet(post);
   }
 
   for (const asset of assets) {
     if (DRY_RUN) continue;
     if (sheetAssetIds.has(asset.id)) continue;
-    await appsRequest('admin.assetOverride.save', {
-      token,
+    await adminRequest('admin.assetOverride.save', {
       override: {
         assetId: asset.id,
         displayName: asset.title,
