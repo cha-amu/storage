@@ -160,4 +160,6 @@ STORAGE_SYNC_DRY_RUN=1 npm run sync
 
 이 명령은 Google Sheets에 쓰지 않고 `manifests/`와 `manifest.json` 생성 결과만 확인한다.
 
-실제 Sheets까지 쓰는 로컬 sync는 `APPS_SCRIPT_URL`과 `ADMIN_PASSWORD`가 필요하므로 보통 GitHub Actions 수동 실행을 쓴다.
+실제 Sheets까지 쓰는 로컬 sync는 Worker용 `STORAGE_SYNC_SECRET`과 `ADMIN_PASSWORD`가 필요하므로 보통 GitHub Actions 수동 실행을 쓴다. API는 기본적으로 `https://cha-amu-gateway.yiyaaang.workers.dev/api`를 사용하며, 다른 Worker 주소가 필요할 때만 `API_URL`을 지정한다.
+
+GitHub 저장소에는 Actions secret으로 `STORAGE_SYNC_SECRET`과 `ADMIN_PASSWORD`를 설정한다. `API_URL`은 repository variable로 덮어쓸 수 있으며, 모든 동기화 요청은 Worker에 Bearer 인증으로 전달된다.

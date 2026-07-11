@@ -6,7 +6,9 @@ import { execFileSync } from 'node:child_process';
 
 const STORAGE_WORKDIR = process.env.STORAGE_WORKDIR || '.';
 const STORAGE_BASE_URL = (process.env.STORAGE_BASE_URL || 'https://cha-amu.github.io/storage').replace(/\/$/, '');
-const APPS_SCRIPT_URL = process.env.APPS_SCRIPT_URL || '';
+const DEFAULT_API_URL = 'https://cha-amu-gateway.yiyaaang.workers.dev/api';
+const API_URL = (process.env.API_URL || DEFAULT_API_URL).trim();
+const STORAGE_SYNC_SECRET = process.env.STORAGE_SYNC_SECRET || '';
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || '';
 const SYNC_MODE = process.env.STORAGE_SYNC_MODE || (process.env.GITHUB_EVENT_NAME === 'push' ? 'storage-first' : 'latest');
 const DRY_RUN = process.env.STORAGE_SYNC_DRY_RUN === '1';
@@ -20,6 +22,22 @@ const ASSET_EXTENSIONS = new Set([...IMAGE_EXTENSIONS, '.pdf', '.zip', '.txt', '
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
+}
+
+function assertSyncConfiguration() {
+  let url;
+  try {
+    url = new URL(API_URL);
+  } catch (_) {
+    throw new Error('API_URL must be a valid URL.');
+  }
+
+  const localTestHost = url.hostname === '127.0.0.1' || url.hostname === 'localhost' || url.hostname === '::1';
+  assert(url.protocol === 'https:' || (url.protocol === 'http:' && localTestHost), 'API_URL must use HTTPS.');
+  assert(url.pathname === '/api' && !url.search && !url.hash, 'API_URL must point to the exact Worker /api endpoint.');
+  assert(!url.username && !url.password, 'API_URL must not contain credentials.');
+  assert(STORAGE_SYNC_SECRET, 'STORAGE_SYNC_SECRET is required for storage sync.');
+  assert(ADMIN_PASSWORD, 'ADMIN_PASSWORD is required for storage sync.');
 }
 
 function slugify(value) {
@@ -170,23 +188,29 @@ async function walk(dir) {
   return files;
 }
 
-async function appsRequest(action, payload = {}) {
-  assert(APPS_SCRIPT_URL, 'APPS_SCRIPT_URL is required.');
-  const response = await fetch(APPS_SCRIPT_URL, {
+async function gatewayRequest(action, payload = {}) {
+  const response = await fetch(API_URL, {
     method: 'POST',
-    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    headers: {
+      Authorization: `Bearer ${STORAGE_SYNC_SECRET}`,
+      'Content-Type': 'text/plain;charset=utf-8'
+    },
+    redirect: 'error',
     body: JSON.stringify({ action, ...payload })
   });
-  if (!response.ok) throw new Error(`Apps Script request failed: ${response.status}`);
-  const json = await response.json();
-  if (!json.ok) throw new Error(json.error || `Apps Script action failed: ${action}`);
+  let json;
+  try {
+    json = await response.json();
+  } catch (_) {
+    throw new Error(`Gateway returned an invalid response: ${response.status}`);
+  }
+  if (!response.ok || !json.ok) throw new Error(json.error || `Gateway action failed: ${action} (${response.status})`);
   return json.data;
 }
 
 async function login() {
-  assert(ADMIN_PASSWORD, 'ADMIN_PASSWORD is required for storage sync.');
-  const session = await appsRequest('admin.login', { password: ADMIN_PASSWORD });
-  assert(session && session.token, 'Apps Script did not return an admin token.');
+  const session = await gatewayRequest('admin.login', { password: ADMIN_PASSWORD });
+  assert(session && session.token, 'Gateway did not return an admin token.');
   adminToken = session.token;
   adminTokenRefreshedAt = Date.now();
 }
@@ -194,12 +218,12 @@ async function login() {
 async function adminRequest(action, payload = {}) {
   assert(adminToken, 'Admin session is required for storage sync.');
   if (Date.now() - adminTokenRefreshedAt >= ADMIN_SESSION_REFRESH_MS) {
-    const session = await appsRequest('admin.session.refresh', { token: adminToken });
-    assert(session && session.token, 'Apps Script did not refresh the admin token.');
+    const session = await gatewayRequest('admin.session.refresh', { token: adminToken });
+    assert(session && session.token, 'Gateway did not refresh the admin token.');
     adminToken = session.token;
     adminTokenRefreshedAt = Date.now();
   }
-  return appsRequest(action, { ...payload, token: adminToken });
+  return gatewayRequest(action, { ...payload, token: adminToken });
 }
 
 function postMarkdown(post) {
@@ -348,7 +372,10 @@ async function syncStoragePostToSheet(post) {
 
 async function main() {
   assert(existsSync(STORAGE_WORKDIR), `Storage checkout not found: ${STORAGE_WORKDIR}`);
-  if (!DRY_RUN) await login();
+  if (!DRY_RUN) {
+    assertSyncConfiguration();
+    await login();
+  }
 
   const sheetPosts = DRY_RUN ? [] : await adminRequest('admin.post.list');
   const sheetOverrides = DRY_RUN ? [] : await adminRequest('admin.assetOverride.list');
