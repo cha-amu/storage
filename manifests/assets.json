@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-11T15:51:11.447Z",
+  "generatedAt": "2026-07-11T17:21:17.344Z",
   "assets": [
     {
       "id": "asset:assets/images/2026/tarot/교황--이미지+타로+메이저--교황_타로_카드.png",
@@ -1926,5 +1926,6 @@
       "updatedAt": "2026-07-09T17:39:51.255Z",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
     }
-  ]
+  ],
+  "orphanedMetadataPaths": []
 }
