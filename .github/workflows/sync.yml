@@ -12,10 +12,14 @@ on:
       - 'package.json'
       - '.github/workflows/sync.yml'
   schedule:
-    - cron: '17 18 * * 0'
+    - cron: '17 * * * *'
 
 permissions:
   contents: write
+
+concurrency:
+  group: storage-sync
+  cancel-in-progress: false
 
 jobs:
   sync:
