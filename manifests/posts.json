@@ -1,63 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-12T09:16:41.578Z",
+  "generatedAt": "2026-07-12T09:43:09.112Z",
   "posts": [
-    {
-      "id": "6ba660b6-3c9e-40fc-8a49-35036be9ef94",
-      "path": "posts/2026/11.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/11.md",
-      "title": "11",
-      "excerpt": "11",
-      "tags": [],
-      "status": "published",
-      "createdAt": "2026-07-11T17:45:17.321Z",
-      "updatedAt": "2026-07-12T06:04:04.331Z",
-      "publishedAt": "2026-07-11T17:45:17.321Z",
-      "contentHash": "ec9cbb921e2d2d808a9c3b8897ab621593c251d8e5f51b142d9934c72fe8b888"
-    },
-    {
-      "id": "84636d82-eb21-451c-aa11-8f04d6af9e7a",
-      "path": "posts/2026/ddd.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/ddd.md",
-      "title": "ddd",
-      "excerpt": "dd",
-      "tags": [],
-      "status": "published",
-      "createdAt": "2026-07-10T01:07:43.319Z",
-      "updatedAt": "2026-07-12T06:04:04.331Z",
-      "publishedAt": "2026-07-10T01:07:43.319Z",
-      "contentHash": "1b1ab0502600651f070cd57e3d995dc64166866e2297bbaf7a32a95c5d3da4da"
-    },
-    {
-      "id": "codex-smoke-5cae139",
-      "path": "posts/2026/codex-smoke-5cae139.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/codex-smoke-5cae139.md",
-      "title": "Codex hidden deployment smoke test 5cae139",
-      "excerpt": "Hidden smoke test row; not public.",
-      "tags": [
-        "smoke-test"
-      ],
-      "status": "published",
-      "createdAt": "2026-07-09T07:36:25.230Z",
-      "updatedAt": "2026-07-12T06:04:04.331Z",
-      "publishedAt": "2026-07-09T07:36:25.230Z",
-      "contentHash": "fd22faca10a9d5368d5fb89c4e606faa42e71f066d5635ab78dd8d7d0dd13940"
-    },
-    {
-      "id": "c3659d67-dd00-4069-a99b-e594986c2b25",
-      "path": "posts/2026/dddd.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/dddd.md",
-      "title": "dddd",
-      "excerpt": "d",
-      "tags": [
-        "d"
-      ],
-      "status": "published",
-      "createdAt": "2026-07-09T07:10:25.664Z",
-      "updatedAt": "2026-07-12T06:04:04.331Z",
-      "publishedAt": "2026-07-09T07:10:25.664Z",
-      "contentHash": "a2d28a96b2a31e0765f69ad6dda670a1cc6fe16ab8b176518b48d139e033204a"
-    },
     {
       "id": "post:posts/2026/example-draft.md",
       "path": "posts/2026/example-draft.md",
@@ -73,73 +17,6 @@
       "updatedAt": "2026-07-09",
       "publishedAt": "2026-07-09",
       "contentHash": "19f5c851fa423f036ee616f50edc3e83c2d2376fae561663cc4ba48ba7475f62"
-    },
-    {
-      "id": "04962e72-fc08-44d5-917d-2b27595593e8",
-      "path": "posts/2026/31231.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/31231.md",
-      "title": "31231",
-      "excerpt": "12312313",
-      "tags": [],
-      "status": "published",
-      "createdAt": "2026-07-08T22:09:29.038Z",
-      "updatedAt": "2026-07-12T06:04:04.331Z",
-      "publishedAt": "2026-07-08T22:09:29.038Z",
-      "contentHash": "dd8d83e125af78b421badefa2725245085445b3ba929330f1de8084288601902"
-    },
-    {
-      "id": "87cd9008-025a-41de-a9b5-ecbe856618ae",
-      "path": "posts/2026/231414.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/231414.md",
-      "title": "231414",
-      "excerpt": "12312312312313",
-      "tags": [],
-      "status": "published",
-      "createdAt": "2026-07-08T21:59:41.136Z",
-      "updatedAt": "2026-07-12T06:04:04.331Z",
-      "publishedAt": "2026-07-08T21:59:41.136Z",
-      "contentHash": "bbe314b30a2615b6748780036cf7ab7d3a148d7b6baee7a8ea4e0782890b06ae"
-    },
-    {
-      "id": "b9832bb8-3ac4-41b2-acd8-eb41908dcd87",
-      "path": "posts/2026/12131.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/12131.md",
-      "title": "12131",
-      "excerpt": "1",
-      "tags": [],
-      "status": "published",
-      "createdAt": "2026-07-08T21:58:03.245Z",
-      "updatedAt": "2026-07-12T06:04:04.331Z",
-      "publishedAt": "2026-07-08T21:58:03.245Z",
-      "contentHash": "611effc27c6e316fcc6b8e9d70cc972258168fdbd4fb060f815d94e8d53689fd"
-    },
-    {
-      "id": "e5a09ee7-1d66-4522-b4c6-13efcd7bc19c",
-      "path": "posts/2026/untitled.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/untitled.md",
-      "title": "관리자 저장 점검",
-      "excerpt": "자동 점검 후 숨김 처리",
-      "tags": [
-        "test"
-      ],
-      "status": "published",
-      "createdAt": "2026-07-08T21:45:28.356Z",
-      "updatedAt": "2026-07-12T06:04:04.331Z",
-      "publishedAt": "2026-07-08T21:45:28.356Z",
-      "contentHash": "50969247b0a93be8fb545139b27845e59625f1f7a1867649c077bc7a01404775"
-    },
-    {
-      "id": "1ca4059a-febf-485e-a6b2-c04d6a3500d0",
-      "path": "posts/2026/dd.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/dd.md",
-      "title": "dd",
-      "excerpt": "테스트글",
-      "tags": [],
-      "status": "published",
-      "createdAt": "2026-07-08T21:45:16.835Z",
-      "updatedAt": "2026-07-12T06:04:04.331Z",
-      "publishedAt": "2026-07-08T21:45:16.835Z",
-      "contentHash": "3c2fa13bf97bdd85b9832a985864c4f15f104e5ea882bb7f45ba94b4996d22e8"
     }
   ]
 }
