@@ -182,6 +182,31 @@ function timeValue(value) {
   return Number.isFinite(time) ? time : 0;
 }
 
+function isDateOnly(value) {
+  return /^\d{4}-\d{2}-\d{2}$/.test(String(value || ''));
+}
+
+function fileCommitTimestamp(path) {
+  try {
+    const value = execFileSync('git', ['log', '-1', '--format=%cI', '--', path], {
+      cwd: STORAGE_WORKDIR,
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore']
+    }).trim();
+    const time = timeValue(value);
+    return time ? new Date(time).toISOString() : '';
+  } catch (_) {
+    return '';
+  }
+}
+
+function storagePostUpdatedAt(meta, path, changes) {
+  const committedAt = fileCommitTimestamp(path);
+  if (pathChanged(changes, path) && committedAt) return committedAt;
+  if (meta.updatedAt && !isDateOnly(meta.updatedAt)) return meta.updatedAt;
+  return committedAt || meta.updatedAt || meta.publishedAt || meta.date || '';
+}
+
 function postTime(post) {
   return timeValue(post.updatedAt || post.publishedAt || post.createdAt);
 }
@@ -370,7 +395,7 @@ async function ensureStoragePostForSheetPost(post) {
   return path;
 }
 
-async function scanStoragePosts() {
+async function scanStoragePosts(changes) {
   const files = (await walk(join(STORAGE_WORKDIR, 'posts'))).filter((file) => extname(file).toLowerCase() === '.md');
   const posts = [];
   for (const file of files) {
@@ -388,7 +413,7 @@ async function scanStoragePosts() {
       tags: parseTags(meta.tags),
       status: meta.status || 'published',
       createdAt: meta.createdAt || meta.date || '',
-      updatedAt: meta.updatedAt || meta.publishedAt || meta.date || '',
+      updatedAt: storagePostUpdatedAt(meta, path, changes),
       publishedAt: meta.publishedAt || meta.date || '',
       contentHash: hash(markdown)
     });
@@ -535,14 +560,14 @@ async function main() {
   const previousPostIds = new Set(
     previousPostsManifestState.manifest.posts.map((post) => String(post?.id || '')).filter(Boolean)
   );
-  const postsAtStart = await scanStoragePosts();
+  const postsAtStart = await scanStoragePosts(changes);
   const { finalizable: finalizablePostDeletions, pendingIds: pendingPostDeletionIds } = await consumePostDeletions(
     postDeletions,
     postsAtStart,
     previousPostIds,
     previousPostsManifestState.known
   );
-  let posts = await scanStoragePosts();
+  let posts = await scanStoragePosts(changes);
   const storageById = new Map(posts.map((post) => [String(post.id), post]));
   const storageByPath = new Map(posts.map((post) => [String(post.path), post]));
 
@@ -555,7 +580,7 @@ async function main() {
     }
   }
 
-  posts = await scanStoragePosts();
+  posts = await scanStoragePosts(changes);
   const { assets, orphanedMetadataPaths, previousAssetIds, previousManifestKnown: previousAssetsManifestKnown } = await scanStorageAssets(changes);
   const sheetPostsById = new Map(sheetPosts.map((post) => [String(post.id), post]));
   const sheetAssetIds = new Set(sheetOverrides.map((override) => String(override.assetId)));

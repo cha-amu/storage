@@ -108,13 +108,14 @@ sortOrder   낮을수록 먼저 표시
   posts/**, assets/**, sync 스크립트, package.json, sync workflow가 바뀌면 실행
 
 주기 sync:
-  매주 월요일 03:17 KST
-  GitHub cron 기준으로는 일요일 18:17 UTC
+  매시간 17분에 실행
 ```
 
 파일을 GitHub 웹에서 직접 올리거나 로컬에서 push하면 `push` 이벤트라서 storage 파일을 최신 원본으로 보고 Sheets에 반영한다. 이때 storage에만 있는 글은 Sheets에 본문까지 복사되고, storage에만 있는 자료는 Sheets의 asset override에 기본 표시 정보가 들어간다.
 
 주기 sync나 수동 실행은 storage와 Sheets 중 `updatedAt`이 더 최신인 쪽을 기준으로 맞춘다. 관리자 페이지에서 수정한 글이 더 최신이면 다음 sync 때 storage Markdown도 갱신된다.
+
+글의 `date`를 `YYYY-MM-DD`로만 적으면 사이트에는 날짜만 표시된다. 업로드 시각까지 직접 지정하려면 ISO 형식(예: `2026-07-12T11:27:22.000Z`)을 쓴다. `updatedAt`을 생략하거나 날짜만 적은 글은 Git 파일의 마지막 커밋 시각을 실제 수정 시각으로 사용한다.
 
 ### 수동으로 실행하는 법
 

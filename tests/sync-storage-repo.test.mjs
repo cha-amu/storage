@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { spawn } from 'node:child_process';
+import { spawn, spawnSync } from 'node:child_process';
 import { access, mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { createServer } from 'node:http';
 import { tmpdir } from 'node:os';
@@ -118,6 +118,132 @@ test('sync sends every action through the Worker API with service authentication
       assert.equal('password' in request.payload, false);
       assert.equal('token' in request.payload, false);
     }
+  } finally {
+    await close(server);
+    await rm(storagePath, { recursive: true, force: true });
+  }
+});
+
+test('date-only posts use the file commit time as their precise updatedAt', async () => {
+  const requests = [];
+  const server = createServer((request, response) => {
+    let body = '';
+    request.setEncoding('utf8');
+    request.on('data', (chunk) => { body += chunk; });
+    request.on('end', () => {
+      const payload = JSON.parse(body);
+      requests.push(payload);
+      response.writeHead(200, { 'Content-Type': 'application/json' });
+      response.end(JSON.stringify({ ok: true, data: [] }));
+    });
+  });
+  const port = await listen(server);
+  const storagePath = await makeStorageFixture();
+  const postPath = join(storagePath, 'posts/2026/date-only.md');
+  await mkdir(dirname(postPath), { recursive: true });
+  await writeFile(postPath, [
+    '---',
+    'title: "Date only"',
+    'date: "2026-07-12"',
+    'status: "published"',
+    '---',
+    '',
+    'Body',
+    ''
+  ].join('\n'));
+  const commitTime = '2026-07-12T11:27:32.000Z';
+  const gitEnv = {
+    ...process.env,
+    GIT_AUTHOR_DATE: commitTime,
+    GIT_COMMITTER_DATE: commitTime
+  };
+  for (const args of [
+    ['init'],
+    ['config', 'user.name', 'Storage Test'],
+    ['config', 'user.email', 'storage-test@example.com'],
+    ['add', '.'],
+    ['commit', '-m', 'Add date-only post']
+  ]) {
+    const git = spawnSync('git', args, { cwd: storagePath, env: gitEnv, encoding: 'utf8' });
+    assert.equal(git.status, 0, git.stderr || git.stdout);
+  }
+
+  try {
+    const result = await runSync({
+      API_URL: `http://127.0.0.1:${port}/api`,
+      STORAGE_SYNC_SECRET: TEST_SYNC_SECRET,
+      STORAGE_WORKDIR: storagePath
+    });
+
+    assert.equal(result.code, 0, result.stderr);
+    const manifest = JSON.parse(await readFile(join(storagePath, 'manifests/posts.json'), 'utf8'));
+    assert.equal(manifest.posts[0].publishedAt, '2026-07-12');
+    assert.equal(manifest.posts[0].updatedAt, commitTime);
+    const saveRequest = requests.find((payload) => payload.action === 'storage.sync.post.save');
+    assert.equal(saveRequest.post.updatedAt, commitTime);
+  } finally {
+    await close(server);
+    await rm(storagePath, { recursive: true, force: true });
+  }
+});
+
+test('push sync uses the changed file commit time over stale frontmatter', async () => {
+  const requests = [];
+  const server = createServer((request, response) => {
+    let body = '';
+    request.setEncoding('utf8');
+    request.on('data', (chunk) => { body += chunk; });
+    request.on('end', () => {
+      requests.push(JSON.parse(body));
+      response.writeHead(200, { 'Content-Type': 'application/json' });
+      response.end(JSON.stringify({ ok: true, data: [] }));
+    });
+  });
+  const port = await listen(server);
+  const storagePath = await makeStorageFixture();
+  const postPath = join(storagePath, 'posts/2026/changed.md');
+  await mkdir(dirname(postPath), { recursive: true });
+  await writeFile(postPath, [
+    '---',
+    'title: "Changed"',
+    'date: "2026-07-12T10:00:00.000Z"',
+    'updatedAt: "2026-07-12T10:00:00.000Z"',
+    'status: "published"',
+    '---',
+    '',
+    'Original',
+    ''
+  ].join('\n'));
+  const gitEnv = { ...process.env, GIT_AUTHOR_DATE: '2026-07-12T10:00:00.000Z', GIT_COMMITTER_DATE: '2026-07-12T10:00:00.000Z' };
+  for (const args of [
+    ['init'],
+    ['config', 'user.name', 'Storage Test'],
+    ['config', 'user.email', 'storage-test@example.com'],
+    ['add', '.'],
+    ['commit', '-m', 'Add post']
+  ]) {
+    const git = spawnSync('git', args, { cwd: storagePath, env: gitEnv, encoding: 'utf8' });
+    assert.equal(git.status, 0, git.stderr || git.stdout);
+  }
+  await writeFile(postPath, (await readFile(postPath, 'utf8')).replace('Original', 'Edited'));
+  const commitTime = '2026-07-12T12:15:00.000Z';
+  const changedEnv = { ...process.env, GIT_AUTHOR_DATE: commitTime, GIT_COMMITTER_DATE: commitTime };
+  for (const args of [['add', '.'], ['commit', '-m', 'Edit post']]) {
+    const git = spawnSync('git', args, { cwd: storagePath, env: changedEnv, encoding: 'utf8' });
+    assert.equal(git.status, 0, git.stderr || git.stdout);
+  }
+
+  try {
+    const result = await runSync({
+      API_URL: `http://127.0.0.1:${port}/api`,
+      GITHUB_EVENT_NAME: 'push',
+      STORAGE_SYNC_SECRET: TEST_SYNC_SECRET,
+      STORAGE_WORKDIR: storagePath
+    });
+
+    assert.equal(result.code, 0, result.stderr);
+    const saveRequest = requests.find((payload) => payload.action === 'storage.sync.post.save');
+    assert.equal(saveRequest.post.updatedAt, commitTime);
   } finally {
     await close(server);
     await rm(storagePath, { recursive: true, force: true });
@@ -558,4 +684,5 @@ test('sync client and workflow have no administrator credential dependency', asy
     assert.equal(contents.includes('admin.session.refresh'), false);
   }
   assert.match(workflow, /STORAGE_SYNC_SECRET:\s*\$\{\{ secrets\.STORAGE_SYNC_SECRET \}\}/);
+  assert.match(workflow, /fetch-depth:\s*0/);
 });
