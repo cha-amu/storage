@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-12T10:58:39.075Z",
+  "generatedAt": "2026-07-12T11:27:44.815Z",
   "posts": [
     {
       "id": "7e14bfe4-36b7-4c78-b0ef-d0a1a1720a96",
@@ -16,6 +16,25 @@
       "updatedAt": "2026-07-12T09:35:20.293Z",
       "publishedAt": "2026-07-12T09:35:20.295Z",
       "contentHash": "a456aa41ff6e1b8dbaaccb3deccc6b57e88f719f7be5750c882071f4cdd87bd5"
+    },
+    {
+      "id": "post:posts/2026/정적-사이트에-무료-방명록-붙이기.md",
+      "path": "posts/2026/정적-사이트에-무료-방명록-붙이기.md",
+      "url": "https://cha-amu.github.io/storage/posts/2026/정적-사이트에-무료-방명록-붙이기.md",
+      "title": "정적 사이트에 무료 방명록 붙이기",
+      "excerpt": "GitHub Pages로 만든 개인 사이트에 Google Sheets와 Apps Script를 연결하고, 공개 쓰기 요청을 안전하게 받기 위해 보안 계층을 더한 과정을 정리했다.",
+      "tags": [
+        "정적 사이트",
+        "방명록",
+        "Google Sheets",
+        "Google Apps Script",
+        "Cloudflare"
+      ],
+      "status": "published",
+      "createdAt": "2026-07-12",
+      "updatedAt": "2026-07-12",
+      "publishedAt": "2026-07-12",
+      "contentHash": "96d5b4b1c3822fc5d5645bd94cdd75b86ea65b746f69c577271d4cecb3de5e37"
     },
     {
       "id": "post:posts/2026/example-draft.md",
