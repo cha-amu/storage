@@ -43,11 +43,9 @@ jobs:
           STORAGE_BASE_URL: https://cha-amu.github.io/storage
           API_URL: ${{ vars.API_URL || 'https://cha-amu-gateway.yiyaaang.workers.dev/api' }}
           STORAGE_SYNC_SECRET: ${{ secrets.STORAGE_SYNC_SECRET }}
-          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
         run: |
           test -n "$API_URL" || { echo "::error::API_URL is required"; exit 1; }
           test -n "$STORAGE_SYNC_SECRET" || { echo "::error::STORAGE_SYNC_SECRET is required"; exit 1; }
-          test -n "$ADMIN_PASSWORD" || { echo "::error::ADMIN_PASSWORD is required"; exit 1; }
           npm run sync
 
       - name: Commit storage changes

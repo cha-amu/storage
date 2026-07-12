@@ -9,14 +9,9 @@ const STORAGE_BASE_URL = (process.env.STORAGE_BASE_URL || 'https://cha-amu.githu
 const DEFAULT_API_URL = 'https://cha-amu-gateway.yiyaaang.workers.dev/api';
 const API_URL = (process.env.API_URL || DEFAULT_API_URL).trim();
 const STORAGE_SYNC_SECRET = process.env.STORAGE_SYNC_SECRET || '';
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || '';
 const SYNC_MODE = process.env.STORAGE_SYNC_MODE || (process.env.GITHUB_EVENT_NAME === 'push' ? 'storage-first' : 'latest');
 const DRY_RUN = process.env.STORAGE_SYNC_DRY_RUN === '1';
-const ADMIN_SESSION_REFRESH_MS = 20_000;
 const ADMIN_MUTATION_BATCH_SIZE = 100;
-
-let adminToken = '';
-let adminTokenRefreshedAt = 0;
 
 const IMAGE_EXTENSIONS = new Set(['.avif', '.gif', '.jpg', '.jpeg', '.png', '.svg', '.webp']);
 const ASSET_EXTENSIONS = new Set([...IMAGE_EXTENSIONS, '.pdf', '.zip', '.txt', '.md', '.json', '.csv', '.mp3', '.mp4', '.webm']);
@@ -37,8 +32,7 @@ function assertSyncConfiguration() {
   assert(url.protocol === 'https:' || (url.protocol === 'http:' && localTestHost), 'API_URL must use HTTPS.');
   assert(url.pathname === '/api' && !url.search && !url.hash, 'API_URL must point to the exact Worker /api endpoint.');
   assert(!url.username && !url.password, 'API_URL must not contain credentials.');
-  assert(STORAGE_SYNC_SECRET, 'STORAGE_SYNC_SECRET is required for storage sync.');
-  assert(ADMIN_PASSWORD, 'ADMIN_PASSWORD is required for storage sync.');
+  assert(STORAGE_SYNC_SECRET.length >= 32, 'STORAGE_SYNC_SECRET must be at least 32 characters for storage sync.');
 }
 
 async function assertStorageLayout() {
@@ -312,7 +306,7 @@ async function consumePostDeletions(deletions, postsAtStart, previousPostIds, pr
 
 async function finalizePostDeletions(deletions) {
   for (const batch of batches(deletions)) {
-    await adminRequest('admin.postDeletion.finalize', { deletions: batch });
+    await storageRequest('storage.sync.postDeletion.finalize', { deletions: batch });
   }
 }
 
@@ -324,11 +318,11 @@ async function deleteOrphanAssetOverrides(sheetOverrides, previousAssetIds, asse
       .filter((assetId) => assetId && !previousAssetIds.has(assetId) && !manifestAssetIds.has(assetId))
   ));
   for (const ids of batches(orphanIds)) {
-    await adminRequest('admin.assetOverride.delete', { ids });
+    await storageRequest('storage.sync.assetOverride.delete', { ids });
   }
 }
 
-async function gatewayRequest(action, payload = {}) {
+async function storageRequest(action, payload = {}) {
   const response = await fetch(API_URL, {
     method: 'POST',
     headers: {
@@ -346,24 +340,6 @@ async function gatewayRequest(action, payload = {}) {
   }
   if (!response.ok || !json.ok) throw new Error(json.error || `Gateway action failed: ${action} (${response.status})`);
   return json.data;
-}
-
-async function login() {
-  const session = await gatewayRequest('admin.login', { password: ADMIN_PASSWORD });
-  assert(session && session.token, 'Gateway did not return an admin token.');
-  adminToken = session.token;
-  adminTokenRefreshedAt = Date.now();
-}
-
-async function adminRequest(action, payload = {}) {
-  assert(adminToken, 'Admin session is required for storage sync.');
-  if (Date.now() - adminTokenRefreshedAt >= ADMIN_SESSION_REFRESH_MS) {
-    const session = await gatewayRequest('admin.session.refresh', { token: adminToken });
-    assert(session && session.token, 'Gateway did not refresh the admin token.');
-    adminToken = session.token;
-    adminTokenRefreshedAt = Date.now();
-  }
-  return gatewayRequest(action, { ...payload, token: adminToken });
 }
 
 function postMarkdown(post) {
@@ -524,7 +500,7 @@ function manifestPost(post) {
 }
 
 async function syncStoragePostToSheet(post) {
-  await adminRequest('admin.post.syncFromStorage', {
+  await storageRequest('storage.sync.post.save', {
     post: {
       id: post.id,
       title: post.title,
@@ -535,10 +511,8 @@ async function syncStoragePostToSheet(post) {
       createdAt: post.createdAt || new Date().toISOString(),
       updatedAt: post.updatedAt || post.publishedAt || post.createdAt || new Date().toISOString(),
       publishedAt: post.publishedAt || post.createdAt || new Date().toISOString(),
-      source: 'storage',
       storagePath: post.path,
-      bodyUrl: post.url,
-      syncStatus: 'synced'
+      bodyUrl: post.url
     }
   });
 }
@@ -547,12 +521,11 @@ async function main() {
   await assertStorageLayout();
   if (!DRY_RUN) {
     assertSyncConfiguration();
-    await login();
   }
 
-  const sheetPosts = DRY_RUN ? [] : await adminRequest('admin.post.list');
-  const sheetOverrides = DRY_RUN ? [] : await adminRequest('admin.assetOverride.list');
-  const postDeletions = DRY_RUN ? [] : normalizePostDeletions(await adminRequest('admin.postDeletion.list'));
+  const sheetPosts = DRY_RUN ? [] : await storageRequest('storage.sync.post.list');
+  const sheetOverrides = DRY_RUN ? [] : await storageRequest('storage.sync.assetOverride.list');
+  const postDeletions = DRY_RUN ? [] : normalizePostDeletions(await storageRequest('storage.sync.postDeletion.list'));
   const changes = changedPaths();
 
   const previousPostsManifestState = readManifestState([
@@ -597,7 +570,7 @@ async function main() {
   for (const asset of assets) {
     if (DRY_RUN) continue;
     if (sheetAssetIds.has(asset.id)) continue;
-    await adminRequest('admin.assetOverride.save', {
+    await storageRequest('storage.sync.assetOverride.save', {
       override: {
         assetId: asset.id,
         displayName: asset.title,

@@ -8,6 +8,8 @@ import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 
 const SCRIPT_PATH = fileURLToPath(new URL('../scripts/sync-storage-repo.mjs', import.meta.url));
+const WORKFLOW_PATH = fileURLToPath(new URL('../.github/workflows/sync.yml', import.meta.url));
+const TEST_SYNC_SECRET = 'test-storage-sync-secret-000000000000';
 
 async function makeStorageFixture() {
   const path = await mkdtemp(join(tmpdir(), 'cha-amu-storage-sync-'));
@@ -83,38 +85,39 @@ test('sync sends every action through the Worker API with service authentication
         payload
       });
 
-      const data = payload.action === 'admin.login' ? { token: 'test-admin-token' } : [];
       response.writeHead(200, { 'Content-Type': 'application/json' });
-      response.end(JSON.stringify({ ok: true, data }));
+      response.end(JSON.stringify({ ok: true, data: [] }));
     });
   });
   const port = await listen(server);
   const storagePath = await makeStorageFixture();
+  await writePost(storagePath, 'posts/2026/service-contract.md', 'service-contract');
+  await mkdir(join(storagePath, 'assets/files/2026'), { recursive: true });
+  await writeFile(join(storagePath, 'assets/files/2026/service-contract.txt'), 'service contract');
 
   try {
     const result = await runSync({
-      ADMIN_PASSWORD: 'test-admin-password',
       API_URL: `http://127.0.0.1:${port}/api`,
-      STORAGE_SYNC_SECRET: 'test-storage-secret',
+      STORAGE_SYNC_SECRET: TEST_SYNC_SECRET,
       STORAGE_WORKDIR: storagePath
     });
 
     assert.equal(result.code, 0, result.stderr);
     assert.deepEqual(requests.map(({ payload }) => payload.action), [
-      'admin.login',
-      'admin.post.list',
-      'admin.assetOverride.list',
-      'admin.postDeletion.list'
+      'storage.sync.post.list',
+      'storage.sync.assetOverride.list',
+      'storage.sync.postDeletion.list',
+      'storage.sync.post.save',
+      'storage.sync.assetOverride.save'
     ]);
     for (const request of requests) {
       assert.equal(request.method, 'POST');
       assert.equal(request.path, '/api');
-      assert.equal(request.authorization, 'Bearer test-storage-secret');
+      assert.equal(request.authorization, `Bearer ${TEST_SYNC_SECRET}`);
       assert.equal(request.contentType, 'text/plain;charset=utf-8');
+      assert.equal('password' in request.payload, false);
+      assert.equal('token' in request.payload, false);
     }
-    assert.equal(requests[1].payload.token, 'test-admin-token');
-    assert.equal(requests[2].payload.token, 'test-admin-token');
-    assert.equal(requests[3].payload.token, 'test-admin-token');
   } finally {
     await close(server);
     await rm(storagePath, { recursive: true, force: true });
@@ -132,11 +135,10 @@ test('post deletion removes the file first and finalizes id plus nonce only on a
       const payload = JSON.parse(body);
       requests.push(payload);
       let data = [];
-      if (payload.action === 'admin.login') data = { token: 'test-admin-token' };
-      if (payload.action === 'admin.post.list') {
+      if (payload.action === 'storage.sync.post.list') {
         data = [{ id: deletion.id, status: 'published', body: 'Must not be recreated', storagePath: deletion.storagePath }];
       }
-      if (payload.action === 'admin.postDeletion.list') data = { deletions: [deletion] };
+      if (payload.action === 'storage.sync.postDeletion.list') data = { deletions: [deletion] };
       response.writeHead(200, { 'Content-Type': 'application/json' });
       response.end(JSON.stringify({ ok: true, data }));
     });
@@ -145,9 +147,8 @@ test('post deletion removes the file first and finalizes id plus nonce only on a
   const storagePath = await makeStorageFixture();
   const postPath = await writePost(storagePath, deletion.storagePath, deletion.id);
   const env = {
-    ADMIN_PASSWORD: 'test-admin-password',
     API_URL: `http://127.0.0.1:${port}/api`,
-    STORAGE_SYNC_SECRET: 'test-storage-secret',
+    STORAGE_SYNC_SECRET: TEST_SYNC_SECRET,
     STORAGE_WORKDIR: storagePath
   };
 
@@ -155,14 +156,14 @@ test('post deletion removes the file first and finalizes id plus nonce only on a
     const firstRun = await runSync(env);
     assert.equal(firstRun.code, 0, firstRun.stderr);
     assert.equal(await pathExists(postPath), false);
-    assert.equal(requests.some((payload) => payload.action === 'admin.postDeletion.finalize'), false);
+    assert.equal(requests.some((payload) => payload.action === 'storage.sync.postDeletion.finalize'), false);
     const firstManifest = JSON.parse(await readFile(join(storagePath, 'manifests/posts.json'), 'utf8'));
     assert.deepEqual(firstManifest.posts, []);
 
     const secondRun = await runSync(env);
     assert.equal(secondRun.code, 0, secondRun.stderr);
     assert.equal(await pathExists(postPath), false);
-    const finalizeRequests = requests.filter((payload) => payload.action === 'admin.postDeletion.finalize');
+    const finalizeRequests = requests.filter((payload) => payload.action === 'storage.sync.postDeletion.finalize');
     assert.deepEqual(finalizeRequests.map((payload) => payload.deletions), [[{ id: deletion.id, nonce: deletion.nonce }]]);
   } finally {
     await close(server);
@@ -180,8 +181,7 @@ test('post deletion rejects unsafe paths and id mismatches without deleting or f
       const payload = JSON.parse(body);
       requests.push(payload);
       let data = [];
-      if (payload.action === 'admin.login') data = { token: 'test-admin-token' };
-      if (payload.action === 'admin.postDeletion.list') {
+      if (payload.action === 'storage.sync.postDeletion.list') {
         data = [
           { id: 'unsafe-post', nonce: 'unsafe-nonce', storagePath: 'posts/../outside.md' },
           { id: 'wrong-id', nonce: 'mismatch-nonce', storagePath: 'posts/2026/keep.md' }
@@ -198,9 +198,8 @@ test('post deletion rejects unsafe paths and id mismatches without deleting or f
 
   try {
     const result = await runSync({
-      ADMIN_PASSWORD: 'test-admin-password',
       API_URL: `http://127.0.0.1:${port}/api`,
-      STORAGE_SYNC_SECRET: 'test-storage-secret',
+      STORAGE_SYNC_SECRET: TEST_SYNC_SECRET,
       STORAGE_WORKDIR: storagePath
     });
 
@@ -209,7 +208,7 @@ test('post deletion rejects unsafe paths and id mismatches without deleting or f
     assert.match(result.stderr, /mismatched id/);
     assert.equal(await pathExists(outsidePath), true);
     assert.equal(await pathExists(keptPath), true);
-    assert.equal(requests.some((payload) => payload.action === 'admin.postDeletion.finalize'), false);
+    assert.equal(requests.some((payload) => payload.action === 'storage.sync.postDeletion.finalize'), false);
   } finally {
     await close(server);
     await rm(storagePath, { recursive: true, force: true });
@@ -231,8 +230,7 @@ test('post deletion finalization batches at most one hundred id and nonce pairs'
       const payload = JSON.parse(body);
       requests.push(payload);
       let data = [];
-      if (payload.action === 'admin.login') data = { token: 'test-admin-token' };
-      if (payload.action === 'admin.postDeletion.list') data = deletions;
+      if (payload.action === 'storage.sync.postDeletion.list') data = deletions;
       response.writeHead(200, { 'Content-Type': 'application/json' });
       response.end(JSON.stringify({ ok: true, data }));
     });
@@ -244,14 +242,13 @@ test('post deletion finalization batches at most one hundred id and nonce pairs'
 
   try {
     const result = await runSync({
-      ADMIN_PASSWORD: 'test-admin-password',
       API_URL: `http://127.0.0.1:${port}/api`,
-      STORAGE_SYNC_SECRET: 'test-storage-secret',
+      STORAGE_SYNC_SECRET: TEST_SYNC_SECRET,
       STORAGE_WORKDIR: storagePath
     });
 
     assert.equal(result.code, 0, result.stderr);
-    const finalizeRequests = requests.filter((payload) => payload.action === 'admin.postDeletion.finalize');
+    const finalizeRequests = requests.filter((payload) => payload.action === 'storage.sync.postDeletion.finalize');
     assert.deepEqual(finalizeRequests.map((payload) => payload.deletions.length), [100, 100, 5]);
     assert.deepEqual(finalizeRequests.flatMap((payload) => payload.deletions), deletions.map(({ id, nonce }) => ({ id, nonce })));
   } finally {
@@ -272,8 +269,7 @@ test('orphan asset overrides are deleted in batches while real asset sidecars re
       const payload = JSON.parse(body);
       requests.push(payload);
       let data = [];
-      if (payload.action === 'admin.login') data = { token: 'test-admin-token' };
-      if (payload.action === 'admin.assetOverride.list') {
+      if (payload.action === 'storage.sync.assetOverride.list') {
         data = [{ assetId: keptAssetId }, ...orphanIds.map((assetId) => ({ assetId }))];
       }
       response.writeHead(200, { 'Content-Type': 'application/json' });
@@ -294,14 +290,13 @@ test('orphan asset overrides are deleted in batches while real asset sidecars re
 
   try {
     const result = await runSync({
-      ADMIN_PASSWORD: 'test-admin-password',
       API_URL: `http://127.0.0.1:${port}/api`,
-      STORAGE_SYNC_SECRET: 'test-storage-secret',
+      STORAGE_SYNC_SECRET: TEST_SYNC_SECRET,
       STORAGE_WORKDIR: storagePath
     });
 
     assert.equal(result.code, 0, result.stderr);
-    const deleteRequests = requests.filter((payload) => payload.action === 'admin.assetOverride.delete');
+    const deleteRequests = requests.filter((payload) => payload.action === 'storage.sync.assetOverride.delete');
     assert.deepEqual(deleteRequests.map((payload) => payload.ids.length), [100, 100, 5]);
     assert.deepEqual(deleteRequests.flatMap((payload) => payload.ids).sort(), [...orphanIds].sort());
     assert.equal(await pathExists(assetPath), true);
@@ -328,8 +323,7 @@ test('unknown previous asset manifests never trigger destructive override cleanu
       const payload = JSON.parse(body);
       requests.push(payload);
       let data = [];
-      if (payload.action === 'admin.login') data = { token: 'test-admin-token' };
-      if (payload.action === 'admin.assetOverride.list') data = [{ assetId: orphanId, status: 'hidden' }];
+      if (payload.action === 'storage.sync.assetOverride.list') data = [{ assetId: orphanId, status: 'hidden' }];
       response.writeHead(200, { 'Content-Type': 'application/json' });
       response.end(JSON.stringify({ ok: true, data }));
     });
@@ -346,15 +340,14 @@ test('unknown previous asset manifests never trigger destructive override cleanu
       const requestStart = requests.length;
 
       const result = await runSync({
-        ADMIN_PASSWORD: 'test-admin-password',
         API_URL: `http://127.0.0.1:${port}/api`,
-        STORAGE_SYNC_SECRET: 'test-storage-secret',
+        STORAGE_SYNC_SECRET: TEST_SYNC_SECRET,
         STORAGE_WORKDIR: storagePath
       });
 
       assert.equal(result.code, 0, result.stderr);
       assert.equal(
-        requests.slice(requestStart).some((payload) => payload.action === 'admin.assetOverride.delete'),
+        requests.slice(requestStart).some((payload) => payload.action === 'storage.sync.assetOverride.delete'),
         false
       );
       const replacement = JSON.parse(await readFile(join(storagePath, 'manifests/assets.json'), 'utf8'));
@@ -380,11 +373,10 @@ test('an orphaned known sidecar is not promoted while standalone Markdown remain
       const payload = JSON.parse(body);
       requests.push(payload);
       let data = [];
-      if (payload.action === 'admin.login') data = { token: 'test-admin-token' };
-      if (payload.action === 'admin.assetOverride.list') {
+      if (payload.action === 'storage.sync.assetOverride.list') {
         data = Array.from(overrideIds, (assetId) => ({ assetId }));
       }
-      if (payload.action === 'admin.assetOverride.delete') {
+      if (payload.action === 'storage.sync.assetOverride.delete') {
         payload.ids.forEach((assetId) => overrideIds.delete(assetId));
         data = { deletedIds: payload.ids };
       }
@@ -420,9 +412,8 @@ test('an orphaned known sidecar is not promoted while standalone Markdown remain
 
   try {
     const result = await runSync({
-      ADMIN_PASSWORD: 'test-admin-password',
       API_URL: `http://127.0.0.1:${port}/api`,
-      STORAGE_SYNC_SECRET: 'test-storage-secret',
+      STORAGE_SYNC_SECRET: TEST_SYNC_SECRET,
       STORAGE_WORKDIR: storagePath
     });
 
@@ -430,14 +421,13 @@ test('an orphaned known sidecar is not promoted while standalone Markdown remain
     const firstManifest = JSON.parse(await readFile(join(storagePath, 'manifests/assets.json'), 'utf8'));
     assert.deepEqual(firstManifest.assets.map((asset) => asset.id), [standaloneAssetId]);
     assert.deepEqual(firstManifest.orphanedMetadataPaths, ['assets/gallery/photo.md']);
-    const firstDeleteRequests = requests.filter((payload) => payload.action === 'admin.assetOverride.delete');
+    const firstDeleteRequests = requests.filter((payload) => payload.action === 'storage.sync.assetOverride.delete');
     assert.deepEqual(firstDeleteRequests.flatMap((payload) => payload.ids), [orphanedSidecarId]);
     assert.equal(overrideIds.has(removedAssetId), true);
 
     const secondResult = await runSync({
-      ADMIN_PASSWORD: 'test-admin-password',
       API_URL: `http://127.0.0.1:${port}/api`,
-      STORAGE_SYNC_SECRET: 'test-storage-secret',
+      STORAGE_SYNC_SECRET: TEST_SYNC_SECRET,
       STORAGE_WORKDIR: storagePath
     });
 
@@ -445,7 +435,7 @@ test('an orphaned known sidecar is not promoted while standalone Markdown remain
     const secondManifest = JSON.parse(await readFile(join(storagePath, 'manifests/assets.json'), 'utf8'));
     assert.deepEqual(secondManifest.assets.map((asset) => asset.id), [standaloneAssetId]);
     assert.deepEqual(secondManifest.orphanedMetadataPaths, ['assets/gallery/photo.md']);
-    const deleteRequests = requests.filter((payload) => payload.action === 'admin.assetOverride.delete');
+    const deleteRequests = requests.filter((payload) => payload.action === 'storage.sync.assetOverride.delete');
     assert.deepEqual(deleteRequests.flatMap((payload) => payload.ids).sort(), [orphanedSidecarId, removedAssetId].sort());
     assert.equal(overrideIds.has(removedAssetId), false);
     assert.equal(await pathExists(orphanedSidecarPath), true);
@@ -476,9 +466,8 @@ test('sync fails closed before API requests when the storage layout is incomplet
       [invalidAssetsPath, /Storage assets path is not a directory/]
     ]) {
       const result = await runSync({
-        ADMIN_PASSWORD: 'test-admin-password',
         API_URL: `http://127.0.0.1:${port}/api`,
-        STORAGE_SYNC_SECRET: 'test-storage-secret',
+        STORAGE_SYNC_SECRET: TEST_SYNC_SECRET,
         STORAGE_WORKDIR: storagePath
       });
 
@@ -499,32 +488,45 @@ test('sync fails before making a request when the service secret is missing', as
   const storagePath = await makeStorageFixture();
   try {
     const result = await runSync({
-      ADMIN_PASSWORD: 'test-admin-password',
       API_URL: 'https://cha-amu-gateway.yiyaaang.workers.dev/api',
       STORAGE_SYNC_SECRET: '',
       STORAGE_WORKDIR: storagePath
     });
 
     assert.equal(result.code, 1);
-    assert.match(result.stderr, /STORAGE_SYNC_SECRET is required/);
+    assert.match(result.stderr, /STORAGE_SYNC_SECRET must be at least 32 characters/);
   } finally {
     await rm(storagePath, { recursive: true, force: true });
   }
 });
 
-test('sync fails before making a request when the admin password is missing', async () => {
+test('sync stops on a rejected service secret without writing manifests or leaking the secret', async () => {
+  let requestCount = 0;
+  const server = createServer((request, response) => {
+    requestCount += 1;
+    request.resume();
+    request.on('end', () => {
+      response.writeHead(403, { 'Content-Type': 'application/json' });
+      response.end(JSON.stringify({ ok: false, error: 'Storage authentication failed.' }));
+    });
+  });
+  const port = await listen(server);
   const storagePath = await makeStorageFixture();
   try {
     const result = await runSync({
-      ADMIN_PASSWORD: '',
-      API_URL: 'https://cha-amu-gateway.yiyaaang.workers.dev/api',
-      STORAGE_SYNC_SECRET: 'test-storage-secret',
+      API_URL: `http://127.0.0.1:${port}/api`,
+      STORAGE_SYNC_SECRET: TEST_SYNC_SECRET,
       STORAGE_WORKDIR: storagePath
     });
 
     assert.equal(result.code, 1);
-    assert.match(result.stderr, /ADMIN_PASSWORD is required/);
+    assert.match(result.stderr, /Storage authentication failed/);
+    assert.equal(result.stderr.includes(TEST_SYNC_SECRET), false);
+    assert.equal(requestCount, 1);
+    assert.equal(await pathExists(join(storagePath, 'manifests/posts.json')), false);
+    assert.equal(await pathExists(join(storagePath, 'manifests/assets.json')), false);
   } finally {
+    await close(server);
     await rm(storagePath, { recursive: true, force: true });
   }
 });
@@ -533,9 +535,8 @@ test('sync rejects a direct Apps Script endpoint', async () => {
   const storagePath = await makeStorageFixture();
   try {
     const result = await runSync({
-      ADMIN_PASSWORD: 'test-admin-password',
       API_URL: 'https://script.google.com/macros/s/example/exec',
-      STORAGE_SYNC_SECRET: 'test-storage-secret',
+      STORAGE_SYNC_SECRET: TEST_SYNC_SECRET,
       STORAGE_WORKDIR: storagePath
     });
 
@@ -544,4 +545,17 @@ test('sync rejects a direct Apps Script endpoint', async () => {
   } finally {
     await rm(storagePath, { recursive: true, force: true });
   }
+});
+
+test('sync client and workflow have no administrator credential dependency', async () => {
+  const [script, workflow] = await Promise.all([
+    readFile(SCRIPT_PATH, 'utf8'),
+    readFile(WORKFLOW_PATH, 'utf8')
+  ]);
+  for (const contents of [script, workflow]) {
+    assert.equal(contents.includes('ADMIN_PASSWORD'), false);
+    assert.equal(contents.includes('admin.login'), false);
+    assert.equal(contents.includes('admin.session.refresh'), false);
+  }
+  assert.match(workflow, /STORAGE_SYNC_SECRET:\s*\$\{\{ secrets\.STORAGE_SYNC_SECRET \}\}/);
 });
