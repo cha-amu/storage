@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-12T12:07:51.742Z",
+  "generatedAt": "2026-07-12T13:56:12.262Z",
   "posts": [
     {
       "id": "7e14bfe4-36b7-4c78-b0ef-d0a1a1720a96",
@@ -32,9 +32,9 @@
       ],
       "status": "published",
       "createdAt": "2026-07-11T15:00:00.000Z",
-      "updatedAt": "2026-07-12T11:34:38.256Z",
+      "updatedAt": "2026-07-12T12:10:08.256Z",
       "publishedAt": "2026-07-11T15:00:00.000Z",
-      "contentHash": "398cf1db4449d51620efee2362b37a6ca7bec5b974d140e3cca1ce119b6fdda9"
+      "contentHash": "8571795d3ee80587e098c2bf3fcbe6095eda6945d7aadd79bda3253775b0f6bf"
     },
     {
       "id": "post:posts/2026/example-draft.md",
