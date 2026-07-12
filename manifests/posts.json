@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-12T11:33:06.581Z",
+  "generatedAt": "2026-07-12T11:58:54.014Z",
   "posts": [
     {
       "id": "7e14bfe4-36b7-4c78-b0ef-d0a1a1720a96",
@@ -32,7 +32,7 @@
       ],
       "status": "published",
       "createdAt": "2026-07-12",
-      "updatedAt": "2026-07-12",
+      "updatedAt": "2026-07-12T11:27:22.000Z",
       "publishedAt": "2026-07-12",
       "contentHash": "96d5b4b1c3822fc5d5645bd94cdd75b86ea65b746f69c577271d4cecb3de5e37"
     },
@@ -48,7 +48,7 @@
       ],
       "status": "draft",
       "createdAt": "2026-07-09",
-      "updatedAt": "2026-07-09",
+      "updatedAt": "2026-07-09T08:45:03.000Z",
       "publishedAt": "2026-07-09",
       "contentHash": "19f5c851fa423f036ee616f50edc3e83c2d2376fae561663cc4ba48ba7475f62"
     }
