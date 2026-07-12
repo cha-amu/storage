@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-12T03:57:43.901Z",
+  "generatedAt": "2026-07-12T06:46:45.234Z",
   "posts": [
     {
       "id": "6ba660b6-3c9e-40fc-8a49-35036be9ef94",
@@ -11,9 +11,9 @@
       "tags": [],
       "status": "published",
       "createdAt": "2026-07-11T17:45:17.321Z",
-      "updatedAt": "2026-07-11T17:45:17.319Z",
+      "updatedAt": "2026-07-12T06:04:04.331Z",
       "publishedAt": "2026-07-11T17:45:17.321Z",
-      "contentHash": "8a718e9de059aeda82be628b8897eff579ab12456489481e3b397ef769b79b1a"
+      "contentHash": "ec9cbb921e2d2d808a9c3b8897ab621593c251d8e5f51b142d9934c72fe8b888"
     },
     {
       "id": "84636d82-eb21-451c-aa11-8f04d6af9e7a",
@@ -22,11 +22,11 @@
       "title": "ddd",
       "excerpt": "dd",
       "tags": [],
-      "status": "hidden",
+      "status": "published",
       "createdAt": "2026-07-10T01:07:43.319Z",
-      "updatedAt": "2026-07-11T15:35:03.424Z",
+      "updatedAt": "2026-07-12T06:04:04.331Z",
       "publishedAt": "2026-07-10T01:07:43.319Z",
-      "contentHash": "847cb0eb9295fede786144993ebeb67aad654808cc8deec66579b72544478c1e"
+      "contentHash": "1b1ab0502600651f070cd57e3d995dc64166866e2297bbaf7a32a95c5d3da4da"
     },
     {
       "id": "codex-smoke-5cae139",
@@ -37,11 +37,11 @@
       "tags": [
         "smoke-test"
       ],
-      "status": "hidden",
+      "status": "published",
       "createdAt": "2026-07-09T07:36:25.230Z",
-      "updatedAt": "2026-07-10T10:18:08.187Z",
+      "updatedAt": "2026-07-12T06:04:04.331Z",
       "publishedAt": "2026-07-09T07:36:25.230Z",
-      "contentHash": "b35e5afac7379338a2ef5c62b73273a4b8ab6a43adbf789007f402325342d2bb"
+      "contentHash": "fd22faca10a9d5368d5fb89c4e606faa42e71f066d5635ab78dd8d7d0dd13940"
     },
     {
       "id": "c3659d67-dd00-4069-a99b-e594986c2b25",
@@ -52,11 +52,11 @@
       "tags": [
         "d"
       ],
-      "status": "hidden",
+      "status": "published",
       "createdAt": "2026-07-09T07:10:25.664Z",
-      "updatedAt": "2026-07-11T15:35:12.133Z",
+      "updatedAt": "2026-07-12T06:04:04.331Z",
       "publishedAt": "2026-07-09T07:10:25.664Z",
-      "contentHash": "72a2a04770a5299ef2c0d06ea3304a881f5d0e729fe2b2bb3be3d0a535fe92d4"
+      "contentHash": "a2d28a96b2a31e0765f69ad6dda670a1cc6fe16ab8b176518b48d139e033204a"
     },
     {
       "id": "post:posts/2026/example-draft.md",
@@ -81,11 +81,11 @@
       "title": "31231",
       "excerpt": "12312313",
       "tags": [],
-      "status": "hidden",
+      "status": "published",
       "createdAt": "2026-07-08T22:09:29.038Z",
-      "updatedAt": "2026-07-08T22:09:29.038Z",
+      "updatedAt": "2026-07-12T06:04:04.331Z",
       "publishedAt": "2026-07-08T22:09:29.038Z",
-      "contentHash": "f9cdfe4def6c3c9f9d47360f5c9a1c8dc5557c0b719937452e5ffe775e6cc10d"
+      "contentHash": "dd8d83e125af78b421badefa2725245085445b3ba929330f1de8084288601902"
     },
     {
       "id": "87cd9008-025a-41de-a9b5-ecbe856618ae",
@@ -94,11 +94,11 @@
       "title": "231414",
       "excerpt": "12312312312313",
       "tags": [],
-      "status": "hidden",
+      "status": "published",
       "createdAt": "2026-07-08T21:59:41.136Z",
-      "updatedAt": "2026-07-08T21:59:41.136Z",
+      "updatedAt": "2026-07-12T06:04:04.331Z",
       "publishedAt": "2026-07-08T21:59:41.136Z",
-      "contentHash": "8e10c5bb8f71e5aafdad47ff706c12951f6a042f316b1beb4f3432c73d991d4c"
+      "contentHash": "bbe314b30a2615b6748780036cf7ab7d3a148d7b6baee7a8ea4e0782890b06ae"
     },
     {
       "id": "b9832bb8-3ac4-41b2-acd8-eb41908dcd87",
@@ -107,11 +107,11 @@
       "title": "12131",
       "excerpt": "1",
       "tags": [],
-      "status": "hidden",
+      "status": "published",
       "createdAt": "2026-07-08T21:58:03.245Z",
-      "updatedAt": "2026-07-08T21:59:33.889Z",
+      "updatedAt": "2026-07-12T06:04:04.331Z",
       "publishedAt": "2026-07-08T21:58:03.245Z",
-      "contentHash": "c54decbb7c4a53b07d4057b2dd177217ec145b8432b3ebe30c482e109b95acc2"
+      "contentHash": "611effc27c6e316fcc6b8e9d70cc972258168fdbd4fb060f815d94e8d53689fd"
     },
     {
       "id": "e5a09ee7-1d66-4522-b4c6-13efcd7bc19c",
@@ -122,11 +122,11 @@
       "tags": [
         "test"
       ],
-      "status": "hidden",
+      "status": "published",
       "createdAt": "2026-07-08T21:45:28.356Z",
-      "updatedAt": "2026-07-08T21:45:28.356Z",
+      "updatedAt": "2026-07-12T06:04:04.331Z",
       "publishedAt": "2026-07-08T21:45:28.356Z",
-      "contentHash": "c65bac8aa187b0577100d4544d0d935c1c9706b6cfba3a013d1218f695d956e6"
+      "contentHash": "50969247b0a93be8fb545139b27845e59625f1f7a1867649c077bc7a01404775"
     },
     {
       "id": "1ca4059a-febf-485e-a6b2-c04d6a3500d0",
@@ -135,11 +135,11 @@
       "title": "dd",
       "excerpt": "테스트글",
       "tags": [],
-      "status": "hidden",
+      "status": "published",
       "createdAt": "2026-07-08T21:45:16.835Z",
-      "updatedAt": "2026-07-08T21:45:16.835Z",
+      "updatedAt": "2026-07-12T06:04:04.331Z",
       "publishedAt": "2026-07-08T21:45:16.835Z",
-      "contentHash": "7c875f7ebfdb16c330333809537dc1098b82b818f7457a182d7ecff1804c42fd"
+      "contentHash": "3c2fa13bf97bdd85b9832a985864c4f15f104e5ea882bb7f45ba94b4996d22e8"
     }
   ]
 }
