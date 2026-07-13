@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-13T11:18:32.724Z",
+  "generatedAt": "2026-07-13T11:29:12.781Z",
   "posts": [
+    {
+      "id": "944fd92f-4025-47ee-ab18-3fa27c8b5b2a",
+      "path": "posts/2026/--1.md",
+      "url": "https://cha-amu.github.io/storage/posts/2026/--1.md",
+      "title": "수중 생태계 시뮬레이션 만들기 - 1",
+      "excerpt": "생물과 환경을 배치해 스스로 순환하는 수조를 만드는 게임. 첫 단계에서 조류, 빛, 구조물을 이용한 두 개의 미션 구현 예정",
+      "tags": [
+        "게임 개발",
+        "개발 일지",
+        "생태 시뮬레이션",
+        "AquaCycle"
+      ],
+      "status": "published",
+      "createdAt": "2026-07-13T11:08:39.013Z",
+      "updatedAt": "2026-07-13T11:10:15.959Z",
+      "publishedAt": "2026-07-13T11:10:15.961Z",
+      "contentHash": "369dfdd76804c35dd664d90c070aff03ff96f757f2a8b787ad898305c075df19"
+    },
     {
       "id": "7e14bfe4-36b7-4c78-b0ef-d0a1a1720a96",
       "path": "posts/2026/untitled.md",
