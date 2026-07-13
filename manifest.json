@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-13T07:37:28.343Z",
+  "generatedAt": "2026-07-13T11:18:32.724Z",
   "posts": [
     {
       "id": "7e14bfe4-36b7-4c78-b0ef-d0a1a1720a96",
@@ -68,6 +68,22 @@
       "status": "visible",
       "size": 730609,
       "updatedAt": "2026-07-12T10:23:03.751Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/aquacycle/모기고기--이미지+물고기--.png",
+      "path": "assets/images/2026/aquacycle/모기고기--이미지+물고기--.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/aquacycle/모기고기--이미지+물고기--.png",
+      "kind": "image",
+      "fileName": "모기고기--이미지+물고기--.png",
+      "title": "모기고기",
+      "tags": [
+        "이미지",
+        "물고기"
+      ],
+      "status": "visible",
+      "size": 600243,
+      "updatedAt": "2026-07-13T11:18:21.240Z",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
     },
     {
