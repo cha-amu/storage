@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-16T22:11:37.547Z",
+  "generatedAt": "2026-07-16T22:17:15.860Z",
   "posts": [
     {
       "id": "post:posts/2026/타로밀크티-웹을-만들었다.md",
       "path": "posts/2026/타로밀크티-웹을-만들었다.md",
       "url": "https://cha-amu.github.io/storage/posts/2026/타로밀크티-웹을-만들었다.md",
-      "title": "타로밀크티 웹을 만들었다",
+      "title": "타로웹 만듦...",
       "excerpt": "이전에 그린 78장의 카드와 Cloudflare Workers AI를 이용해, 질문에 맞는 카드를 직접 뽑고 해석받는 웹 타로 앱을 만들었다.",
       "tags": [
         "웹 개발",
@@ -15,11 +15,11 @@
         "타로",
         "Cloudflare"
       ],
-      "status": "draft",
-      "createdAt": "2026-07-17",
-      "updatedAt": "2026-07-16T21:56:58.000Z",
-      "publishedAt": "2026-07-17",
-      "contentHash": "b5be04e1693a6bf9b2b0993e7b21d94639e4408b0372f88057cd541b96579cb8"
+      "status": "published",
+      "createdAt": "2026-07-16T15:00:00.000Z",
+      "updatedAt": "2026-07-16T22:13:59.814Z",
+      "publishedAt": "2026-07-16T15:00:00.000Z",
+      "contentHash": "c31c09aadebecedcac581474e9798ec05b182687390c3cbac1a34dfe8119ee39"
     },
     {
       "id": "944fd92f-4025-47ee-ab18-3fa27c8b5b2a",
