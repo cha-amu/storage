@@ -29,6 +29,6 @@ manifest.json
 
 The sync workflow runs in this storage repo. Pushes to `posts/` or `assets/` immediately copy storage content into Google Sheets through Apps Script. Scheduled/manual syncs also copy newer Google Sheets edits back into Markdown files, regenerate manifests, and commit the result with this repo's built-in `GITHUB_TOKEN`.
 
-The workflow sends every sync request through `https://cha-amu-gateway.yiyaaang.workers.dev/api`. Configure the repository secret `STORAGE_SYNC_SECRET`; `API_URL` is an optional repository variable for replacing the default Worker endpoint. Storage sync uses its dedicated service actions and never uses the interactive administrator password or session.
+The workflow sends every sync request through `https://cha-amu-gateway.cha-amu.workers.dev/api`. Configure the repository secret `STORAGE_SYNC_SECRET`; `API_URL` is an optional repository variable for replacing the default Worker endpoint. Storage sync uses its dedicated service actions and never uses the interactive administrator password or session.
 
 See `UPLOAD_GUIDE.md` for the direct GitHub upload format. The site repo document `docs/storage-authoring.md` has the same authoring rules from the main project side.

@@ -41,7 +41,7 @@ jobs:
       - name: Sync Sheets and storage manifests
         env:
           STORAGE_BASE_URL: https://cha-amu.github.io/storage
-          API_URL: ${{ vars.API_URL || 'https://cha-amu-gateway.yiyaaang.workers.dev/api' }}
+          API_URL: ${{ vars.API_URL || 'https://cha-amu-gateway.cha-amu.workers.dev/api' }}
           STORAGE_SYNC_SECRET: ${{ secrets.STORAGE_SYNC_SECRET }}
         run: |
           test -n "$API_URL" || { echo "::error::API_URL is required"; exit 1; }

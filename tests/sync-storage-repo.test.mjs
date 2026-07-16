@@ -614,7 +614,7 @@ test('sync fails before making a request when the service secret is missing', as
   const storagePath = await makeStorageFixture();
   try {
     const result = await runSync({
-      API_URL: 'https://cha-amu-gateway.yiyaaang.workers.dev/api',
+      API_URL: 'https://cha-amu-gateway.cha-amu.workers.dev/api',
       STORAGE_SYNC_SECRET: '',
       STORAGE_WORKDIR: storagePath
     });

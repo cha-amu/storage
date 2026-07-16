@@ -6,7 +6,7 @@ import { execFileSync } from 'node:child_process';
 
 const STORAGE_WORKDIR = process.env.STORAGE_WORKDIR || '.';
 const STORAGE_BASE_URL = (process.env.STORAGE_BASE_URL || 'https://cha-amu.github.io/storage').replace(/\/$/, '');
-const DEFAULT_API_URL = 'https://cha-amu-gateway.yiyaaang.workers.dev/api';
+const DEFAULT_API_URL = 'https://cha-amu-gateway.cha-amu.workers.dev/api';
 const API_URL = (process.env.API_URL || DEFAULT_API_URL).trim();
 const STORAGE_SYNC_SECRET = process.env.STORAGE_SYNC_SECRET || '';
 const SYNC_MODE = process.env.STORAGE_SYNC_MODE || (process.env.GITHUB_EVENT_NAME === 'push' ? 'storage-first' : 'latest');
