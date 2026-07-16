@@ -162,9 +162,8 @@ function changedPaths() {
   if (process.env.GITHUB_EVENT_NAME !== 'push') return undefined;
   try {
     return new Set(
-      execFileSync('git', ['diff', '--name-only', 'HEAD~1', 'HEAD'], { cwd: STORAGE_WORKDIR, encoding: 'utf8' })
-        .split('\n')
-        .map((path) => path.trim())
+      execFileSync('git', ['diff', '--name-only', '-z', 'HEAD~1', 'HEAD'], { cwd: STORAGE_WORKDIR, encoding: 'utf8' })
+        .split('\0')
         .filter(Boolean)
     );
   } catch (_) {

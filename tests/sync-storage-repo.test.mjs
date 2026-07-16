@@ -187,7 +187,7 @@ test('date-only posts use the file commit time as their precise updatedAt', asyn
   }
 });
 
-test('push sync uses the changed file commit time over stale frontmatter', async () => {
+test('push sync detects changed non-ASCII paths and uses the file commit time', async () => {
   const requests = [];
   const server = createServer((request, response) => {
     let body = '';
@@ -201,7 +201,7 @@ test('push sync uses the changed file commit time over stale frontmatter', async
   });
   const port = await listen(server);
   const storagePath = await makeStorageFixture();
-  const postPath = join(storagePath, 'posts/2026/changed.md');
+  const postPath = join(storagePath, 'posts/2026/변경된-글.md');
   await mkdir(dirname(postPath), { recursive: true });
   await writeFile(postPath, [
     '---',
