@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-16T23:13:50.761Z",
+  "generatedAt": "2026-07-16T23:27:20.584Z",
   "assets": [
     {
       "id": "asset:assets/files/2026/dodbogi--앱--돋보기 앱.zip",
@@ -1902,6 +1902,24 @@
       "status": "visible",
       "size": 38990,
       "updatedAt": "2026-07-09T17:39:51.254Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/아무거--아이콘+사이트+앱--파스텔_돌_캐릭터.png",
+      "path": "assets/images/2026/아무거--아이콘+사이트+앱--파스텔_돌_캐릭터.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/아무거--아이콘+사이트+앱--파스텔_돌_캐릭터.png",
+      "kind": "image",
+      "fileName": "아무거--아이콘+사이트+앱--파스텔_돌_캐릭터.png",
+      "title": "아무거",
+      "description": "파스텔 돌 캐릭터",
+      "tags": [
+        "아이콘",
+        "사이트",
+        "앱"
+      ],
+      "status": "visible",
+      "size": 37594,
+      "updatedAt": "2026-07-16T23:27:07.833Z",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
     },
     {
