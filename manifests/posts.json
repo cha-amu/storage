@@ -1,7 +1,26 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-21T23:11:31.054Z",
+  "generatedAt": "2026-07-21T23:55:49.144Z",
   "posts": [
+    {
+      "id": "post:posts/2026/한-해를-한-장에-펼치는-플래너-Anniary.md",
+      "path": "posts/2026/한-해를-한-장에-펼치는-플래너-Anniary.md",
+      "url": "https://cha-amu.github.io/storage/posts/2026/한-해를-한-장에-펼치는-플래너-Anniary.md",
+      "title": "한 해를 한 장에 펼치는 플래너, Anniary",
+      "excerpt": "월간 달력 대신 한 해 전체를 펼쳐놓고 일정과 메모, 기간과 그림을 함께 관리하는 연간 플래너를 만들었다.",
+      "tags": [
+        "웹 개발",
+        "개발 일지",
+        "생산성 도구",
+        "캘린더",
+        "Anniary"
+      ],
+      "status": "draft",
+      "createdAt": "2026-07-22",
+      "updatedAt": "2026-07-21T23:54:27.000Z",
+      "publishedAt": "2026-07-22",
+      "contentHash": "7ea03e39dfcccc575c8c6bbf79f0f2e82aaddbe855a5c0ef8f814d3786bd8b79"
+    },
     {
       "id": "post:posts/2026/수중-생태계-시뮬레이션-만들기-2.md",
       "path": "posts/2026/수중-생태계-시뮬레이션-만들기-2.md",
