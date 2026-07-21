@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-21T15:28:00.141Z",
+  "generatedAt": "2026-07-21T16:41:36.776Z",
   "posts": [
     {
       "id": "post:posts/2026/수중-생태계-시뮬레이션-만들기-2.md",
@@ -14,11 +14,11 @@
         "생태 시뮬레이션",
         "AquaCycle"
       ],
-      "status": "draft",
-      "createdAt": "2026-07-21",
-      "updatedAt": "2026-07-21T15:27:30.000Z",
-      "publishedAt": "2026-07-21",
-      "contentHash": "e0f95329be915c8993196fa7614ee996761b27b5edb7247c008af82c0ff0532f"
+      "status": "published",
+      "createdAt": "2026-07-20T15:00:00.000Z",
+      "updatedAt": "2026-07-21T15:28:46.416Z",
+      "publishedAt": "2026-07-20T15:00:00.000Z",
+      "contentHash": "d61bce3306db3f20e409ea6dc7958b407a3b882fc6e12403d85aede95abc98b7"
     },
     {
       "id": "post:posts/2026/타로밀크티-웹을-만들었다.md",
