@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-22T00:03:34.324Z",
+  "generatedAt": "2026-07-22T00:04:31.587Z",
   "assets": [
     {
       "id": "asset:assets/files/2026/dodbogi--앱--돋보기 앱.zip",
@@ -19,20 +19,21 @@
       "markdownRootUrl": "https://cha-amu.github.io/storage"
     },
     {
-      "id": "asset:assets/images/2026/anniary/favicon.png",
-      "path": "assets/images/2026/anniary/favicon.png",
-      "url": "https://cha-amu.github.io/storage/assets/images/2026/anniary/favicon.png",
+      "id": "asset:assets/images/2026/anniary/애니어리--아이콘+연간플래너+캘린더--애니어리_앱_아이콘.png",
+      "path": "assets/images/2026/anniary/애니어리--아이콘+연간플래너+캘린더--애니어리_앱_아이콘.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/anniary/애니어리--아이콘+연간플래너+캘린더--애니어리_앱_아이콘.png",
       "kind": "image",
-      "fileName": "favicon.png",
-      "title": "favicon",
+      "fileName": "애니어리--아이콘+연간플래너+캘린더--애니어리_앱_아이콘.png",
+      "title": "애니어리",
+      "description": "애니어리 앱 아이콘",
       "tags": [
-        "images",
-        "2026",
-        "anniary"
+        "아이콘",
+        "연간플래너",
+        "캘린더"
       ],
       "status": "visible",
       "size": 6893,
-      "updatedAt": "2026-07-22T00:03:20.114Z",
+      "updatedAt": "2026-07-22T00:04:18.802Z",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
     },
     {
