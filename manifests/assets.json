@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-21T23:55:49.144Z",
+  "generatedAt": "2026-07-22T00:03:34.324Z",
   "assets": [
     {
       "id": "asset:assets/files/2026/dodbogi--앱--돋보기 앱.zip",
@@ -16,6 +16,23 @@
       "status": "visible",
       "size": 730609,
       "updatedAt": "2026-07-12T10:23:03.751Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/anniary/favicon.png",
+      "path": "assets/images/2026/anniary/favicon.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/anniary/favicon.png",
+      "kind": "image",
+      "fileName": "favicon.png",
+      "title": "favicon",
+      "tags": [
+        "images",
+        "2026",
+        "anniary"
+      ],
+      "status": "visible",
+      "size": 6893,
+      "updatedAt": "2026-07-22T00:03:20.114Z",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
     },
     {
