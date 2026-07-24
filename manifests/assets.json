@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-24T03:43:55.491Z",
+  "generatedAt": "2026-07-24T05:04:55.023Z",
   "assets": [
     {
       "id": "asset:assets/files/2026/dodbogi--앱--돋보기 앱.zip",
@@ -50,6 +50,42 @@
       "status": "visible",
       "size": 600243,
       "updatedAt": "2026-07-13T11:18:21.240Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/physics/100m-수직-점프--이미지+물리+계산--두_사람의_질량과_다리_가속_거리.png",
+      "path": "assets/images/2026/physics/100m-수직-점프--이미지+물리+계산--두_사람의_질량과_다리_가속_거리.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/physics/100m-수직-점프--이미지+물리+계산--두_사람의_질량과_다리_가속_거리.png",
+      "kind": "image",
+      "fileName": "100m-수직-점프--이미지+물리+계산--두_사람의_질량과_다리_가속_거리.png",
+      "title": "100m-수직-점프",
+      "description": "두 사람의 질량과 다리 가속 거리",
+      "tags": [
+        "이미지",
+        "물리",
+        "계산"
+      ],
+      "status": "visible",
+      "size": 772328,
+      "updatedAt": "2026-07-24T05:04:32.866Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/physics/서로-들어-올리기--이미지+물리+밈--서로를_들어_올리는_비행_밈.png",
+      "path": "assets/images/2026/physics/서로-들어-올리기--이미지+물리+밈--서로를_들어_올리는_비행_밈.png",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/physics/서로-들어-올리기--이미지+물리+밈--서로를_들어_올리는_비행_밈.png",
+      "kind": "image",
+      "fileName": "서로-들어-올리기--이미지+물리+밈--서로를_들어_올리는_비행_밈.png",
+      "title": "서로-들어-올리기",
+      "description": "서로를 들어 올리는 비행 밈",
+      "tags": [
+        "이미지",
+        "물리",
+        "밈"
+      ],
+      "status": "visible",
+      "size": 867867,
+      "updatedAt": "2026-07-24T05:04:32.867Z",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
     },
     {
