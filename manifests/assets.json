@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-24T05:19:33.389Z",
+  "generatedAt": "2026-07-24T05:33:21.434Z",
   "assets": [
     {
       "id": "asset:assets/files/2026/dodbogi--앱--돋보기 앱.zip",
@@ -66,8 +66,8 @@
         "계산"
       ],
       "status": "visible",
-      "size": 772328,
-      "updatedAt": "2026-07-24T05:04:32.866Z",
+      "size": 633327,
+      "updatedAt": "2026-07-24T05:33:09.418Z",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
     },
     {
@@ -84,8 +84,8 @@
         "밈"
       ],
       "status": "visible",
-      "size": 867867,
-      "updatedAt": "2026-07-24T05:04:32.867Z",
+      "size": 764927,
+      "updatedAt": "2026-07-24T05:33:09.420Z",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
     },
     {
