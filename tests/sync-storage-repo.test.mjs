@@ -94,6 +94,7 @@ test('sync sends every action through the Worker API with service authentication
   await writePost(storagePath, 'posts/2026/service-contract.md', 'service-contract');
   await mkdir(join(storagePath, 'assets/files/2026'), { recursive: true });
   await writeFile(join(storagePath, 'assets/files/2026/service-contract.txt'), 'service contract');
+  await writeFile(join(storagePath, 'assets/files/2026/split-archive.z01'), 'split archive part');
 
   try {
     const result = await runSync({
@@ -108,8 +109,19 @@ test('sync sends every action through the Worker API with service authentication
       'storage.sync.assetOverride.list',
       'storage.sync.postDeletion.list',
       'storage.sync.post.save',
+      'storage.sync.assetOverride.save',
       'storage.sync.assetOverride.save'
     ]);
+    assert.deepEqual(
+      requests
+        .filter(({ payload }) => payload.action === 'storage.sync.assetOverride.save')
+        .map(({ payload }) => payload.override.assetId)
+        .sort(),
+      [
+        'asset:assets/files/2026/service-contract.txt',
+        'asset:assets/files/2026/split-archive.z01'
+      ]
+    );
     for (const request of requests) {
       assert.equal(request.method, 'POST');
       assert.equal(request.path, '/api');
