@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-24T00:11:07.486Z",
+  "generatedAt": "2026-07-24T01:07:52.495Z",
   "posts": [
+    {
+      "id": "post:posts/2026/수중-생태계-시뮬레이션-만들기-3.md",
+      "path": "posts/2026/수중-생태계-시뮬레이션-만들기-3.md",
+      "url": "https://cha-amu.github.io/storage/posts/2026/수중-생태계-시뮬레이션-만들기-3.md",
+      "title": "수중 생태계 시뮬레이션 만들기 - 3",
+      "excerpt": "조류의 순성장률을 광합성·호흡으로 분리하고, 체리새우와 미생물의 계산을 실제 질량과 수온에 연결했다.",
+      "tags": [
+        "게임 개발",
+        "개발 일지",
+        "생태 시뮬레이션",
+        "AquaCycle"
+      ],
+      "status": "draft",
+      "createdAt": "2026-07-24",
+      "updatedAt": "2026-07-24T01:07:22.000Z",
+      "publishedAt": "2026-07-24",
+      "contentHash": "fcadef8afacbe394808c3cafe55e7e564df08dd8a866f3e649b2e69c7731ba7c"
+    },
     {
       "id": "post:posts/2026/한-해를-한-장에-펼치는-플래너-Anniary.md",
       "path": "posts/2026/한-해를-한-장에-펼치는-플래너-Anniary.md",
