@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-24T05:33:21.434Z",
+  "generatedAt": "2026-07-24T06:11:31.940Z",
   "posts": [
     {
       "id": "post:posts/2026/서로를-들어-올리며-비둘기-높이까지-날-수-있을까.md",
@@ -161,6 +161,48 @@
     }
   ],
   "assets": [
+    {
+      "id": "asset:assets/files/2026/aquacycle/AquaCycle-0.2.0-Windows-x64--게임+AquaCycle+Windows+다운로드--분할압축_두_파일을_같이_받아주세요.z01",
+      "path": "assets/files/2026/aquacycle/AquaCycle-0.2.0-Windows-x64--게임+AquaCycle+Windows+다운로드--분할압축_두_파일을_같이_받아주세요.z01",
+      "url": "https://cha-amu.github.io/storage/assets/files/2026/aquacycle/AquaCycle-0.2.0-Windows-x64--게임+AquaCycle+Windows+다운로드--분할압축_두_파일을_같이_받아주세요.z01",
+      "kind": "file",
+      "fileName": "AquaCycle-0.2.0-Windows-x64--게임+AquaCycle+Windows+다운로드--분할압축_두_파일을_같이_받아주세요.z01",
+      "title": "AquaCycle 0.2.0 Windows x64",
+      "description": "Windows 64비트용 AquaCycle 0.2.0 실행 파일이다.\n\nGitHub의 파일 크기 제한 때문에 두 부분으로 나눴다. 아래 파일을 모두 같은 폴더에 받은 뒤, 분할 ZIP을 지원하는 압축 프로그램으로 `.zip` 파일을 열어 압축을 풀면 된다.\n\n1. [1번 파일 (.z01)](./AquaCycle-0.2.0-Windows-x64--게임+AquaCycle+Windows+다운로드--분할압축_두_파일을_같이_받아주세요.z01)\n2. [2번 파일 (.zip)](./AquaCycle-0.2.0-Windows-x64--게임+AquaCycle+Windows+다운로드--분할압축_두_파일을_같이_받아주세요.zip)\n\n두 파일 중 하나만 받으면 압축을 풀 수 없다.",
+      "tags": [
+        "게임",
+        "AquaCycle",
+        "Windows",
+        "다운로드"
+      ],
+      "status": "visible",
+      "size": 94371840,
+      "updatedAt": "2026-07-24T06:11:10.810Z",
+      "metadataPath": "assets/files/2026/aquacycle/AquaCycle-0.2.0-Windows-x64--게임+AquaCycle+Windows+다운로드--분할압축_두_파일을_같이_받아주세요.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/files/2026/aquacycle/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/files/2026/aquacycle/AquaCycle-0.2.0-Windows-x64--게임+AquaCycle+Windows+다운로드--분할압축_두_파일을_같이_받아주세요.zip",
+      "path": "assets/files/2026/aquacycle/AquaCycle-0.2.0-Windows-x64--게임+AquaCycle+Windows+다운로드--분할압축_두_파일을_같이_받아주세요.zip",
+      "url": "https://cha-amu.github.io/storage/assets/files/2026/aquacycle/AquaCycle-0.2.0-Windows-x64--게임+AquaCycle+Windows+다운로드--분할압축_두_파일을_같이_받아주세요.zip",
+      "kind": "file",
+      "fileName": "AquaCycle-0.2.0-Windows-x64--게임+AquaCycle+Windows+다운로드--분할압축_두_파일을_같이_받아주세요.zip",
+      "title": "AquaCycle 0.2.0 Windows x64",
+      "description": "Windows 64비트용 AquaCycle 0.2.0 실행 파일이다.\n\nGitHub의 파일 크기 제한 때문에 두 부분으로 나눴다. 아래 파일을 모두 같은 폴더에 받은 뒤, 분할 ZIP을 지원하는 압축 프로그램으로 `.zip` 파일을 열어 압축을 풀면 된다.\n\n1. [1번 파일 (.z01)](./AquaCycle-0.2.0-Windows-x64--게임+AquaCycle+Windows+다운로드--분할압축_두_파일을_같이_받아주세요.z01)\n2. [2번 파일 (.zip)](./AquaCycle-0.2.0-Windows-x64--게임+AquaCycle+Windows+다운로드--분할압축_두_파일을_같이_받아주세요.zip)\n\n두 파일 중 하나만 받으면 압축을 풀 수 없다.",
+      "tags": [
+        "게임",
+        "AquaCycle",
+        "Windows",
+        "다운로드"
+      ],
+      "status": "visible",
+      "size": 59501954,
+      "updatedAt": "2026-07-24T06:11:10.865Z",
+      "metadataPath": "assets/files/2026/aquacycle/AquaCycle-0.2.0-Windows-x64--게임+AquaCycle+Windows+다운로드--분할압축_두_파일을_같이_받아주세요.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/files/2026/aquacycle/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
     {
       "id": "asset:assets/files/2026/dodbogi--앱--돋보기 앱.zip",
       "path": "assets/files/2026/dodbogi--앱--돋보기 앱.zip",
