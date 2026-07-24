@@ -14,7 +14,7 @@ const DRY_RUN = process.env.STORAGE_SYNC_DRY_RUN === '1';
 const ADMIN_MUTATION_BATCH_SIZE = 100;
 
 const IMAGE_EXTENSIONS = new Set(['.avif', '.gif', '.jpg', '.jpeg', '.png', '.svg', '.webp']);
-const ASSET_EXTENSIONS = new Set([...IMAGE_EXTENSIONS, '.pdf', '.zip', '.z01', '.txt', '.md', '.json', '.csv', '.mp3', '.mp4', '.webm']);
+const ASSET_EXTENSIONS = new Set([...IMAGE_EXTENSIONS, '.pdf', '.zip', '.txt', '.md', '.json', '.csv', '.mp3', '.mp4', '.webm']);
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
