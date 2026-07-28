@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-28T03:35:11.374Z",
+  "generatedAt": "2026-07-28T04:38:47.548Z",
   "posts": [
+    {
+      "id": "post:posts/2026/수중-생태계-시뮬레이션-만들기-4.md",
+      "path": "posts/2026/수중-생태계-시뮬레이션-만들기-4.md",
+      "url": "https://cha-amu.github.io/storage/posts/2026/수중-생태계-시뮬레이션-만들기-4.md",
+      "title": "수중 생태계 시뮬레이션 만들기 - 4",
+      "excerpt": "처음 만든 송사리 미션이 단기 부화에는 성공했지만 장기 먹이망을 유지하지 못해, 식물플랑크톤과 물벼룩을 중심으로 미션 7을 다시 설계했다.",
+      "tags": [
+        "게임 개발",
+        "개발 일지",
+        "생태 시뮬레이션",
+        "AquaCycle"
+      ],
+      "status": "published",
+      "createdAt": "2026-07-28",
+      "updatedAt": "2026-07-28T04:38:06.000Z",
+      "publishedAt": "2026-07-28",
+      "contentHash": "b4822853ea199dd0f1070ecca6384338ea9f8d9f2a0b587b59118bb68e0e2a04"
+    },
     {
       "id": "post:posts/2026/서로를-들어-올리며-비둘기-높이까지-날-수-있을까.md",
       "path": "posts/2026/서로를-들어-올리며-비둘기-높이까지-날-수-있을까.md",
