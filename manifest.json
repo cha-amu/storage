@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-30T14:14:05.569Z",
+  "generatedAt": "2026-08-30T14:20:34.067Z",
   "posts": [
     {
       "id": "post:posts/2026/222123.md",
@@ -14,9 +14,9 @@
       ],
       "status": "draft",
       "createdAt": "2026-08-30",
-      "updatedAt": "2026-08-30T14:13:32.000Z",
+      "updatedAt": "2026-08-30T14:19:59.000Z",
       "publishedAt": "2026-08-30",
-      "contentHash": "aa013abe807b1da0918900c1498bfdcf339e347526451b5b1001cb2320e6c2d7"
+      "contentHash": "009273d0057cdc93c1c65e66ce6e9a24f0a248470b5f514c2ce96041880d9449"
     },
     {
       "id": "post:posts/2026/수중-생태계-시뮬레이션-만들기-4.md",
