@@ -1,22 +1,21 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-30T14:20:34.067Z",
+  "generatedAt": "2026-08-30T17:29:34.056Z",
   "posts": [
     {
       "id": "post:posts/2026/222123.md",
       "path": "posts/2026/222123.md",
       "url": "https://cha-amu.github.io/storage/posts/2026/222123.md",
-      "title": "222123",
-      "excerpt": "유튜브에 올린 영상을 블로그 포스트에서 확인하기 위한 초안.",
+      "title": "풀키우는겜...",
+      "excerpt": "만들다만거",
       "tags": [
-        "영상",
-        "유튜브"
+        "아무 글"
       ],
-      "status": "draft",
-      "createdAt": "2026-08-30",
-      "updatedAt": "2026-08-30T14:19:59.000Z",
-      "publishedAt": "2026-08-30",
-      "contentHash": "009273d0057cdc93c1c65e66ce6e9a24f0a248470b5f514c2ce96041880d9449"
+      "status": "published",
+      "createdAt": "2026-08-29T15:00:00.000Z",
+      "updatedAt": "2026-08-30T14:46:44.961Z",
+      "publishedAt": "2026-08-29T15:00:00.000Z",
+      "contentHash": "bcfcee9735c52b94a28c14e39d92202b32ba82b38322bbd6d34ad620c92ff364"
     },
     {
       "id": "post:posts/2026/수중-생태계-시뮬레이션-만들기-4.md",
