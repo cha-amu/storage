@@ -1,7 +1,23 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-30T12:54:31.245Z",
+  "generatedAt": "2026-08-30T14:14:05.569Z",
   "posts": [
+    {
+      "id": "post:posts/2026/222123.md",
+      "path": "posts/2026/222123.md",
+      "url": "https://cha-amu.github.io/storage/posts/2026/222123.md",
+      "title": "222123",
+      "excerpt": "유튜브에 올린 영상을 블로그 포스트에서 확인하기 위한 초안.",
+      "tags": [
+        "영상",
+        "유튜브"
+      ],
+      "status": "draft",
+      "createdAt": "2026-08-30",
+      "updatedAt": "2026-08-30T14:13:32.000Z",
+      "publishedAt": "2026-08-30",
+      "contentHash": "aa013abe807b1da0918900c1498bfdcf339e347526451b5b1001cb2320e6c2d7"
+    },
     {
       "id": "post:posts/2026/수중-생태계-시뮬레이션-만들기-4.md",
       "path": "posts/2026/수중-생태계-시뮬레이션-만들기-4.md",
