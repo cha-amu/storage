@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-07T12:13:21.585Z",
+  "generatedAt": "2026-09-07T12:16:37.209Z",
   "assets": [
     {
       "id": "asset:assets/files/2026/aquacycle/AquaCycle-0.2.0-Windows-x64--게임+AquaCycle+Windows+다운로드--분할압축_두_파일을_같이_받아주세요.zip",
@@ -116,19 +116,14 @@
       "kind": "image",
       "fileName": "001-우산에-매달린-사람.svg",
       "title": "우산에 매달린 사람",
-      "description": "우산 손잡이에 사람이 매달린 채 허공을 떠다니는 초현실적인 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "우산",
-        "사람",
-        "하늘",
-        "비행"
+        "인물"
       ],
       "status": "visible",
       "size": 40074,
-      "updatedAt": "2026-09-07T12:09:34.599Z",
+      "updatedAt": "2026-09-07T12:16:36.985Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/001-우산에-매달린-사람.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -140,19 +135,14 @@
       "kind": "image",
       "fileName": "002-공중의-빨랫줄.svg",
       "title": "공중의 빨랫줄",
-      "description": "빨래가 걸린 빨랫줄 전체가 공중에 둥실 떠 있는 장면의 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "빨랫줄",
-        "빨래",
-        "하늘",
-        "부유"
+        "사물"
       ],
       "status": "visible",
       "size": 72825,
-      "updatedAt": "2026-09-07T12:09:34.600Z",
+      "updatedAt": "2026-09-07T12:16:36.985Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/002-공중의-빨랫줄.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -164,19 +154,14 @@
       "kind": "image",
       "fileName": "003-허공의-버스정류장.svg",
       "title": "허공의 버스정류장",
-      "description": "허공에 떠 있는 버스정류장에서 승객이 차분히 기다리는 장면의 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "버스정류장",
-        "승객",
-        "대기",
-        "하늘"
+        "건물"
       ],
       "status": "visible",
       "size": 87990,
-      "updatedAt": "2026-09-07T12:09:34.601Z",
+      "updatedAt": "2026-09-07T12:16:36.985Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/003-허공의-버스정류장.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -188,19 +173,14 @@
       "kind": "image",
       "fileName": "004-편의점-탁자의-라면.svg",
       "title": "편의점 탁자의 라면",
-      "description": "편의점 앞 플라스틱 탁자에 앉아 라면을 먹는 사람을 담은 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "편의점",
-        "라면",
-        "플라스틱탁자",
-        "식사"
+        "인물"
       ],
       "status": "visible",
       "size": 165358,
-      "updatedAt": "2026-09-07T12:09:34.602Z",
+      "updatedAt": "2026-09-07T12:16:36.985Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/004-편의점-탁자의-라면.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -212,19 +192,14 @@
       "kind": "image",
       "fileName": "005-하늘에-뜬-거실.svg",
       "title": "하늘에 뜬 거실",
-      "description": "생활 가구가 놓인 아늑한 거실이 하늘 한가운데 떠 있는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "거실",
-        "가구",
-        "하늘",
-        "부유"
+        "사물"
       ],
       "status": "visible",
       "size": 89480,
-      "updatedAt": "2026-09-07T12:09:34.602Z",
+      "updatedAt": "2026-09-07T12:16:36.985Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/005-하늘에-뜬-거실.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -236,19 +211,14 @@
       "kind": "image",
       "fileName": "006-떠다니는-사무실.svg",
       "title": "떠다니는 사무실",
-      "description": "회사원이 책상과 함께 허공에 떠서 업무를 보는 장면의 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "회사원",
-        "책상",
-        "업무",
-        "부유"
+        "인물"
       ],
       "status": "visible",
       "size": 96315,
-      "updatedAt": "2026-09-07T12:09:34.603Z",
+      "updatedAt": "2026-09-07T12:16:36.985Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/006-떠다니는-사무실.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -260,18 +230,14 @@
       "kind": "image",
       "fileName": "007-쇼핑카트-고양이.svg",
       "title": "쇼핑카트 고양이",
-      "description": "고양이가 쇼핑카트 안에 느긋하게 올라타 있는 유쾌한 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "고양이",
-        "쇼핑카트",
-        "마트"
+        "동물"
       ],
       "status": "visible",
       "size": 67180,
-      "updatedAt": "2026-09-07T12:09:34.604Z",
+      "updatedAt": "2026-09-07T12:16:36.985Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/007-쇼핑카트-고양이.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -283,19 +249,14 @@
       "kind": "image",
       "fileName": "008-하늘을-헤엄치는-금붕어.svg",
       "title": "하늘을 헤엄치는 금붕어",
-      "description": "거대한 금붕어가 물속처럼 하늘을 유영하는 장면의 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "금붕어",
-        "거대동물",
-        "하늘",
-        "비행"
+        "동물"
       ],
       "status": "visible",
       "size": 103286,
-      "updatedAt": "2026-09-07T12:09:34.604Z",
+      "updatedAt": "2026-09-07T12:16:36.985Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/008-하늘을-헤엄치는-금붕어.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -307,19 +268,14 @@
       "kind": "image",
       "fileName": "009-구름-사이의-고래.svg",
       "title": "구름 사이의 고래",
-      "description": "커다란 고래가 포근한 구름 사이를 지나가는 몽환적인 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "고래",
-        "구름",
-        "하늘",
-        "비행"
+        "동물"
       ],
       "status": "visible",
       "size": 54369,
-      "updatedAt": "2026-09-07T12:09:34.605Z",
+      "updatedAt": "2026-09-07T12:16:36.985Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/009-구름-사이의-고래.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -331,19 +287,14 @@
       "kind": "image",
       "fileName": "010-구름-위-낚시꾼.svg",
       "title": "구름 위 낚시꾼",
-      "description": "구름 위에 앉은 사람이 아래 세상을 향해 낚싯줄을 드리운 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "낚시",
-        "사람",
-        "구름",
-        "하늘"
+        "인물"
       ],
       "status": "visible",
       "size": 60373,
-      "updatedAt": "2026-09-07T12:09:34.606Z",
+      "updatedAt": "2026-09-07T12:16:36.985Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/010-구름-위-낚시꾼.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -355,19 +306,14 @@
       "kind": "image",
       "fileName": "011-UFO와-소.svg",
       "title": "UFO와 소",
-      "description": "소 한 마리가 UFO의 광선에 이끌려 하늘로 올라가는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "UFO",
-        "소",
-        "외계",
-        "광선"
+        "동물"
       ],
       "status": "visible",
       "size": 73634,
-      "updatedAt": "2026-09-07T12:09:34.606Z",
+      "updatedAt": "2026-09-07T12:16:36.985Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/011-UFO와-소.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -379,19 +325,14 @@
       "kind": "image",
       "fileName": "012-엉켜-추락하는-두-사람.svg",
       "title": "엉켜 추락하는 두 사람",
-      "description": "두 사람이 서로 엉킨 자세로 허공 아래를 향해 떨어지는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "두사람",
-        "추락",
-        "하늘",
-        "몸짓"
+        "인물"
       ],
       "status": "visible",
       "size": 90144,
-      "updatedAt": "2026-09-07T12:09:34.607Z",
+      "updatedAt": "2026-09-07T12:16:36.986Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/012-엉켜-추락하는-두-사람.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -403,19 +344,14 @@
       "kind": "image",
       "fileName": "013-허공에-열린-문.svg",
       "title": "허공에 열린 문",
-      "description": "하늘에 홀로 선 문틈으로 한 사람이 얼굴을 빼꼼 내다보는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "문",
-        "사람",
-        "하늘",
-        "엿보기"
+        "인물"
       ],
       "status": "visible",
       "size": 46377,
-      "updatedAt": "2026-09-07T12:09:34.608Z",
+      "updatedAt": "2026-09-07T12:16:36.986Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/013-허공에-열린-문.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -427,19 +363,14 @@
       "kind": "image",
       "fileName": "014-비행하는-잠수함.svg",
       "title": "비행하는 잠수함",
-      "description": "물속을 벗어난 잠수함이 공중을 유유히 운항하는 장면의 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "잠수함",
-        "하늘",
-        "비행",
         "탈것"
       ],
       "status": "visible",
       "size": 59917,
-      "updatedAt": "2026-09-07T12:09:34.608Z",
+      "updatedAt": "2026-09-07T12:16:36.986Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/014-비행하는-잠수함.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -451,19 +382,14 @@
       "kind": "image",
       "fileName": "015-거대한-러버덕.svg",
       "title": "거대한 러버덕",
-      "description": "익숙한 고무 오리 장난감이 압도적인 크기로 등장하는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "러버덕",
-        "오리",
-        "거대물체",
-        "장난감"
+        "동물"
       ],
       "status": "visible",
       "size": 38213,
-      "updatedAt": "2026-09-07T12:09:34.609Z",
+      "updatedAt": "2026-09-07T12:16:36.986Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/015-거대한-러버덕.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -475,19 +401,14 @@
       "kind": "image",
       "fileName": "016-구름-위-포장마차.svg",
       "title": "구름 위 포장마차",
-      "description": "구름 위 포장마차에서 라면을 먹는 사람을 담은 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "포장마차",
-        "구름",
-        "음식",
-        "노점"
+        "건물"
       ],
       "status": "visible",
       "size": 90010,
-      "updatedAt": "2026-09-07T12:09:34.610Z",
+      "updatedAt": "2026-09-07T12:16:36.986Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/016-구름-위-포장마차.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -499,19 +420,14 @@
       "kind": "image",
       "fileName": "017-구름-위-편의점.svg",
       "title": "구름 위 편의점",
-      "description": "아담한 편의점 하나가 구름 위에 덩그러니 놓인 풍경의 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "편의점",
-        "구름",
-        "상점",
-        "하늘"
+        "건물"
       ],
       "status": "visible",
       "size": 92519,
-      "updatedAt": "2026-09-07T12:09:34.610Z",
+      "updatedAt": "2026-09-07T12:16:36.986Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/017-구름-위-편의점.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -523,19 +439,14 @@
       "kind": "image",
       "fileName": "018-구름을-그리는-연필.svg",
       "title": "구름을 그리는 연필",
-      "description": "거대한 연필이 하늘을 가로지르며 직접 구름을 그려 내는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "연필",
-        "구름",
-        "그림",
-        "창작"
+        "사물"
       ],
       "status": "visible",
       "size": 44044,
-      "updatedAt": "2026-09-07T12:09:34.612Z",
+      "updatedAt": "2026-09-07T12:16:36.986Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/018-구름을-그리는-연필.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -547,19 +458,14 @@
       "kind": "image",
       "fileName": "019-하늘을-지우는-지우개.svg",
       "title": "하늘을 지우는 지우개",
-      "description": "거대한 지우개가 종이처럼 펼쳐진 하늘의 일부를 문질러 지우는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "지우개",
-        "하늘",
-        "삭제",
-        "문구"
+        "사물"
       ],
       "status": "visible",
       "size": 46761,
-      "updatedAt": "2026-09-07T12:09:34.615Z",
+      "updatedAt": "2026-09-07T12:16:36.986Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/019-하늘을-지우는-지우개.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -571,19 +477,14 @@
       "kind": "image",
       "fileName": "020-테이프로-붙인-구름.svg",
       "title": "테이프로 붙인 구름",
-      "description": "갈라진 구름을 여러 조각의 테이프로 붙여 놓은 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "구름",
-        "테이프",
-        "하늘",
-        "수선"
+        "사물"
       ],
       "status": "visible",
       "size": 55442,
-      "updatedAt": "2026-09-07T12:09:34.616Z",
+      "updatedAt": "2026-09-07T12:16:36.986Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/020-테이프로-붙인-구름.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -595,19 +496,14 @@
       "kind": "image",
       "fileName": "021-커다란-커피-얼룩.svg",
       "title": "커다란 커피 얼룩",
-      "description": "종이 위에 번진 듯한 커다란 커피 자국을 중심에 담은 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "커피",
-        "얼룩",
-        "원형",
-        "종이"
+        "사물"
       ],
       "status": "visible",
       "size": 87481,
-      "updatedAt": "2026-09-07T12:09:34.618Z",
+      "updatedAt": "2026-09-07T12:16:36.986Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/021-커다란-커피-얼룩.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -619,19 +515,14 @@
       "kind": "image",
       "fileName": "022-종이-틈의-낙서-괴물.svg",
       "title": "종이 틈의 낙서 괴물",
-      "description": "찢어진 종이 틈 사이로 장난스러운 낙서 괴물이 내다보는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "괴물",
-        "종이",
-        "낙서",
-        "찢어진틈"
+        "괴물"
       ],
       "status": "visible",
       "size": 78692,
-      "updatedAt": "2026-09-07T12:09:34.619Z",
+      "updatedAt": "2026-09-07T12:16:36.986Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/022-종이-틈의-낙서-괴물.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -643,19 +534,14 @@
       "kind": "image",
       "fileName": "023-풍선에-매달린-집.svg",
       "title": "풍선에 매달린 집",
-      "description": "수많은 풍선에 묶인 집 한 채가 하늘로 날아가는 장면의 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "집",
-        "풍선",
-        "비행",
-        "하늘"
+        "건물"
       ],
       "status": "visible",
       "size": 83936,
-      "updatedAt": "2026-09-07T12:09:34.619Z",
+      "updatedAt": "2026-09-07T12:16:36.986Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/023-풍선에-매달린-집.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -667,20 +553,14 @@
       "kind": "image",
       "fileName": "024-하늘을-나는-이삿짐.svg",
       "title": "하늘을 나는 이삿짐",
-      "description": "상자와 의자와 화분이 줄을 맞춰 공중으로 이동하는 이삿날 풍경의 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "이삿짐",
-        "상자",
-        "의자",
-        "화분",
-        "비행"
+        "사물"
       ],
       "status": "visible",
       "size": 75330,
-      "updatedAt": "2026-09-07T12:09:34.621Z",
+      "updatedAt": "2026-09-07T12:16:36.987Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/024-하늘을-나는-이삿짐.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -692,19 +572,14 @@
       "kind": "image",
       "fileName": "025-날개-달린-배달-오토바이.svg",
       "title": "날개 달린 배달 오토바이",
-      "description": "날개가 돋은 배달 오토바이가 주문을 싣고 하늘을 나는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "오토바이",
-        "배달",
-        "날개",
-        "비행"
+        "탈것"
       ],
       "status": "visible",
       "size": 59965,
-      "updatedAt": "2026-09-07T12:09:34.621Z",
+      "updatedAt": "2026-09-07T12:16:36.987Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/025-날개-달린-배달-오토바이.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -716,19 +591,14 @@
       "kind": "image",
       "fileName": "026-구름-위-응원단.svg",
       "title": "구름 위 응원단",
-      "description": "구름 위에 모인 관중이 한마음으로 열띤 응원을 펼치는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "관중",
-        "응원",
-        "구름",
-        "군중"
+        "인물"
       ],
       "status": "visible",
       "size": 91651,
-      "updatedAt": "2026-09-07T12:09:34.622Z",
+      "updatedAt": "2026-09-07T12:16:36.987Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/026-구름-위-응원단.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -740,19 +610,14 @@
       "kind": "image",
       "fileName": "027-아직-먼-휴게소.svg",
       "title": "아직 먼 휴게소",
-      "description": "허공의 표지판이 휴게소까지 아직 멀었다고 알려 주는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "휴게소",
-        "표지판",
-        "하늘",
-        "여행"
+        "건물"
       ],
       "status": "visible",
       "size": 51552,
-      "updatedAt": "2026-09-07T12:09:34.623Z",
+      "updatedAt": "2026-09-07T12:16:36.987Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/027-아직-먼-휴게소.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -764,19 +629,14 @@
       "kind": "image",
       "fileName": "028-공중-구름-공장.svg",
       "title": "공중 구름 공장",
-      "description": "공중에 세워진 공장이 기계로 구름을 연이어 찍어 내는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "공장",
-        "구름",
-        "생산",
-        "하늘"
+        "건물"
       ],
       "status": "visible",
       "size": 75816,
-      "updatedAt": "2026-09-07T12:09:34.623Z",
+      "updatedAt": "2026-09-07T12:16:36.987Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/028-공중-구름-공장.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -788,19 +648,14 @@
       "kind": "image",
       "fileName": "029-구름-위-낡은-모텔.svg",
       "title": "구름 위 낡은 모텔",
-      "description": "세월의 흔적이 밴 작은 모텔이 구름 위에 자리한 풍경의 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "모텔",
-        "구름",
-        "숙박",
-        "낡은건물"
+        "건물"
       ],
       "status": "visible",
       "size": 63700,
-      "updatedAt": "2026-09-07T12:09:34.624Z",
+      "updatedAt": "2026-09-07T12:16:36.987Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/029-구름-위-낡은-모텔.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -812,19 +667,14 @@
       "kind": "image",
       "fileName": "030-매달린-공중-엘리베이터.svg",
       "title": "매달린 공중 엘리베이터",
-      "description": "엘리베이터 한 대가 건물 없이 허공에 위태롭게 매달려 있는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "엘리베이터",
-        "하늘",
-        "매달림",
-        "이동"
+        "건물"
       ],
       "status": "visible",
       "size": 41757,
-      "updatedAt": "2026-09-07T12:09:34.625Z",
+      "updatedAt": "2026-09-07T12:16:36.987Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/030-매달린-공중-엘리베이터.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -836,19 +686,14 @@
       "kind": "image",
       "fileName": "031-구름-위-다이빙-풀.svg",
       "title": "구름 위 다이빙 풀",
-      "description": "구름 위 수영장을 향해 한 사람이 힘차게 다이빙하는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "수영장",
-        "다이빙",
-        "구름",
-        "물놀이"
+        "인물"
       ],
       "status": "visible",
       "size": 77690,
-      "updatedAt": "2026-09-07T12:09:34.626Z",
+      "updatedAt": "2026-09-07T12:16:36.987Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/031-구름-위-다이빙-풀.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -860,19 +705,14 @@
       "kind": "image",
       "fileName": "032-공중의-등대.svg",
       "title": "공중의 등대",
-      "description": "허공에 선 등대가 구름 사이로 긴 빛줄기를 옆으로 비추는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "등대",
-        "빛",
-        "하늘",
-        "항로"
+        "건물"
       ],
       "status": "visible",
       "size": 40348,
-      "updatedAt": "2026-09-07T12:09:34.627Z",
+      "updatedAt": "2026-09-07T12:16:36.987Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/032-공중의-등대.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -884,19 +724,14 @@
       "kind": "image",
       "fileName": "033-신호를-기다리는-새-떼.svg",
       "title": "신호를 기다리는 새 떼",
-      "description": "하늘의 신호등 앞에서 새 떼가 질서 있게 신호를 기다리는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "새",
-        "신호등",
-        "무리",
-        "교통"
+        "동물"
       ],
       "status": "visible",
       "size": 103757,
-      "updatedAt": "2026-09-07T12:09:34.628Z",
+      "updatedAt": "2026-09-07T12:16:36.987Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/033-신호를-기다리는-새-떼.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -908,19 +743,14 @@
       "kind": "image",
       "fileName": "034-고래-등에-탄-구경꾼.svg",
       "title": "고래 등에 탄 구경꾼",
-      "description": "사람들이 거대한 고래 등에 올라타 주변 풍경을 구경하는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "고래",
-        "사람들",
-        "관광",
-        "탑승"
+        "인물"
       ],
       "status": "visible",
       "size": 85655,
-      "updatedAt": "2026-09-07T12:09:34.629Z",
+      "updatedAt": "2026-09-07T12:16:36.987Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/034-고래-등에-탄-구경꾼.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -932,19 +762,14 @@
       "kind": "image",
       "fileName": "035-하늘의-가오리-떼.svg",
       "title": "하늘의 가오리 떼",
-      "description": "거대한 가오리 떼가 바다가 아닌 하늘을 헤엄쳐 가는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "가오리",
-        "무리",
-        "하늘",
-        "비행"
+        "동물"
       ],
       "status": "visible",
       "size": 52453,
-      "updatedAt": "2026-09-07T12:09:34.630Z",
+      "updatedAt": "2026-09-07T12:16:36.987Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/035-하늘의-가오리-떼.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -956,19 +781,14 @@
       "kind": "image",
       "fileName": "036-허공에-늘어선-창문.svg",
       "title": "허공에 늘어선 창문",
-      "description": "허공에 줄지어 뜬 여러 창문 너머로 주민들이 모습을 드러낸 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "창문",
-        "주민",
-        "하늘",
-        "주거"
+        "건물"
       ],
       "status": "visible",
       "size": 108918,
-      "updatedAt": "2026-09-07T12:09:34.630Z",
+      "updatedAt": "2026-09-07T12:16:36.987Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/036-허공에-늘어선-창문.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -980,20 +800,14 @@
       "kind": "image",
       "fileName": "037-연들의-이삿짐-운반.svg",
       "title": "연들의 이삿짐 운반",
-      "description": "여러 연이 소파와 냉장고를 매달아 하늘로 운반하는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "연",
-        "소파",
-        "냉장고",
-        "이사",
-        "비행"
+        "사물"
       ],
       "status": "visible",
       "size": 84764,
-      "updatedAt": "2026-09-07T12:09:34.632Z",
+      "updatedAt": "2026-09-07T12:16:36.988Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/037-연들의-이삿짐-운반.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1005,19 +819,14 @@
       "kind": "image",
       "fileName": "038-구름-위-캠핑.svg",
       "title": "구름 위 캠핑",
-      "description": "두 친구가 구름 위에 캠핑 자리를 꾸리고 한가롭게 머무는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "캠핑",
-        "친구",
-        "구름",
-        "야영"
+        "인물"
       ],
       "status": "visible",
       "size": 119983,
-      "updatedAt": "2026-09-07T12:09:34.632Z",
+      "updatedAt": "2026-09-07T12:16:36.988Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/038-구름-위-캠핑.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1029,19 +838,14 @@
       "kind": "image",
       "fileName": "039-비행기를-문-거대-비둘기.svg",
       "title": "비행기를 문 거대 비둘기",
-      "description": "거대한 비둘기가 작은 비행기를 부리에 물고 날아가는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "비둘기",
-        "비행기",
-        "거대동물",
-        "하늘"
+        "동물"
       ],
       "status": "visible",
       "size": 69693,
-      "updatedAt": "2026-09-07T12:09:34.633Z",
+      "updatedAt": "2026-09-07T12:16:36.988Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/039-비행기를-문-거대-비둘기.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1053,19 +857,14 @@
       "kind": "image",
       "fileName": "040-비행기-날개-위-소풍.svg",
       "title": "비행기 날개 위 소풍",
-      "description": "하늘을 나는 비행기 날개 위에 자리를 펴고 소풍을 즐기는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "비행기",
-        "날개",
-        "소풍",
-        "하늘"
+        "인물"
       ],
       "status": "visible",
       "size": 129634,
-      "updatedAt": "2026-09-07T12:09:34.634Z",
+      "updatedAt": "2026-09-07T12:16:36.988Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/040-비행기-날개-위-소풍.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1077,19 +876,14 @@
       "kind": "image",
       "fileName": "041-구름-속-낙서-괴물.svg",
       "title": "구름 속 낙서 괴물",
-      "description": "낙서처럼 그려진 괴물이 구름 속에서 얼굴만 불쑥 내민 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "괴물",
-        "구름",
-        "얼굴",
-        "낙서"
+        "괴물"
       ],
       "status": "visible",
       "size": 53372,
-      "updatedAt": "2026-09-07T12:09:34.634Z",
+      "updatedAt": "2026-09-07T12:16:36.988Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/041-구름-속-낙서-괴물.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1101,19 +895,14 @@
       "kind": "image",
       "fileName": "042-풍선에-매달린-교실.svg",
       "title": "풍선에 매달린 교실",
-      "description": "기상관측 풍선 아래에 교실 하나가 통째로 매달려 떠가는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "교실",
-        "기상관측풍선",
-        "학교",
-        "비행"
+        "건물"
       ],
       "status": "visible",
       "size": 99290,
-      "updatedAt": "2026-09-07T12:09:34.635Z",
+      "updatedAt": "2026-09-07T12:16:36.988Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/042-풍선에-매달린-교실.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1125,19 +914,14 @@
       "kind": "image",
       "fileName": "043-거꾸로-향하는-로켓.svg",
       "title": "거꾸로 향하는 로켓",
-      "description": "로켓이 기수를 아래로 향한 채 날아가는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "로켓",
-        "우주",
-        "하강",
-        "방향"
+        "탈것"
       ],
       "status": "visible",
       "size": 44000,
-      "updatedAt": "2026-09-07T12:09:34.635Z",
+      "updatedAt": "2026-09-07T12:16:36.988Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/043-거꾸로-향하는-로켓.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1149,19 +933,14 @@
       "kind": "image",
       "fileName": "044-허공에서-울리는-전화부스.svg",
       "title": "허공에서 울리는 전화부스",
-      "description": "아무도 없는 공중전화 부스가 허공에 떠서 홀로 울리는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "공중전화",
-        "전화부스",
-        "하늘",
-        "벨소리"
+        "건물"
       ],
       "status": "visible",
       "size": 103077,
-      "updatedAt": "2026-09-07T12:09:34.636Z",
+      "updatedAt": "2026-09-07T12:16:36.988Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/044-허공에서-울리는-전화부스.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1173,19 +952,14 @@
       "kind": "image",
       "fileName": "045-캔이-떠다니는-자판기.svg",
       "title": "캔이 떠다니는 자판기",
-      "description": "자판기 주변으로 여러 음료 캔이 중력을 잊은 듯 떠다니는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "자판기",
-        "음료캔",
-        "부유",
-        "기계"
+        "사물"
       ],
       "status": "visible",
       "size": 88636,
-      "updatedAt": "2026-09-07T12:09:34.636Z",
+      "updatedAt": "2026-09-07T12:16:36.988Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/045-캔이-떠다니는-자판기.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1197,19 +971,14 @@
       "kind": "image",
       "fileName": "046-사무용-의자-출근길.svg",
       "title": "사무용 의자 출근길",
-      "description": "서류 가방을 든 회사원이 사무용 의자에 앉아 이동하는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "회사원",
-        "사무용의자",
-        "출근",
-        "이동"
+        "인물"
       ],
       "status": "visible",
       "size": 92892,
-      "updatedAt": "2026-09-07T12:09:34.637Z",
+      "updatedAt": "2026-09-07T12:16:36.988Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/046-사무용-의자-출근길.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1221,19 +990,14 @@
       "kind": "image",
       "fileName": "047-끊어진-무한-계단.svg",
       "title": "끊어진 무한 계단",
-      "description": "끝없이 이어질 듯 올라가던 계단이 허공에서 갑자기 끊기는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "계단",
-        "단절",
-        "무한",
-        "건축"
+        "건물"
       ],
       "status": "visible",
       "size": 84146,
-      "updatedAt": "2026-09-07T12:09:34.638Z",
+      "updatedAt": "2026-09-07T12:16:36.988Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/047-끊어진-무한-계단.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1245,19 +1009,14 @@
       "kind": "image",
       "fileName": "048-별-공간으로-열린-문.svg",
       "title": "별 공간으로 열린 문",
-      "description": "허공에 선 문 너머로 별이 가득한 다른 공간이 펼쳐지는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "문",
-        "별",
-        "우주",
-        "차원"
+        "우주"
       ],
       "status": "visible",
       "size": 33060,
-      "updatedAt": "2026-09-07T12:09:34.638Z",
+      "updatedAt": "2026-09-07T12:16:36.988Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/048-별-공간으로-열린-문.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1269,19 +1028,14 @@
       "kind": "image",
       "fileName": "049-비행운을-그리는-연필.svg",
       "title": "비행운을 그리는 연필",
-      "description": "거대한 연필이 비행기처럼 날며 하늘에 길게 비행운을 그리는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "연필",
-        "비행운",
-        "하늘",
-        "그림"
+        "사물"
       ],
       "status": "visible",
       "size": 25540,
-      "updatedAt": "2026-09-07T12:09:34.639Z",
+      "updatedAt": "2026-09-07T12:16:36.988Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/049-비행운을-그리는-연필.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1293,19 +1047,14 @@
       "kind": "image",
       "fileName": "050-지우개-가루-같은-종이-파편.svg",
       "title": "지우개 가루 같은 종이 파편",
-      "description": "잘게 흩어진 종이 조각들이 커다란 지우개 가루처럼 보이는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "종이",
-        "파편",
-        "지우개가루",
-        "문구"
+        "사물"
       ],
       "status": "visible",
       "size": 47833,
-      "updatedAt": "2026-09-07T12:09:34.639Z",
+      "updatedAt": "2026-09-07T12:16:36.988Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/050-지우개-가루-같은-종이-파편.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1317,19 +1066,14 @@
       "kind": "image",
       "fileName": "051-UFO-견인차.svg",
       "title": "UFO 견인차",
-      "description": "견인 장비를 갖춘 UFO가 고장 난 다른 UFO를 끌고 가는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "UFO",
-        "견인차",
-        "고장",
-        "외계"
+        "탈것"
       ],
       "status": "visible",
       "size": 58738,
-      "updatedAt": "2026-09-07T12:09:34.640Z",
+      "updatedAt": "2026-09-07T12:16:36.988Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/051-UFO-견인차.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1341,19 +1085,14 @@
       "kind": "image",
       "fileName": "052-잠망경을-내민-공중-잠수함.svg",
       "title": "잠망경을 내민 공중 잠수함",
-      "description": "공중을 떠다니는 잠수함이 잠망경을 길게 내밀어 주변을 살피는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "잠수함",
-        "잠망경",
-        "관찰",
-        "하늘"
+        "탈것"
       ],
       "status": "visible",
       "size": 50871,
-      "updatedAt": "2026-09-07T12:09:34.641Z",
+      "updatedAt": "2026-09-07T12:16:36.989Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/052-잠망경을-내민-공중-잠수함.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1365,19 +1104,14 @@
       "kind": "image",
       "fileName": "053-산소마스크를-쓴-구름.svg",
       "title": "산소마스크를 쓴 구름",
-      "description": "둥근 구름이 얼굴처럼 산소마스크를 착용하고 떠 있는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "구름",
-        "산소마스크",
-        "호흡",
-        "하늘"
+        "사물"
       ],
       "status": "visible",
       "size": 63135,
-      "updatedAt": "2026-09-07T12:09:34.641Z",
+      "updatedAt": "2026-09-07T12:16:36.989Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/053-산소마스크를-쓴-구름.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1389,19 +1123,14 @@
       "kind": "image",
       "fileName": "054-추락하며-차-마시는-두-사람.svg",
       "title": "추락하며 차 마시는 두 사람",
-      "description": "두 사람이 허공으로 떨어지는 순간에도 태연히 차를 마시는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "두사람",
-        "차",
-        "추락",
-        "티타임"
+        "인물"
       ],
       "status": "visible",
       "size": 148048,
-      "updatedAt": "2026-09-07T12:09:34.642Z",
+      "updatedAt": "2026-09-07T12:16:36.989Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/054-추락하며-차-마시는-두-사람.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1413,19 +1142,14 @@
       "kind": "image",
       "fileName": "055-초보운전-로켓.svg",
       "title": "초보운전 로켓",
-      "description": "초보운전 표지판을 단 로켓이 조심스럽게 우주를 날아가는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "로켓",
-        "초보운전",
-        "표지판",
-        "우주"
+        "탈것"
       ],
       "status": "visible",
       "size": 67016,
-      "updatedAt": "2026-09-07T12:09:34.643Z",
+      "updatedAt": "2026-09-07T12:16:36.989Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/055-초보운전-로켓.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1437,19 +1161,14 @@
       "kind": "image",
       "fileName": "056-우주인의-개-산책.svg",
       "title": "우주인의 개 산책",
-      "description": "우주복을 입은 사람이 개에게 목줄을 채워 우주에서 산책하는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "우주인",
-        "개",
-        "산책",
-        "우주복"
+        "인물"
       ],
       "status": "visible",
       "size": 114407,
-      "updatedAt": "2026-09-07T12:09:34.643Z",
+      "updatedAt": "2026-09-07T12:16:36.989Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/056-우주인의-개-산책.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1461,19 +1180,14 @@
       "kind": "image",
       "fileName": "057-태양전지판-빨랫줄.svg",
       "title": "태양전지판 빨랫줄",
-      "description": "인공위성의 태양전지판을 빨랫줄 삼아 옷가지를 널어 놓은 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "위성",
-        "태양전지판",
-        "빨래",
-        "우주"
+        "탈것"
       ],
       "status": "visible",
       "size": 98789,
-      "updatedAt": "2026-09-07T12:09:34.644Z",
+      "updatedAt": "2026-09-07T12:16:36.989Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/057-태양전지판-빨랫줄.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1485,19 +1199,14 @@
       "kind": "image",
       "fileName": "058-인공위성-교통체증.svg",
       "title": "인공위성 교통체증",
-      "description": "빽빽하게 막힌 인공위성들이 서로 경적을 울리는 우주 교통의 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "인공위성",
-        "교통체증",
-        "경적",
-        "우주"
+        "탈것"
       ],
       "status": "visible",
       "size": 66454,
-      "updatedAt": "2026-09-07T12:09:34.644Z",
+      "updatedAt": "2026-09-07T12:16:36.989Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/058-인공위성-교통체증.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1509,19 +1218,14 @@
       "kind": "image",
       "fileName": "059-우주선이-오는-정류장.svg",
       "title": "우주선이 오는 정류장",
-      "description": "허공의 버스정류장 앞으로 버스 대신 우주선이 도착하는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "버스정류장",
-        "우주선",
-        "승객",
-        "도착"
+        "건물"
       ],
       "status": "visible",
       "size": 89699,
-      "updatedAt": "2026-09-07T12:09:34.645Z",
+      "updatedAt": "2026-09-07T12:16:36.989Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/059-우주선이-오는-정류장.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1533,19 +1237,14 @@
       "kind": "image",
       "fileName": "060-운석-위-라면-포장마차.svg",
       "title": "운석 위 라면 포장마차",
-      "description": "작은 운석 표면에 라면을 파는 포장마차가 자리한 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "운석",
-        "라면",
-        "포장마차",
-        "우주"
+        "건물"
       ],
       "status": "visible",
       "size": 105067,
-      "updatedAt": "2026-09-07T12:09:34.645Z",
+      "updatedAt": "2026-09-07T12:16:36.989Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/060-운석-위-라면-포장마차.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1557,19 +1256,14 @@
       "kind": "image",
       "fileName": "061-공전하는-소파와-TV.svg",
       "title": "공전하는 소파와 TV",
-      "description": "소파와 텔레비전이 행성처럼 서로의 주위를 빙글빙글 도는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "소파",
-        "텔레비전",
-        "공전",
-        "우주"
+        "사물"
       ],
       "status": "visible",
       "size": 87202,
-      "updatedAt": "2026-09-07T12:09:34.646Z",
+      "updatedAt": "2026-09-07T12:16:36.989Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/061-공전하는-소파와-TV.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1581,19 +1275,14 @@
       "kind": "image",
       "fileName": "062-달-표면-톨게이트.svg",
       "title": "달 표면 톨게이트",
-      "description": "달 표면을 가로지르는 길목에 요금소가 세워진 풍경의 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "달",
-        "톨게이트",
-        "도로",
-        "우주"
+        "건물"
       ],
       "status": "visible",
       "size": 96396,
-      "updatedAt": "2026-09-07T12:09:34.647Z",
+      "updatedAt": "2026-09-07T12:16:36.989Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/062-달-표면-톨게이트.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1605,19 +1294,14 @@
       "kind": "image",
       "fileName": "063-빨래-고리를-두른-행성.svg",
       "title": "빨래 고리를 두른 행성",
-      "description": "행성을 둘러싼 고리 전체에 갖가지 빨래가 널려 있는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "행성",
-        "빨래",
-        "고리",
         "우주"
       ],
       "status": "visible",
       "size": 113535,
-      "updatedAt": "2026-09-07T12:09:34.648Z",
+      "updatedAt": "2026-09-07T12:16:36.989Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/063-빨래-고리를-두른-행성.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1629,19 +1313,14 @@
       "kind": "image",
       "fileName": "064-우주를-헤엄치는-고래.svg",
       "title": "우주를 헤엄치는 고래",
-      "description": "거대한 고래가 별이 빛나는 우주 공간을 바다처럼 헤엄치는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "고래",
-        "우주",
-        "별",
-        "유영"
+        "동물"
       ],
       "status": "visible",
       "size": 64829,
-      "updatedAt": "2026-09-07T12:09:34.649Z",
+      "updatedAt": "2026-09-07T12:16:36.989Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/064-우주를-헤엄치는-고래.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1653,19 +1332,14 @@
       "kind": "image",
       "fileName": "065-별을-굽는-토스터.svg",
       "title": "별을 굽는 토스터",
-      "description": "우주에 놓인 토스터가 빵 대신 반짝이는 별을 구워 내는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "토스터",
-        "별",
-        "우주",
-        "주방가전"
+        "사물"
       ],
       "status": "visible",
       "size": 101560,
-      "updatedAt": "2026-09-07T12:09:34.649Z",
+      "updatedAt": "2026-09-07T12:16:36.989Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/065-별을-굽는-토스터.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1677,19 +1351,14 @@
       "kind": "image",
       "fileName": "066-낙서를-삼키는-연필-소용돌이.svg",
       "title": "낙서를 삼키는 연필 소용돌이",
-      "description": "연필을 중심으로 생긴 소용돌이가 주변의 낙서를 빨아들이는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "연필",
-        "소용돌이",
-        "낙서",
-        "흡입"
+        "사물"
       ],
       "status": "visible",
       "size": 83470,
-      "updatedAt": "2026-09-07T12:09:34.650Z",
+      "updatedAt": "2026-09-07T12:16:36.989Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/066-낙서를-삼키는-연필-소용돌이.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1701,19 +1370,14 @@
       "kind": "image",
       "fileName": "067-노트-구멍-블랙홀.svg",
       "title": "노트 구멍 블랙홀",
-      "description": "찢어진 노트의 커다란 구멍을 블랙홀처럼 표현한 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "블랙홀",
-        "노트",
-        "구멍",
         "우주"
       ],
       "status": "visible",
       "size": 83217,
-      "updatedAt": "2026-09-07T12:09:34.651Z",
+      "updatedAt": "2026-09-07T12:16:36.990Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/067-노트-구멍-블랙홀.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1725,19 +1389,14 @@
       "kind": "image",
       "fileName": "068-테이프로-수선한-달.svg",
       "title": "테이프로 수선한 달",
-      "description": "금이 간 달의 표면을 여러 조각의 테이프로 붙여 수선한 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "달",
-        "테이프",
-        "균열",
-        "수선"
+        "우주"
       ],
       "status": "visible",
       "size": 81476,
-      "updatedAt": "2026-09-07T12:09:34.651Z",
+      "updatedAt": "2026-09-07T12:16:36.990Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/068-테이프로-수선한-달.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1749,19 +1408,14 @@
       "kind": "image",
       "fileName": "069-포스트잇-행성.svg",
       "title": "포스트잇 행성",
-      "description": "수많은 포스트잇 쪽지가 겹겹이 모여 하나의 행성을 이룬 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "포스트잇",
-        "행성",
-        "메모",
         "우주"
       ],
       "status": "visible",
       "size": 91248,
-      "updatedAt": "2026-09-07T12:09:34.652Z",
+      "updatedAt": "2026-09-07T12:16:36.990Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/069-포스트잇-행성.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1773,19 +1427,14 @@
       "kind": "image",
       "fileName": "070-망원경으로-관찰하는-외계인.svg",
       "title": "망원경으로 관찰하는 외계인",
-      "description": "먼 우주의 외계인이 망원경으로 어딘가를 유심히 바라보는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "외계인",
-        "망원경",
-        "관찰",
-        "우주"
+        "괴물"
       ],
       "status": "visible",
       "size": 95618,
-      "updatedAt": "2026-09-07T12:09:34.654Z",
+      "updatedAt": "2026-09-07T12:16:36.990Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/070-망원경으로-관찰하는-외계인.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1797,19 +1446,14 @@
       "kind": "image",
       "fileName": "071-위성을-낚는-UFO.svg",
       "title": "위성을 낚는 UFO",
-      "description": "UFO가 낚싯대를 드리워 우주를 지나는 인공위성을 낚는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "UFO",
-        "인공위성",
-        "낚시",
-        "우주"
+        "탈것"
       ],
       "status": "visible",
       "size": 59743,
-      "updatedAt": "2026-09-07T12:09:34.654Z",
+      "updatedAt": "2026-09-07T12:16:36.990Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/071-위성을-낚는-UFO.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1821,19 +1465,14 @@
       "kind": "image",
       "fileName": "072-회전하는-노년의-두-사람.svg",
       "title": "회전하는 노년의 두 사람",
-      "description": "나이 든 모습의 두 사람이 서로 곁을 지키며 계속 회전하는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "두사람",
-        "노년",
-        "회전",
-        "시간"
+        "인물"
       ],
       "status": "visible",
       "size": 156775,
-      "updatedAt": "2026-09-07T12:09:34.656Z",
+      "updatedAt": "2026-09-07T12:16:36.990Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/072-회전하는-노년의-두-사람.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1845,19 +1484,14 @@
       "kind": "image",
       "fileName": "073-손잡은-두-사람의-별자리.svg",
       "title": "손잡은 두 사람의 별자리",
-      "description": "두 사람이 손을 맞잡은 모습이 밤하늘의 별자리로 이어진 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "별자리",
-        "두사람",
-        "손잡기",
         "우주"
       ],
       "status": "visible",
       "size": 54168,
-      "updatedAt": "2026-09-07T12:09:34.657Z",
+      "updatedAt": "2026-09-07T12:16:36.990Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/073-손잡은-두-사람의-별자리.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1869,19 +1503,14 @@
       "kind": "image",
       "fileName": "074-지구행-표지판.svg",
       "title": "지구행 표지판",
-      "description": "우주 공간의 표지판이 지구로 향하는 아래쪽 길을 가리키는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "지구",
-        "표지판",
-        "방향",
         "우주"
       ],
       "status": "visible",
       "size": 41681,
-      "updatedAt": "2026-09-07T12:09:34.657Z",
+      "updatedAt": "2026-09-07T12:16:36.990Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/074-지구행-표지판.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1893,19 +1522,14 @@
       "kind": "image",
       "fileName": "075-우주-한가운데-편의점-의자.svg",
       "title": "우주 한가운데 편의점 의자",
-      "description": "익숙한 편의점 플라스틱 의자 하나가 우주 한가운데 놓인 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "플라스틱의자",
-        "편의점",
-        "우주",
-        "휴식"
+        "사물"
       ],
       "status": "visible",
       "size": 69548,
-      "updatedAt": "2026-09-07T12:09:34.658Z",
+      "updatedAt": "2026-09-07T12:16:36.990Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/075-우주-한가운데-편의점-의자.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1917,19 +1541,14 @@
       "kind": "image",
       "fileName": "076-운석-사이의-학원버스.svg",
       "title": "운석 사이의 학원버스",
-      "description": "학원버스가 운석 사이를 누비며 달리는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "학원버스",
-        "운석",
-        "우주",
-        "통학"
+        "탈것"
       ],
       "status": "visible",
       "size": 71119,
-      "updatedAt": "2026-09-07T12:09:34.658Z",
+      "updatedAt": "2026-09-07T12:16:36.990Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/076-운석-사이의-학원버스.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1941,19 +1560,14 @@
       "kind": "image",
       "fileName": "077-행성을-집는-인형뽑기-집게.svg",
       "title": "행성을 집는 인형뽑기 집게",
-      "description": "거대한 인형뽑기 집게가 장난감처럼 작은 행성을 집어 올리는 선화입니다.",
       "tags": [
-        "SVG",
+        "이미지",
         "선화",
-        "초현실",
-        "인형뽑기",
-        "집게",
-        "행성",
         "우주"
       ],
       "status": "visible",
       "size": 53630,
-      "updatedAt": "2026-09-07T12:09:34.659Z",
+      "updatedAt": "2026-09-07T12:16:36.990Z",
       "metadataPath": "assets/images/2026/sky-space-line-art/077-행성을-집는-인형뽑기-집게.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/sky-space-line-art/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
