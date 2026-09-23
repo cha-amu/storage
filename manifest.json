@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-23T08:52:15.737Z",
+  "generatedAt": "2026-09-23T08:54:25.702Z",
   "posts": [
     {
       "id": "042e8cb5-2664-4e37-9798-dbe501e23df2",
-      "path": "posts/2026/untitled.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/untitled.md",
+      "path": "posts/2026/물건쌓는겜-물리-구현.md",
+      "url": "https://cha-amu.github.io/storage/posts/2026/물건쌓는겜-물리-구현.md",
       "title": "물건쌓는겜 물리 구현",
       "excerpt": "공든탑은 물건을 집어서 받침대 위에 쌓는 게임이다. 물건의 끝을 잡으면 돌아가고, 밑에 깔린 상자를 끌면 위의 물건도 영향을 받는다. 상자뿐 아니라 돌, 달걀, 공구처럼 모양과 무게가 다른 물건을 같은 계산으로 다루...",
       "tags": [
@@ -15,9 +15,9 @@
       ],
       "status": "draft",
       "createdAt": "2026-09-23T08:17:34.644Z",
-      "updatedAt": "2026-09-23T08:17:34.644Z",
+      "updatedAt": "2026-09-23T08:53:45.000Z",
       "publishedAt": "2026-09-23T08:17:34.644Z",
-      "contentHash": "29ba84f0fbc2de9da6f659c3348f2d749d367db442144f1dbe88c7886a0b0005"
+      "contentHash": "f66a668a69de33f3279738f85e7e8a42859f9df6b21db14e3c111f2fa49cfeda"
     },
     {
       "id": "post:posts/2026/222123.md",
@@ -158,6 +158,21 @@
       "updatedAt": "2026-07-13T11:10:15.959Z",
       "publishedAt": "2026-07-13T11:10:15.961Z",
       "contentHash": "369dfdd76804c35dd664d90c070aff03ff96f757f2a8b787ad898305c075df19"
+    },
+    {
+      "id": "7e14bfe4-36b7-4c78-b0ef-d0a1a1720a96",
+      "path": "posts/2026/untitled.md",
+      "url": "https://cha-amu.github.io/storage/posts/2026/untitled.md",
+      "title": "아무 글",
+      "excerpt": "?",
+      "tags": [
+        "아무 글"
+      ],
+      "status": "published",
+      "createdAt": "2026-07-12T09:35:20.295Z",
+      "updatedAt": "2026-09-23T08:53:45.000Z",
+      "publishedAt": "2026-07-12T09:35:20.295Z",
+      "contentHash": "a456aa41ff6e1b8dbaaccb3deccc6b57e88f719f7be5750c882071f4cdd87bd5"
     },
     {
       "id": "post:posts/2026/정적-사이트에-무료-방명록-붙이기.md",
