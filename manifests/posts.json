@@ -1,23 +1,23 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-23T16:58:28.346Z",
+  "generatedAt": "2026-09-23T20:22:29.001Z",
   "posts": [
     {
       "id": "042e8cb5-2664-4e37-9798-dbe501e23df2",
       "path": "posts/2026/물건쌓는겜-물리-구현.md",
       "url": "https://cha-amu.github.io/storage/posts/2026/물건쌓는겜-물리-구현.md",
       "title": "물건쌓는겜 물리 구현",
-      "excerpt": "공든탑은 물건을 집어서 받침대 위에 쌓는 게임이다. 물건의 끝을 잡으면 돌아가고, 밑에 깔린 상자를 끌면 위의 물건도 영향을 받는다. 상자뿐 아니라 돌, 달걀, 공구처럼 모양과 무게가 다른 물건을 같은 계산으로 다루...",
+      "excerpt": "그냥 물건쌓는겜 구현했다는 내용...",
       "tags": [
         "게임 개발",
         "공든탑",
         "물리"
       ],
-      "status": "draft",
+      "status": "published",
       "createdAt": "2026-09-23T08:17:34.644Z",
-      "updatedAt": "2026-09-23T14:37:01.000Z",
+      "updatedAt": "2026-09-23T18:15:13.020Z",
       "publishedAt": "2026-09-23T08:17:34.644Z",
-      "contentHash": "fba509c374cbe2c7116e498bf849d56f458947a8266ba3461bbcd1e97834ba2e"
+      "contentHash": "b641b1dc0c68f13f945778e848c2b6668e90e173ee115860c7308e24140f3a32"
     },
     {
       "id": "post:posts/2026/222123.md",
