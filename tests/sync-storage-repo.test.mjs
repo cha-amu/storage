@@ -80,6 +80,7 @@ test('sync sends every action through the Worker API with service authentication
       requests.push({
         authorization: request.headers.authorization,
         contentType: request.headers['content-type'],
+        requestId: request.headers['x-sync-request-id'],
         method: request.method,
         path: request.url,
         payload
@@ -115,9 +116,13 @@ test('sync sends every action through the Worker API with service authentication
       assert.equal(request.path, '/api');
       assert.equal(request.authorization, `Bearer ${TEST_SYNC_SECRET}`);
       assert.equal(request.contentType, 'text/plain;charset=utf-8');
+      assert.match(request.requestId, /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/);
+      assert.ok(result.stdout.includes(request.requestId));
       assert.equal('password' in request.payload, false);
       assert.equal('token' in request.payload, false);
     }
+    assert.equal(new Set(requests.map(request => request.requestId)).size, requests.length);
+    assert.equal(result.stdout.includes(TEST_SYNC_SECRET), false);
   } finally {
     await close(server);
     await rm(storagePath, { recursive: true, force: true });

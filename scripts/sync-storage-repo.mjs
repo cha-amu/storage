@@ -1,4 +1,4 @@
-import { createHash } from 'node:crypto';
+import { createHash, randomUUID } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import { mkdir, readFile, readdir, realpath, stat, unlink, writeFile } from 'node:fs/promises';
 import { basename, dirname, extname, join, posix, relative, resolve, sep } from 'node:path';
@@ -347,21 +347,34 @@ async function deleteOrphanAssetOverrides(sheetOverrides, previousAssetIds, asse
 }
 
 async function storageRequest(action, payload = {}) {
+  const requestId = randomUUID();
+  const startedAt = Date.now();
+  console.info(JSON.stringify({ event: 'storage_sync_request', phase: 'started', action, request_id: requestId }));
   const response = await fetch(API_URL, {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${STORAGE_SYNC_SECRET}`,
-      'Content-Type': 'text/plain;charset=utf-8'
+      'Content-Type': 'text/plain;charset=utf-8',
+      'X-Sync-Request-Id': requestId
     },
     redirect: 'error',
     body: JSON.stringify({ action, ...payload })
+  }).catch((error) => {
+    console.error(JSON.stringify({ event: 'storage_sync_request', phase: 'network_error', action,
+      request_id: requestId, duration_ms: Date.now() - startedAt }));
+    throw error;
   });
   let json;
   try {
     json = await response.json();
   } catch (_) {
+    console.error(JSON.stringify({ event: 'storage_sync_request', phase: 'invalid_json', action,
+      request_id: requestId, status: response.status, duration_ms: Date.now() - startedAt }));
     throw new Error(`Gateway returned an invalid response: ${response.status}`);
   }
+  console.info(JSON.stringify({ event: 'storage_sync_request', phase: 'response', action,
+    request_id: requestId, status: response.status, duration_ms: Date.now() - startedAt,
+    ok: json?.ok === true, data_type: Array.isArray(json?.data) ? 'array' : json?.data === null ? 'null' : typeof json?.data }));
   if (!response.ok || !json.ok) throw new Error(json.error || `Gateway action failed: ${action} (${response.status})`);
   return json.data;
 }
