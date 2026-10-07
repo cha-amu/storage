@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-07T00:52:17.647Z",
+  "generatedAt": "2026-10-07T12:48:19.680Z",
   "posts": [
+    {
+      "id": "post:posts/2026/블로그에-아무위키를-붙였다.md",
+      "path": "posts/2026/블로그에-아무위키를-붙였다.md",
+      "url": "https://cha-amu.github.io/storage/posts/2026/블로그에-아무위키를-붙였다.md",
+      "title": "블로그에 아무위키를 붙였다",
+      "excerpt": "프로젝트와 개념, 참고자료를 연결해서 읽을 수 있도록 블로그 안에 개인 백과사전을 붙였다. 기존 본문 자리에서 문서를 읽고, 태그 위의 작은 지도로 연결을 따라가는 구조다.",
+      "tags": [
+        "아무위키",
+        "개발 일지",
+        "웹 개발",
+        "지식 정리"
+      ],
+      "status": "hidden",
+      "createdAt": "2026-10-07T08:57:17+09:00",
+      "updatedAt": "2026-10-07T00:06:16.000Z",
+      "publishedAt": "2026-10-07T08:57:17+09:00",
+      "contentHash": "61e5a15d1c1723a753246f8aa5de7fa997c4d1ed4bc58e6adbac985de2b52bc7"
+    },
     {
       "id": "042e8cb5-2664-4e37-9798-dbe501e23df2",
       "path": "posts/2026/물건쌓는겜-물리-구현.md",
