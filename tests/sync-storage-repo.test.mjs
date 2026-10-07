@@ -293,6 +293,44 @@ test('sync reads posts only from files and never sends post actions', async () =
   }
 });
 
+test('a run without file changes rewrites identical manifests, and a new post updates them', async () => {
+  const server = createServer((request, response) => {
+    request.resume();
+    request.on('end', () => {
+      response.writeHead(200, { 'Content-Type': 'application/json' });
+      response.end(JSON.stringify({ ok: true, data: [] }));
+    });
+  });
+  const port = await listen(server);
+  const storagePath = await makeStorageFixture();
+  await writePost(storagePath, 'posts/2026/first.md', 'first');
+  await mkdir(join(storagePath, 'assets/files/2026'), { recursive: true });
+  await writeFile(join(storagePath, 'assets/files/2026/note.txt'), 'note');
+  const env = { API_URL: `http://127.0.0.1:${port}/api`, STORAGE_SYNC_SECRET: TEST_SYNC_SECRET, STORAGE_WORKDIR: storagePath };
+  const files = ['manifests/posts.json', 'manifests/assets.json', 'manifest.json'];
+  const snapshot = async () => Promise.all(files.map((file) => readFile(join(storagePath, file), 'utf8')));
+
+  try {
+    assert.equal((await runSync(env)).code, 0);
+    const first = await snapshot();
+    await new Promise((resolve) => setTimeout(resolve, 20));
+    assert.equal((await runSync(env)).code, 0);
+    assert.deepEqual(await snapshot(), first, 'no file change means no manifest change');
+
+    await writePost(storagePath, 'posts/2026/second.md', 'second');
+    assert.equal((await runSync(env)).code, 0);
+    const third = await snapshot();
+    const manifest = JSON.parse(third[0]);
+    assert.deepEqual(manifest.posts.map((post) => post.id).sort(), ['first', 'second']);
+    assert.notEqual(manifest.generatedAt, JSON.parse(first[0]).generatedAt);
+    assert.equal(JSON.parse(third[1]).generatedAt, manifest.generatedAt);
+    assert.equal(JSON.parse(third[2]).generatedAt, manifest.generatedAt);
+  } finally {
+    await close(server);
+    await rm(storagePath, { recursive: true, force: true });
+  }
+});
+
 test('orphan asset overrides are deleted in batches while real asset sidecars remain metadata', async () => {
   const requests = [];
   const keptAssetId = 'asset:assets/gallery/photo.png';

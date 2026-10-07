@@ -391,6 +391,26 @@ async function writeManifest(path, payload) {
   await writeFile(fullPath, `${JSON.stringify(payload, null, 2)}\n`);
 }
 
+// A run that finds nothing new keeps the previous timestamp, so the manifests stay
+// byte-identical and the workflow makes no commit.
+function unchangedGeneratedAt(next) {
+  try {
+    const read = (path) => JSON.parse(readFileSync(join(STORAGE_WORKDIR, path), 'utf8'));
+    const posts = read('manifests/posts.json');
+    const assets = read('manifests/assets.json');
+    const combined = read('manifest.json');
+    const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+    const timestamp = String(posts.generatedAt || '');
+    if (!timestamp || assets.generatedAt !== timestamp || combined.generatedAt !== timestamp) return '';
+    if (!same(posts.posts, next.posts) || !same(combined.posts, next.posts)) return '';
+    if (!same(assets.assets, next.assets) || !same(combined.assets, next.assets)) return '';
+    if (!same(assets.orphanedMetadataPaths || [], next.orphanedMetadataPaths)) return '';
+    return timestamp;
+  } catch (_) {
+    return '';
+  }
+}
+
 function manifestPost(post) {
   const { body, ...publicPost } = post;
   return publicPost;
@@ -431,8 +451,8 @@ async function main() {
     await deleteOrphanAssetOverrides(overrides, previousAssetIds, assets);
   }
 
-  const generatedAt = new Date().toISOString();
   const manifestPosts = posts.map(manifestPost);
+  const generatedAt = unchangedGeneratedAt({ posts: manifestPosts, assets, orphanedMetadataPaths }) || new Date().toISOString();
   await writeManifest('manifests/posts.json', { version: 1, generatedAt, posts: manifestPosts });
   await writeManifest('manifests/assets.json', { version: 1, generatedAt, assets, orphanedMetadataPaths });
   await writeManifest('manifest.json', { version: 1, generatedAt, posts: manifestPosts, assets });
