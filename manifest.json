@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-07T00:00:00.028Z",
+  "generatedAt": "2026-10-07T00:06:44.539Z",
   "posts": [
     {
       "id": "post:posts/2026/블로그에-아무위키를-붙였다.md",
@@ -14,11 +14,11 @@
         "웹 개발",
         "지식 정리"
       ],
-      "status": "published",
+      "status": "hidden",
       "createdAt": "2026-10-07T08:57:17+09:00",
-      "updatedAt": "2026-10-06T23:59:32.000Z",
+      "updatedAt": "2026-10-07T00:06:16.000Z",
       "publishedAt": "2026-10-07T08:57:17+09:00",
-      "contentHash": "df2e22a7ab70c96d59741db21640faf2eb1915f72f4eca402a30431a4b7b49aa"
+      "contentHash": "55abfd16a673b0b7b50eba1ba7b3252cc05077d1b944cfca08525b0711c2efb5"
     },
     {
       "id": "042e8cb5-2664-4e37-9798-dbe501e23df2",
