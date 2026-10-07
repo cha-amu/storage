@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { spawn, spawnSync } from 'node:child_process';
-import { access, mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { access, mkdtemp, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { createServer } from 'node:http';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
@@ -27,7 +27,6 @@ function runSync(env) {
         ...process.env,
         GITHUB_EVENT_NAME: '',
         STORAGE_SYNC_DRY_RUN: '0',
-        STORAGE_SYNC_MODE: 'latest',
         ...env
       },
       stdio: ['ignore', 'pipe', 'pipe']
@@ -105,10 +104,7 @@ test('sync sends every action through the Worker API with service authentication
 
     assert.equal(result.code, 0, result.stderr);
     assert.deepEqual(requests.map(({ payload }) => payload.action), [
-      'storage.sync.post.list',
       'storage.sync.assetOverride.list',
-      'storage.sync.postDeletion.list',
-      'storage.sync.post.save',
       'storage.sync.assetOverride.save'
     ]);
     for (const request of requests) {
@@ -184,8 +180,6 @@ test('date-only posts use the file commit time as their precise updatedAt', asyn
     const manifest = JSON.parse(await readFile(join(storagePath, 'manifests/posts.json'), 'utf8'));
     assert.equal(manifest.posts[0].publishedAt, '2026-07-12');
     assert.equal(manifest.posts[0].updatedAt, commitTime);
-    const saveRequest = requests.find((payload) => payload.action === 'storage.sync.post.save');
-    assert.equal(saveRequest.post.updatedAt, commitTime);
   } finally {
     await close(server);
     await rm(storagePath, { recursive: true, force: true });
@@ -247,62 +241,15 @@ test('push sync detects changed non-ASCII paths and uses the file commit time', 
     });
 
     assert.equal(result.code, 0, result.stderr);
-    const saveRequest = requests.find((payload) => payload.action === 'storage.sync.post.save');
-    assert.equal(saveRequest.post.updatedAt, commitTime);
+    const manifest = JSON.parse(await readFile(join(storagePath, 'manifests/posts.json'), 'utf8'));
+    assert.equal(manifest.posts.find((post) => post.path === 'posts/2026/변경된-글.md').updatedAt, commitTime);
   } finally {
     await close(server);
     await rm(storagePath, { recursive: true, force: true });
   }
 });
 
-test('post deletion removes the file first and finalizes id plus nonce only on a later run', async () => {
-  const requests = [];
-  const deletion = { id: 'post-delete-me', nonce: 'delete-nonce', storagePath: 'posts/2026/delete-me.md' };
-  const server = createServer((request, response) => {
-    let body = '';
-    request.setEncoding('utf8');
-    request.on('data', (chunk) => { body += chunk; });
-    request.on('end', () => {
-      const payload = JSON.parse(body);
-      requests.push(payload);
-      let data = [];
-      if (payload.action === 'storage.sync.post.list') {
-        data = [{ id: deletion.id, status: 'published', body: 'Must not be recreated', storagePath: deletion.storagePath }];
-      }
-      if (payload.action === 'storage.sync.postDeletion.list') data = { deletions: [deletion] };
-      response.writeHead(200, { 'Content-Type': 'application/json' });
-      response.end(JSON.stringify({ ok: true, data }));
-    });
-  });
-  const port = await listen(server);
-  const storagePath = await makeStorageFixture();
-  const postPath = await writePost(storagePath, deletion.storagePath, deletion.id);
-  const env = {
-    API_URL: `http://127.0.0.1:${port}/api`,
-    STORAGE_SYNC_SECRET: TEST_SYNC_SECRET,
-    STORAGE_WORKDIR: storagePath
-  };
-
-  try {
-    const firstRun = await runSync(env);
-    assert.equal(firstRun.code, 0, firstRun.stderr);
-    assert.equal(await pathExists(postPath), false);
-    assert.equal(requests.some((payload) => payload.action === 'storage.sync.postDeletion.finalize'), false);
-    const firstManifest = JSON.parse(await readFile(join(storagePath, 'manifests/posts.json'), 'utf8'));
-    assert.deepEqual(firstManifest.posts, []);
-
-    const secondRun = await runSync(env);
-    assert.equal(secondRun.code, 0, secondRun.stderr);
-    assert.equal(await pathExists(postPath), false);
-    const finalizeRequests = requests.filter((payload) => payload.action === 'storage.sync.postDeletion.finalize');
-    assert.deepEqual(finalizeRequests.map((payload) => payload.deletions), [[{ id: deletion.id, nonce: deletion.nonce }]]);
-  } finally {
-    await close(server);
-    await rm(storagePath, { recursive: true, force: true });
-  }
-});
-
-test('post deletion rejects unsafe paths and id mismatches without deleting or finalizing', async () => {
+test('sync reads posts only from files and never sends post actions', async () => {
   const requests = [];
   const server = createServer((request, response) => {
     let body = '';
@@ -311,21 +258,21 @@ test('post deletion rejects unsafe paths and id mismatches without deleting or f
     request.on('end', () => {
       const payload = JSON.parse(body);
       requests.push(payload);
-      let data = [];
-      if (payload.action === 'storage.sync.postDeletion.list') {
-        data = [
-          { id: 'unsafe-post', nonce: 'unsafe-nonce', storagePath: 'posts/../outside.md' },
-          { id: 'wrong-id', nonce: 'mismatch-nonce', storagePath: 'posts/2026/keep.md' }
-        ];
-      }
+      // Every action answers with a post-like row. A sync that still mirrored posts
+      // would write it into the storage checkout or send the files back to the gateway.
+      const data = [{ id: 'gateway-only', title: 'Gateway only', status: 'published', body: 'Must not appear', storagePath: 'posts/2026/gateway-only.md' }];
       response.writeHead(200, { 'Content-Type': 'application/json' });
       response.end(JSON.stringify({ ok: true, data }));
     });
   });
   const port = await listen(server);
   const storagePath = await makeStorageFixture();
-  const outsidePath = await writePost(storagePath, 'outside.md', 'unsafe-post');
-  const keptPath = await writePost(storagePath, 'posts/2026/keep.md', 'actual-id');
+  const statuses = ['published', 'draft', 'hidden'];
+  for (const status of statuses) {
+    const fullPath = join(storagePath, `posts/2026/${status}.md`);
+    await mkdir(dirname(fullPath), { recursive: true });
+    await writeFile(fullPath, `---\nid: "${status}"\ntitle: "${status}"\ndate: "2026-10-08T00:00:00.000Z"\nstatus: "${status}"\n---\n\nBody\n`);
+  }
 
   try {
     const result = await runSync({
@@ -335,53 +282,11 @@ test('post deletion rejects unsafe paths and id mismatches without deleting or f
     });
 
     assert.equal(result.code, 0, result.stderr);
-    assert.match(result.stderr, /unsafe storagePath/);
-    assert.match(result.stderr, /mismatched id/);
-    assert.equal(await pathExists(outsidePath), true);
-    assert.equal(await pathExists(keptPath), true);
-    assert.equal(requests.some((payload) => payload.action === 'storage.sync.postDeletion.finalize'), false);
-  } finally {
-    await close(server);
-    await rm(storagePath, { recursive: true, force: true });
-  }
-});
-
-test('post deletion finalization batches at most one hundred id and nonce pairs', async () => {
-  const requests = [];
-  const deletions = Array.from({ length: 205 }, (_, index) => ({
-    id: `missing-post-${index}`,
-    nonce: `delete-nonce-${index}`,
-    storagePath: `posts/2026/missing-post-${index}.md`
-  }));
-  const server = createServer((request, response) => {
-    let body = '';
-    request.setEncoding('utf8');
-    request.on('data', (chunk) => { body += chunk; });
-    request.on('end', () => {
-      const payload = JSON.parse(body);
-      requests.push(payload);
-      let data = [];
-      if (payload.action === 'storage.sync.postDeletion.list') data = deletions;
-      response.writeHead(200, { 'Content-Type': 'application/json' });
-      response.end(JSON.stringify({ ok: true, data }));
-    });
-  });
-  const port = await listen(server);
-  const storagePath = await makeStorageFixture();
-  await mkdir(join(storagePath, 'manifests'), { recursive: true });
-  await writeFile(join(storagePath, 'manifests/posts.json'), '{"version":1,"posts":[]}\n');
-
-  try {
-    const result = await runSync({
-      API_URL: `http://127.0.0.1:${port}/api`,
-      STORAGE_SYNC_SECRET: TEST_SYNC_SECRET,
-      STORAGE_WORKDIR: storagePath
-    });
-
-    assert.equal(result.code, 0, result.stderr);
-    const finalizeRequests = requests.filter((payload) => payload.action === 'storage.sync.postDeletion.finalize');
-    assert.deepEqual(finalizeRequests.map((payload) => payload.deletions.length), [100, 100, 5]);
-    assert.deepEqual(finalizeRequests.flatMap((payload) => payload.deletions), deletions.map(({ id, nonce }) => ({ id, nonce })));
+    assert.deepEqual(requests.map((payload) => payload.action), ['storage.sync.assetOverride.list']);
+    assert.deepEqual((await readdir(join(storagePath, 'posts/2026'))).sort(), ['draft.md', 'hidden.md', 'published.md']);
+    const manifest = JSON.parse(await readFile(join(storagePath, 'manifests/posts.json'), 'utf8'));
+    assert.deepEqual(manifest.posts.map((post) => [post.id, post.status]).sort(), [['draft', 'draft'], ['hidden', 'hidden'], ['published', 'published']]);
+    assert.equal(manifest.posts.some((post) => 'body' in post), false);
   } finally {
     await close(server);
     await rm(storagePath, { recursive: true, force: true });

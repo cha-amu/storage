@@ -38,7 +38,7 @@ jobs:
       - name: Test storage sync client
         run: npm test
 
-      - name: Sync Sheets and storage manifests
+      - name: Sync storage manifests and asset overrides
         env:
           STORAGE_BASE_URL: https://cha-amu.github.io/storage
           API_URL: ${{ vars.API_URL || 'https://cha-amu-gateway.cha-amu.workers.dev/api' }}

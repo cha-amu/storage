@@ -1,7 +1,7 @@
 import { createHash, randomUUID } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
-import { mkdir, readFile, readdir, realpath, stat, unlink, writeFile } from 'node:fs/promises';
-import { basename, dirname, extname, join, posix, relative, resolve, sep } from 'node:path';
+import { mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promises';
+import { basename, dirname, extname, join, relative, resolve } from 'node:path';
 import { execFileSync } from 'node:child_process';
 
 const STORAGE_WORKDIR = process.env.STORAGE_WORKDIR || '.';
@@ -9,7 +9,6 @@ const STORAGE_BASE_URL = (process.env.STORAGE_BASE_URL || 'https://cha-amu.githu
 const DEFAULT_API_URL = 'https://cha-amu-gateway.cha-amu.workers.dev/api';
 const API_URL = (process.env.API_URL || DEFAULT_API_URL).trim();
 const STORAGE_SYNC_SECRET = process.env.STORAGE_SYNC_SECRET || '';
-const SYNC_MODE = process.env.STORAGE_SYNC_MODE || (process.env.GITHUB_EVENT_NAME === 'push' ? 'storage-first' : 'latest');
 const DRY_RUN = process.env.STORAGE_SYNC_DRY_RUN === '1';
 const ADMIN_MUTATION_BATCH_SIZE = 100;
 
@@ -58,21 +57,6 @@ async function assertStorageLayout() {
     throw error;
   }
   assert(assetsInfo.isDirectory(), `Storage assets path is not a directory: ${assetsRoot}`);
-}
-
-function slugify(value) {
-  return String(value || '')
-    .normalize('NFKD')
-    .replace(/[^\w\s-]/g, '')
-    .trim()
-    .replace(/\s+/g, '-')
-    .replace(/_+/g, '-')
-    .toLowerCase() || 'untitled';
-}
-
-function yamlValue(value) {
-  if (Array.isArray(value)) return `[${value.map((item) => JSON.stringify(String(item))).join(', ')}]`;
-  return JSON.stringify(String(value ?? ''));
 }
 
 function parseTags(value) {
@@ -206,14 +190,6 @@ function storagePostUpdatedAt(meta, path, changes) {
   return committedAt || meta.updatedAt || meta.publishedAt || meta.date || '';
 }
 
-function postTime(post) {
-  return timeValue(post.updatedAt || post.publishedAt || post.createdAt);
-}
-
-function isSheetNewer(sheetPost, storagePost) {
-  return postTime(sheetPost) > postTime(storagePost);
-}
-
 function storageUrl(path) {
   return `${STORAGE_BASE_URL}/${path.replace(/^\/+/, '')}`;
 }
@@ -246,98 +222,10 @@ function batches(items, size = ADMIN_MUTATION_BATCH_SIZE) {
   return result;
 }
 
-function normalizePostDeletions(value) {
-  const values = Array.isArray(value) ? value : Array.isArray(value?.deletions) ? value.deletions : [];
-  const unique = new Map();
-  for (const value of values) {
-    const id = String(value?.id || '').trim();
-    const nonce = String(value?.nonce || '').trim();
-    if (!id || !nonce) continue;
-    const storagePath = String(value?.storagePath || '').trim();
-    unique.set(`${id}\0${nonce}`, { id, nonce, storagePath });
-  }
-  return Array.from(unique.values());
-}
-
-function validatedPostPath(value) {
-  const path = String(value || '').trim();
-  if (!path || path.includes('\\') || path.includes('\0') || path !== posix.normalize(path)) return '';
-  const segments = path.split('/');
-  if (segments.length < 2 || segments[0] !== 'posts' || segments.some((segment) => !segment || segment === '.' || segment === '..')) return '';
-  if (extname(path).toLowerCase() !== '.md') return '';
-
-  const postsRoot = resolve(STORAGE_WORKDIR, 'posts');
-  const fullPath = resolve(STORAGE_WORKDIR, ...segments);
-  if (fullPath === postsRoot || !fullPath.startsWith(`${postsRoot}${sep}`)) return '';
-  return path;
-}
-
-async function unlinkValidatedPostPath(path) {
-  const postsRoot = await realpath(resolve(STORAGE_WORKDIR, 'posts'));
-  const fullPath = resolve(STORAGE_WORKDIR, ...path.split('/'));
-  let actualPath;
-  try {
-    actualPath = await realpath(fullPath);
-  } catch (error) {
-    if (error?.code === 'ENOENT') return;
-    throw error;
-  }
-  if (actualPath === postsRoot || !actualPath.startsWith(`${postsRoot}${sep}`)) {
-    console.warn(`Skipped post deletion outside the storage posts directory: ${path}.`);
-    return;
-  }
-  await unlink(fullPath);
-}
-
-async function consumePostDeletions(deletions, postsAtStart, previousPostIds, previousManifestKnown) {
-  const finalizable = [];
-  const pendingIds = new Set(deletions.map((deletion) => deletion.id));
-
-  for (const deletion of deletions) {
-    const requestedPath = deletion.storagePath ? validatedPostPath(deletion.storagePath) : '';
-    if (deletion.storagePath && !requestedPath) {
-      console.warn(`Skipped post deletion with unsafe storagePath for ${deletion.id}.`);
-      continue;
-    }
-
-    const postAtRequestedPath = requestedPath ? postsAtStart.find((post) => post.path === requestedPath) : undefined;
-    if (postAtRequestedPath && String(postAtRequestedPath.id) !== deletion.id) {
-      console.warn(`Skipped post deletion with mismatched id at ${requestedPath}.`);
-      continue;
-    }
-
-    const matchingPosts = postsAtStart.filter((post) => String(post.id) === deletion.id);
-    const targetPaths = Array.from(new Set(matchingPosts.map((post) => validatedPostPath(post.path)).filter(Boolean)));
-    if (targetPaths.length !== new Set(matchingPosts.map((post) => post.path)).size) {
-      console.warn(`Skipped post deletion with an unsafe scanned path for ${deletion.id}.`);
-      continue;
-    }
-
-    if (!targetPaths.length) {
-      if (previousManifestKnown && !previousPostIds.has(deletion.id)) {
-        finalizable.push({ id: deletion.id, nonce: deletion.nonce });
-      }
-      continue;
-    }
-
-    for (const path of targetPaths) {
-      await unlinkValidatedPostPath(path);
-    }
-  }
-
-  return { finalizable, pendingIds };
-}
-
-async function finalizePostDeletions(deletions) {
-  for (const batch of batches(deletions)) {
-    await storageRequest('storage.sync.postDeletion.finalize', { deletions: batch });
-  }
-}
-
-async function deleteOrphanAssetOverrides(sheetOverrides, previousAssetIds, assets) {
+async function deleteOrphanAssetOverrides(overrides, previousAssetIds, assets) {
   const manifestAssetIds = new Set(assets.map((asset) => String(asset.id)));
   const orphanIds = Array.from(new Set(
-    sheetOverrides
+    overrides
       .map((override) => String(override?.assetId || '').trim())
       .filter((assetId) => assetId && !previousAssetIds.has(assetId) && !manifestAssetIds.has(assetId))
   ));
@@ -377,34 +265,6 @@ async function storageRequest(action, payload = {}) {
     ok: json?.ok === true, data_type: Array.isArray(json?.data) ? 'array' : json?.data === null ? 'null' : typeof json?.data }));
   if (!response.ok || !json.ok) throw new Error(json.error || `Gateway action failed: ${action} (${response.status})`);
   return json.data;
-}
-
-function postMarkdown(post) {
-  const date = post.publishedAt || post.createdAt || new Date().toISOString();
-  const header = [
-    '---',
-    `id: ${yamlValue(post.id)}`,
-    `title: ${yamlValue(post.title || '(제목 없음)')}`,
-    `date: ${yamlValue(date)}`,
-    post.createdAt ? `createdAt: ${yamlValue(post.createdAt)}` : '',
-    post.updatedAt ? `updatedAt: ${yamlValue(post.updatedAt)}` : '',
-    post.publishedAt ? `publishedAt: ${yamlValue(post.publishedAt)}` : '',
-    `tags: ${yamlValue(post.tags || [])}`,
-    `status: ${yamlValue(post.status || 'published')}`,
-    post.excerpt ? `excerpt: ${yamlValue(post.excerpt)}` : '',
-    '---'
-  ].filter(Boolean).join('\n');
-  return `${header}\n\n${post.body || ''}`.trimEnd() + '\n';
-}
-
-async function ensureStoragePostForSheetPost(post) {
-  const year = String(post.publishedAt || post.createdAt || new Date().toISOString()).slice(0, 4) || 'undated';
-  const slug = slugify(post.slug || post.title || post.id);
-  const path = post.storagePath || `posts/${year}/${slug}.md`;
-  const fullPath = join(STORAGE_WORKDIR, path);
-  await mkdir(dirname(fullPath), { recursive: true });
-  await writeFile(fullPath, postMarkdown(post));
-  return path;
 }
 
 async function scanStoragePosts(changes) {
@@ -536,77 +396,24 @@ function manifestPost(post) {
   return publicPost;
 }
 
-async function syncStoragePostToSheet(post) {
-  await storageRequest('storage.sync.post.save', {
-    post: {
-      id: post.id,
-      title: post.title,
-      excerpt: post.excerpt,
-      body: post.body,
-      tags: post.tags,
-      status: post.status,
-      createdAt: post.createdAt || new Date().toISOString(),
-      updatedAt: post.updatedAt || post.publishedAt || post.createdAt || new Date().toISOString(),
-      publishedAt: post.publishedAt || post.createdAt || new Date().toISOString(),
-      storagePath: post.path,
-      bodyUrl: post.url
-    }
-  });
-}
-
+// Post files in this repository are the only copy of each post: the site reads them
+// directly and their frontmatter status decides what is listed. This job regenerates the
+// manifests and registers new assets with the gateway's asset display settings.
 async function main() {
   await assertStorageLayout();
   if (!DRY_RUN) {
     assertSyncConfiguration();
   }
 
-  const sheetPosts = DRY_RUN ? [] : await storageRequest('storage.sync.post.list');
-  const sheetOverrides = DRY_RUN ? [] : await storageRequest('storage.sync.assetOverride.list');
-  const postDeletions = DRY_RUN ? [] : normalizePostDeletions(await storageRequest('storage.sync.postDeletion.list'));
+  const overrides = DRY_RUN ? [] : await storageRequest('storage.sync.assetOverride.list');
   const changes = changedPaths();
-
-  const previousPostsManifestState = readManifestState([
-    join(STORAGE_WORKDIR, 'manifests/posts.json'),
-    join(STORAGE_WORKDIR, 'manifest.json')
-  ], 'posts');
-  const previousPostIds = new Set(
-    previousPostsManifestState.manifest.posts.map((post) => String(post?.id || '')).filter(Boolean)
-  );
-  const postsAtStart = await scanStoragePosts(changes);
-  const { finalizable: finalizablePostDeletions, pendingIds: pendingPostDeletionIds } = await consumePostDeletions(
-    postDeletions,
-    postsAtStart,
-    previousPostIds,
-    previousPostsManifestState.known
-  );
-  let posts = await scanStoragePosts(changes);
-  const storageById = new Map(posts.map((post) => [String(post.id), post]));
-  const storageByPath = new Map(posts.map((post) => [String(post.path), post]));
-
-  if (SYNC_MODE !== 'storage-first') {
-    for (const post of sheetPosts.filter((post) => post && !pendingPostDeletionIds.has(String(post.id)) && post.status !== 'deleted' && post.body)) {
-      const storagePost = storageById.get(String(post.id)) || storageByPath.get(String(post.storagePath || ''));
-      if (!storagePost || isSheetNewer(post, storagePost)) {
-        await ensureStoragePostForSheetPost(post);
-      }
-    }
-  }
-
-  posts = await scanStoragePosts(changes);
-  const { assets, orphanedMetadataPaths, previousAssetIds, previousManifestKnown: previousAssetsManifestKnown } = await scanStorageAssets(changes);
-  const sheetPostsById = new Map(sheetPosts.map((post) => [String(post.id), post]));
-  const sheetAssetIds = new Set(sheetOverrides.map((override) => String(override.assetId)));
-
-  for (const post of posts) {
-    if (pendingPostDeletionIds.has(String(post.id))) continue;
-    const sheetPost = sheetPostsById.get(String(post.id));
-    const changedStoragePost = changes === undefined || pathChanged(changes, post.path);
-    if (!DRY_RUN && changedStoragePost && (SYNC_MODE === 'storage-first' || !sheetPost || !isSheetNewer(sheetPost, post))) await syncStoragePostToSheet(post);
-  }
+  const posts = await scanStoragePosts(changes);
+  const { assets, orphanedMetadataPaths, previousAssetIds, previousManifestKnown } = await scanStorageAssets(changes);
+  const overrideAssetIds = new Set(overrides.map((override) => String(override.assetId)));
 
   for (const asset of assets) {
     if (DRY_RUN) continue;
-    if (sheetAssetIds.has(asset.id)) continue;
+    if (overrideAssetIds.has(asset.id)) continue;
     await storageRequest('storage.sync.assetOverride.save', {
       override: {
         assetId: asset.id,
@@ -620,8 +427,8 @@ async function main() {
     });
   }
 
-  if (!DRY_RUN && previousAssetsManifestKnown) {
-    await deleteOrphanAssetOverrides(sheetOverrides, previousAssetIds, assets);
+  if (!DRY_RUN && previousManifestKnown) {
+    await deleteOrphanAssetOverrides(overrides, previousAssetIds, assets);
   }
 
   const generatedAt = new Date().toISOString();
@@ -630,9 +437,7 @@ async function main() {
   await writeManifest('manifests/assets.json', { version: 1, generatedAt, assets, orphanedMetadataPaths });
   await writeManifest('manifest.json', { version: 1, generatedAt, posts: manifestPosts, assets });
 
-  if (!DRY_RUN) await finalizePostDeletions(finalizablePostDeletions);
-
-  console.log(`Synced ${posts.length} storage posts and ${assets.length} storage assets in ${SYNC_MODE}${DRY_RUN ? ' dry-run' : ''} mode.`);
+  console.log(`Synced ${posts.length} storage posts and ${assets.length} storage assets${DRY_RUN ? ' (dry run)' : ''}.`);
 }
 
 main().catch((error) => {
