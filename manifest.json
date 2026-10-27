@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-27T13:37:55.605Z",
+  "generatedAt": "2026-10-27T13:43:49.444Z",
   "posts": [
     {
       "id": "042e8cb5-2664-4e37-9798-dbe501e23df2",
@@ -261,8 +261,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 174704,
-      "updatedAt": "2026-10-27T13:37:24.482Z",
+      "size": 138556,
+      "updatedAt": "2026-10-27T13:43:42.503Z",
       "metadataPath": "assets/images/2026/almost-a-tower/001-택배-상자.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -280,8 +280,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 33288,
-      "updatedAt": "2026-10-27T13:37:24.482Z",
+      "size": 27098,
+      "updatedAt": "2026-10-27T13:43:42.503Z",
       "metadataPath": "assets/images/2026/almost-a-tower/002-팔레트-판자.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -299,8 +299,8 @@
         "동물"
       ],
       "status": "visible",
-      "size": 104958,
-      "updatedAt": "2026-10-27T13:37:24.482Z",
+      "size": 89482,
+      "updatedAt": "2026-10-27T13:43:42.503Z",
       "metadataPath": "assets/images/2026/almost-a-tower/003-기린.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -318,8 +318,8 @@
         "동물"
       ],
       "status": "visible",
-      "size": 154584,
-      "updatedAt": "2026-10-27T13:37:24.482Z",
+      "size": 131620,
+      "updatedAt": "2026-10-27T13:43:42.504Z",
       "metadataPath": "assets/images/2026/almost-a-tower/004-여우.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -337,8 +337,8 @@
         "동물"
       ],
       "status": "visible",
-      "size": 129118,
-      "updatedAt": "2026-10-27T13:37:24.482Z",
+      "size": 105532,
+      "updatedAt": "2026-10-27T13:43:42.504Z",
       "metadataPath": "assets/images/2026/almost-a-tower/005-고래.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -356,8 +356,8 @@
         "동물"
       ],
       "status": "visible",
-      "size": 185008,
-      "updatedAt": "2026-10-27T13:37:24.482Z",
+      "size": 151734,
+      "updatedAt": "2026-10-27T13:43:42.504Z",
       "metadataPath": "assets/images/2026/almost-a-tower/006-코끼리.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -375,8 +375,8 @@
         "동물"
       ],
       "status": "visible",
-      "size": 147948,
-      "updatedAt": "2026-10-27T13:37:24.483Z",
+      "size": 119918,
+      "updatedAt": "2026-10-27T13:43:42.504Z",
       "metadataPath": "assets/images/2026/almost-a-tower/007-새.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -394,8 +394,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 85916,
-      "updatedAt": "2026-10-27T13:37:24.483Z",
+      "size": 71952,
+      "updatedAt": "2026-10-27T13:43:42.504Z",
       "metadataPath": "assets/images/2026/almost-a-tower/008-초승달.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -413,8 +413,8 @@
         "음식"
       ],
       "status": "visible",
-      "size": 81822,
-      "updatedAt": "2026-10-27T13:37:24.483Z",
+      "size": 70910,
+      "updatedAt": "2026-10-27T13:43:42.504Z",
       "metadataPath": "assets/images/2026/almost-a-tower/009-바나나.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -432,8 +432,8 @@
         "음식"
       ],
       "status": "visible",
-      "size": 164122,
-      "updatedAt": "2026-10-27T13:37:24.483Z",
+      "size": 137492,
+      "updatedAt": "2026-10-27T13:43:42.504Z",
       "metadataPath": "assets/images/2026/almost-a-tower/010-배.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -451,8 +451,8 @@
         "음식"
       ],
       "status": "visible",
-      "size": 357262,
-      "updatedAt": "2026-10-27T13:37:24.483Z",
+      "size": 295654,
+      "updatedAt": "2026-10-27T13:43:42.505Z",
       "metadataPath": "assets/images/2026/almost-a-tower/011-오렌지.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -470,8 +470,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 68220,
-      "updatedAt": "2026-10-27T13:37:24.483Z",
+      "size": 58888,
+      "updatedAt": "2026-10-27T13:43:42.505Z",
       "metadataPath": "assets/images/2026/almost-a-tower/012-과일-받침.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -489,8 +489,8 @@
         "음식"
       ],
       "status": "visible",
-      "size": 141060,
-      "updatedAt": "2026-10-27T13:37:24.484Z",
+      "size": 119584,
+      "updatedAt": "2026-10-27T13:43:42.505Z",
       "metadataPath": "assets/images/2026/almost-a-tower/013-달걀.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -508,8 +508,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 102598,
-      "updatedAt": "2026-10-27T13:37:24.484Z",
+      "size": 79286,
+      "updatedAt": "2026-10-27T13:43:42.505Z",
       "metadataPath": "assets/images/2026/almost-a-tower/014-책.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -527,8 +527,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 32584,
-      "updatedAt": "2026-10-27T13:37:24.484Z",
+      "size": 25836,
+      "updatedAt": "2026-10-27T13:43:42.505Z",
       "metadataPath": "assets/images/2026/almost-a-tower/015-자.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -546,8 +546,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 36060,
-      "updatedAt": "2026-10-27T13:37:24.484Z",
+      "size": 28862,
+      "updatedAt": "2026-10-27T13:43:42.505Z",
       "metadataPath": "assets/images/2026/almost-a-tower/016-연필.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -565,8 +565,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 243998,
-      "updatedAt": "2026-10-27T13:37:24.484Z",
+      "size": 203906,
+      "updatedAt": "2026-10-27T13:43:42.506Z",
       "metadataPath": "assets/images/2026/almost-a-tower/017-테이프.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -584,8 +584,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 308974,
-      "updatedAt": "2026-10-27T13:37:24.484Z",
+      "size": 256580,
+      "updatedAt": "2026-10-27T13:43:42.506Z",
       "metadataPath": "assets/images/2026/almost-a-tower/018-잉크병.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -603,8 +603,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 75002,
-      "updatedAt": "2026-10-27T13:37:24.484Z",
+      "size": 63738,
+      "updatedAt": "2026-10-27T13:43:42.506Z",
       "metadataPath": "assets/images/2026/almost-a-tower/019-망치.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -622,8 +622,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 64082,
-      "updatedAt": "2026-10-27T13:37:24.485Z",
+      "size": 55128,
+      "updatedAt": "2026-10-27T13:43:42.506Z",
       "metadataPath": "assets/images/2026/almost-a-tower/020-렌치.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -641,8 +641,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 91880,
-      "updatedAt": "2026-10-27T13:37:24.485Z",
+      "size": 77354,
+      "updatedAt": "2026-10-27T13:43:42.506Z",
       "metadataPath": "assets/images/2026/almost-a-tower/021-펜치.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -660,8 +660,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 42190,
-      "updatedAt": "2026-10-27T13:37:24.485Z",
+      "size": 36004,
+      "updatedAt": "2026-10-27T13:43:42.506Z",
       "metadataPath": "assets/images/2026/almost-a-tower/022-드라이버.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -679,8 +679,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 189910,
-      "updatedAt": "2026-10-27T13:37:24.485Z",
+      "size": 159164,
+      "updatedAt": "2026-10-27T13:43:42.507Z",
       "metadataPath": "assets/images/2026/almost-a-tower/023-클램프.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -698,8 +698,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 203604,
-      "updatedAt": "2026-10-27T13:37:24.485Z",
+      "size": 169196,
+      "updatedAt": "2026-10-27T13:43:42.507Z",
       "metadataPath": "assets/images/2026/almost-a-tower/024-너트.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -717,8 +717,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 65896,
-      "updatedAt": "2026-10-27T13:37:24.485Z",
+      "size": 56258,
+      "updatedAt": "2026-10-27T13:43:42.507Z",
       "metadataPath": "assets/images/2026/almost-a-tower/025-붓.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -736,8 +736,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 110758,
-      "updatedAt": "2026-10-27T13:37:24.485Z",
+      "size": 92100,
+      "updatedAt": "2026-10-27T13:43:42.507Z",
       "metadataPath": "assets/images/2026/almost-a-tower/026-모루.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -755,8 +755,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 248646,
-      "updatedAt": "2026-10-27T13:37:24.486Z",
+      "size": 198386,
+      "updatedAt": "2026-10-27T13:43:42.507Z",
       "metadataPath": "assets/images/2026/almost-a-tower/027-화분.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -774,8 +774,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 113902,
-      "updatedAt": "2026-10-27T13:37:24.486Z",
+      "size": 94944,
+      "updatedAt": "2026-10-27T13:43:42.507Z",
       "metadataPath": "assets/images/2026/almost-a-tower/028-물뿌리개.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -793,8 +793,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 76642,
-      "updatedAt": "2026-10-27T13:37:24.486Z",
+      "size": 65160,
+      "updatedAt": "2026-10-27T13:43:42.508Z",
       "metadataPath": "assets/images/2026/almost-a-tower/029-모종삽.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -812,8 +812,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 143258,
-      "updatedAt": "2026-10-27T13:37:24.486Z",
+      "size": 118554,
+      "updatedAt": "2026-10-27T13:43:42.508Z",
       "metadataPath": "assets/images/2026/almost-a-tower/030-통나무.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -831,8 +831,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 132728,
-      "updatedAt": "2026-10-27T13:37:24.486Z",
+      "size": 108644,
+      "updatedAt": "2026-10-27T13:43:42.508Z",
       "metadataPath": "assets/images/2026/almost-a-tower/031-넓은-화강암.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -850,8 +850,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 99510,
-      "updatedAt": "2026-10-27T13:37:24.486Z",
+      "size": 81210,
+      "updatedAt": "2026-10-27T13:43:42.508Z",
       "metadataPath": "assets/images/2026/almost-a-tower/032-푸른-돌.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -869,8 +869,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 208652,
-      "updatedAt": "2026-10-27T13:37:24.486Z",
+      "size": 174090,
+      "updatedAt": "2026-10-27T13:43:42.508Z",
       "metadataPath": "assets/images/2026/almost-a-tower/033-둥근-화강암.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -888,8 +888,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 144114,
-      "updatedAt": "2026-10-27T13:37:24.487Z",
+      "size": 119430,
+      "updatedAt": "2026-10-27T13:43:42.508Z",
       "metadataPath": "assets/images/2026/almost-a-tower/034-붉은-쐐기돌.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -907,8 +907,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 98068,
-      "updatedAt": "2026-10-27T13:37:24.487Z",
+      "size": 81724,
+      "updatedAt": "2026-10-27T13:43:42.509Z",
       "metadataPath": "assets/images/2026/almost-a-tower/035-회색-강돌.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -926,8 +926,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 121624,
-      "updatedAt": "2026-10-27T13:37:24.487Z",
+      "size": 97692,
+      "updatedAt": "2026-10-27T13:43:42.509Z",
       "metadataPath": "assets/images/2026/almost-a-tower/036-긴-사암.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -945,8 +945,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 161316,
-      "updatedAt": "2026-10-27T13:37:24.487Z",
+      "size": 133266,
+      "updatedAt": "2026-10-27T13:43:42.509Z",
       "metadataPath": "assets/images/2026/almost-a-tower/037-모난-돌.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -964,8 +964,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 125964,
-      "updatedAt": "2026-10-27T13:37:24.487Z",
+      "size": 105208,
+      "updatedAt": "2026-10-27T13:43:42.509Z",
       "metadataPath": "assets/images/2026/almost-a-tower/038-흰-석영.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -983,8 +983,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 137608,
-      "updatedAt": "2026-10-27T13:37:24.487Z",
+      "size": 113584,
+      "updatedAt": "2026-10-27T13:43:42.509Z",
       "metadataPath": "assets/images/2026/almost-a-tower/039-작은-자갈.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1002,8 +1002,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 91598,
-      "updatedAt": "2026-10-27T13:37:24.487Z",
+      "size": 75706,
+      "updatedAt": "2026-10-27T13:43:42.509Z",
       "metadataPath": "assets/images/2026/almost-a-tower/040-검은-납작돌.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1021,8 +1021,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 113478,
-      "updatedAt": "2026-10-27T13:37:24.488Z",
+      "size": 92576,
+      "updatedAt": "2026-10-27T13:43:42.510Z",
       "metadataPath": "assets/images/2026/almost-a-tower/041-큰-바위.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1040,8 +1040,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 85970,
-      "updatedAt": "2026-10-27T13:37:24.488Z",
+      "size": 71828,
+      "updatedAt": "2026-10-27T13:43:42.510Z",
       "metadataPath": "assets/images/2026/almost-a-tower/042-하얀-판돌.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1059,8 +1059,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 104718,
-      "updatedAt": "2026-10-27T13:37:24.488Z",
+      "size": 84680,
+      "updatedAt": "2026-10-27T13:43:42.510Z",
       "metadataPath": "assets/images/2026/almost-a-tower/043-초록-굽은-돌.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1078,8 +1078,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 125620,
-      "updatedAt": "2026-10-27T13:37:24.488Z",
+      "size": 101912,
+      "updatedAt": "2026-10-27T13:43:42.510Z",
       "metadataPath": "assets/images/2026/almost-a-tower/044-분홍-돌.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1097,8 +1097,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 89574,
-      "updatedAt": "2026-10-27T13:37:24.488Z",
+      "size": 74620,
+      "updatedAt": "2026-10-27T13:43:42.510Z",
       "metadataPath": "assets/images/2026/almost-a-tower/045-길쭉한-검은-돌.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1116,8 +1116,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 94604,
-      "updatedAt": "2026-10-27T13:37:24.488Z",
+      "size": 75796,
+      "updatedAt": "2026-10-27T13:43:42.510Z",
       "metadataPath": "assets/images/2026/almost-a-tower/046-황토-아치돌.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1135,8 +1135,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 129796,
-      "updatedAt": "2026-10-27T13:37:24.488Z",
+      "size": 105100,
+      "updatedAt": "2026-10-27T13:43:42.510Z",
       "metadataPath": "assets/images/2026/almost-a-tower/047-마름모-석영.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1154,8 +1154,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 66282,
-      "updatedAt": "2026-10-27T13:37:24.488Z",
+      "size": 52914,
+      "updatedAt": "2026-10-27T13:43:42.511Z",
       "metadataPath": "assets/images/2026/almost-a-tower/048-얇은-층돌.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1173,8 +1173,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 138464,
-      "updatedAt": "2026-10-27T13:37:24.489Z",
+      "size": 113992,
+      "updatedAt": "2026-10-27T13:43:42.511Z",
       "metadataPath": "assets/images/2026/almost-a-tower/049-얼룩돌.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1192,8 +1192,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 83744,
-      "updatedAt": "2026-10-27T13:37:24.489Z",
+      "size": 70140,
+      "updatedAt": "2026-10-27T13:43:42.511Z",
       "metadataPath": "assets/images/2026/almost-a-tower/050-갈고리돌.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1211,8 +1211,8 @@
         "돌"
       ],
       "status": "visible",
-      "size": 134120,
-      "updatedAt": "2026-10-27T13:37:24.489Z",
+      "size": 112114,
+      "updatedAt": "2026-10-27T13:43:42.511Z",
       "metadataPath": "assets/images/2026/almost-a-tower/051-물방울돌.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1230,8 +1230,8 @@
         "사물"
       ],
       "status": "visible",
-      "size": 119252,
-      "updatedAt": "2026-10-27T13:37:24.489Z",
+      "size": 94000,
+      "updatedAt": "2026-10-27T13:43:42.511Z",
       "metadataPath": "assets/images/2026/almost-a-tower/052-나뭇결.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1249,8 +1249,8 @@
         "배경"
       ],
       "status": "visible",
-      "size": 338980,
-      "updatedAt": "2026-10-27T13:37:24.489Z",
+      "size": 88556,
+      "updatedAt": "2026-10-27T13:43:42.511Z",
       "metadataPath": "assets/images/2026/almost-a-tower/053-창고-배경.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1268,8 +1268,8 @@
         "배경"
       ],
       "status": "visible",
-      "size": 298384,
-      "updatedAt": "2026-10-27T13:37:24.490Z",
+      "size": 79830,
+      "updatedAt": "2026-10-27T13:43:42.511Z",
       "metadataPath": "assets/images/2026/almost-a-tower/054-주방-배경.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1287,8 +1287,8 @@
         "배경"
       ],
       "status": "visible",
-      "size": 305038,
-      "updatedAt": "2026-10-27T13:37:24.490Z",
+      "size": 82528,
+      "updatedAt": "2026-10-27T13:43:42.512Z",
       "metadataPath": "assets/images/2026/almost-a-tower/055-작업실-배경.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
@@ -1306,8 +1306,8 @@
         "배경"
       ],
       "status": "visible",
-      "size": 274974,
-      "updatedAt": "2026-10-27T13:37:24.490Z",
+      "size": 87488,
+      "updatedAt": "2026-10-27T13:43:42.512Z",
       "metadataPath": "assets/images/2026/almost-a-tower/056-마당-배경.md",
       "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
