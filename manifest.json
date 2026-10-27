@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-07T15:51:49.623Z",
+  "generatedAt": "2026-10-27T13:37:55.605Z",
   "posts": [
     {
       "id": "042e8cb5-2664-4e37-9798-dbe501e23df2",
@@ -246,6 +246,1070 @@
       "status": "visible",
       "size": 730609,
       "updatedAt": "2026-07-12T10:23:03.751Z",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/001-택배-상자.webp",
+      "path": "assets/images/2026/almost-a-tower/001-택배-상자.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/001-택배-상자.webp",
+      "kind": "image",
+      "fileName": "001-택배-상자.webp",
+      "title": "택배 상자",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 174704,
+      "updatedAt": "2026-10-27T13:37:24.482Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/001-택배-상자.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/002-팔레트-판자.webp",
+      "path": "assets/images/2026/almost-a-tower/002-팔레트-판자.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/002-팔레트-판자.webp",
+      "kind": "image",
+      "fileName": "002-팔레트-판자.webp",
+      "title": "팔레트 판자",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 33288,
+      "updatedAt": "2026-10-27T13:37:24.482Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/002-팔레트-판자.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/003-기린.webp",
+      "path": "assets/images/2026/almost-a-tower/003-기린.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/003-기린.webp",
+      "kind": "image",
+      "fileName": "003-기린.webp",
+      "title": "기린",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "동물"
+      ],
+      "status": "visible",
+      "size": 104958,
+      "updatedAt": "2026-10-27T13:37:24.482Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/003-기린.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/004-여우.webp",
+      "path": "assets/images/2026/almost-a-tower/004-여우.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/004-여우.webp",
+      "kind": "image",
+      "fileName": "004-여우.webp",
+      "title": "여우",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "동물"
+      ],
+      "status": "visible",
+      "size": 154584,
+      "updatedAt": "2026-10-27T13:37:24.482Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/004-여우.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/005-고래.webp",
+      "path": "assets/images/2026/almost-a-tower/005-고래.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/005-고래.webp",
+      "kind": "image",
+      "fileName": "005-고래.webp",
+      "title": "고래",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "동물"
+      ],
+      "status": "visible",
+      "size": 129118,
+      "updatedAt": "2026-10-27T13:37:24.482Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/005-고래.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/006-코끼리.webp",
+      "path": "assets/images/2026/almost-a-tower/006-코끼리.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/006-코끼리.webp",
+      "kind": "image",
+      "fileName": "006-코끼리.webp",
+      "title": "코끼리",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "동물"
+      ],
+      "status": "visible",
+      "size": 185008,
+      "updatedAt": "2026-10-27T13:37:24.482Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/006-코끼리.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/007-새.webp",
+      "path": "assets/images/2026/almost-a-tower/007-새.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/007-새.webp",
+      "kind": "image",
+      "fileName": "007-새.webp",
+      "title": "새",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "동물"
+      ],
+      "status": "visible",
+      "size": 147948,
+      "updatedAt": "2026-10-27T13:37:24.483Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/007-새.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/008-초승달.webp",
+      "path": "assets/images/2026/almost-a-tower/008-초승달.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/008-초승달.webp",
+      "kind": "image",
+      "fileName": "008-초승달.webp",
+      "title": "초승달",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 85916,
+      "updatedAt": "2026-10-27T13:37:24.483Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/008-초승달.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/009-바나나.webp",
+      "path": "assets/images/2026/almost-a-tower/009-바나나.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/009-바나나.webp",
+      "kind": "image",
+      "fileName": "009-바나나.webp",
+      "title": "바나나",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "음식"
+      ],
+      "status": "visible",
+      "size": 81822,
+      "updatedAt": "2026-10-27T13:37:24.483Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/009-바나나.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/010-배.webp",
+      "path": "assets/images/2026/almost-a-tower/010-배.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/010-배.webp",
+      "kind": "image",
+      "fileName": "010-배.webp",
+      "title": "배",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "음식"
+      ],
+      "status": "visible",
+      "size": 164122,
+      "updatedAt": "2026-10-27T13:37:24.483Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/010-배.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/011-오렌지.webp",
+      "path": "assets/images/2026/almost-a-tower/011-오렌지.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/011-오렌지.webp",
+      "kind": "image",
+      "fileName": "011-오렌지.webp",
+      "title": "오렌지",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "음식"
+      ],
+      "status": "visible",
+      "size": 357262,
+      "updatedAt": "2026-10-27T13:37:24.483Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/011-오렌지.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/012-과일-받침.webp",
+      "path": "assets/images/2026/almost-a-tower/012-과일-받침.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/012-과일-받침.webp",
+      "kind": "image",
+      "fileName": "012-과일-받침.webp",
+      "title": "과일 받침",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 68220,
+      "updatedAt": "2026-10-27T13:37:24.483Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/012-과일-받침.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/013-달걀.webp",
+      "path": "assets/images/2026/almost-a-tower/013-달걀.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/013-달걀.webp",
+      "kind": "image",
+      "fileName": "013-달걀.webp",
+      "title": "달걀",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "음식"
+      ],
+      "status": "visible",
+      "size": 141060,
+      "updatedAt": "2026-10-27T13:37:24.484Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/013-달걀.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/014-책.webp",
+      "path": "assets/images/2026/almost-a-tower/014-책.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/014-책.webp",
+      "kind": "image",
+      "fileName": "014-책.webp",
+      "title": "책",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 102598,
+      "updatedAt": "2026-10-27T13:37:24.484Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/014-책.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/015-자.webp",
+      "path": "assets/images/2026/almost-a-tower/015-자.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/015-자.webp",
+      "kind": "image",
+      "fileName": "015-자.webp",
+      "title": "자",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 32584,
+      "updatedAt": "2026-10-27T13:37:24.484Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/015-자.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/016-연필.webp",
+      "path": "assets/images/2026/almost-a-tower/016-연필.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/016-연필.webp",
+      "kind": "image",
+      "fileName": "016-연필.webp",
+      "title": "연필",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 36060,
+      "updatedAt": "2026-10-27T13:37:24.484Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/016-연필.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/017-테이프.webp",
+      "path": "assets/images/2026/almost-a-tower/017-테이프.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/017-테이프.webp",
+      "kind": "image",
+      "fileName": "017-테이프.webp",
+      "title": "테이프",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 243998,
+      "updatedAt": "2026-10-27T13:37:24.484Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/017-테이프.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/018-잉크병.webp",
+      "path": "assets/images/2026/almost-a-tower/018-잉크병.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/018-잉크병.webp",
+      "kind": "image",
+      "fileName": "018-잉크병.webp",
+      "title": "잉크병",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 308974,
+      "updatedAt": "2026-10-27T13:37:24.484Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/018-잉크병.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/019-망치.webp",
+      "path": "assets/images/2026/almost-a-tower/019-망치.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/019-망치.webp",
+      "kind": "image",
+      "fileName": "019-망치.webp",
+      "title": "망치",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 75002,
+      "updatedAt": "2026-10-27T13:37:24.484Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/019-망치.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/020-렌치.webp",
+      "path": "assets/images/2026/almost-a-tower/020-렌치.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/020-렌치.webp",
+      "kind": "image",
+      "fileName": "020-렌치.webp",
+      "title": "렌치",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 64082,
+      "updatedAt": "2026-10-27T13:37:24.485Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/020-렌치.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/021-펜치.webp",
+      "path": "assets/images/2026/almost-a-tower/021-펜치.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/021-펜치.webp",
+      "kind": "image",
+      "fileName": "021-펜치.webp",
+      "title": "펜치",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 91880,
+      "updatedAt": "2026-10-27T13:37:24.485Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/021-펜치.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/022-드라이버.webp",
+      "path": "assets/images/2026/almost-a-tower/022-드라이버.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/022-드라이버.webp",
+      "kind": "image",
+      "fileName": "022-드라이버.webp",
+      "title": "드라이버",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 42190,
+      "updatedAt": "2026-10-27T13:37:24.485Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/022-드라이버.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/023-클램프.webp",
+      "path": "assets/images/2026/almost-a-tower/023-클램프.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/023-클램프.webp",
+      "kind": "image",
+      "fileName": "023-클램프.webp",
+      "title": "클램프",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 189910,
+      "updatedAt": "2026-10-27T13:37:24.485Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/023-클램프.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/024-너트.webp",
+      "path": "assets/images/2026/almost-a-tower/024-너트.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/024-너트.webp",
+      "kind": "image",
+      "fileName": "024-너트.webp",
+      "title": "너트",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 203604,
+      "updatedAt": "2026-10-27T13:37:24.485Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/024-너트.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/025-붓.webp",
+      "path": "assets/images/2026/almost-a-tower/025-붓.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/025-붓.webp",
+      "kind": "image",
+      "fileName": "025-붓.webp",
+      "title": "붓",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 65896,
+      "updatedAt": "2026-10-27T13:37:24.485Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/025-붓.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/026-모루.webp",
+      "path": "assets/images/2026/almost-a-tower/026-모루.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/026-모루.webp",
+      "kind": "image",
+      "fileName": "026-모루.webp",
+      "title": "모루",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 110758,
+      "updatedAt": "2026-10-27T13:37:24.485Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/026-모루.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/027-화분.webp",
+      "path": "assets/images/2026/almost-a-tower/027-화분.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/027-화분.webp",
+      "kind": "image",
+      "fileName": "027-화분.webp",
+      "title": "화분",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 248646,
+      "updatedAt": "2026-10-27T13:37:24.486Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/027-화분.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/028-물뿌리개.webp",
+      "path": "assets/images/2026/almost-a-tower/028-물뿌리개.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/028-물뿌리개.webp",
+      "kind": "image",
+      "fileName": "028-물뿌리개.webp",
+      "title": "물뿌리개",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 113902,
+      "updatedAt": "2026-10-27T13:37:24.486Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/028-물뿌리개.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/029-모종삽.webp",
+      "path": "assets/images/2026/almost-a-tower/029-모종삽.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/029-모종삽.webp",
+      "kind": "image",
+      "fileName": "029-모종삽.webp",
+      "title": "모종삽",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 76642,
+      "updatedAt": "2026-10-27T13:37:24.486Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/029-모종삽.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/030-통나무.webp",
+      "path": "assets/images/2026/almost-a-tower/030-통나무.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/030-통나무.webp",
+      "kind": "image",
+      "fileName": "030-통나무.webp",
+      "title": "통나무",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 143258,
+      "updatedAt": "2026-10-27T13:37:24.486Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/030-통나무.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/031-넓은-화강암.webp",
+      "path": "assets/images/2026/almost-a-tower/031-넓은-화강암.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/031-넓은-화강암.webp",
+      "kind": "image",
+      "fileName": "031-넓은-화강암.webp",
+      "title": "넓은 화강암",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 132728,
+      "updatedAt": "2026-10-27T13:37:24.486Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/031-넓은-화강암.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/032-푸른-돌.webp",
+      "path": "assets/images/2026/almost-a-tower/032-푸른-돌.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/032-푸른-돌.webp",
+      "kind": "image",
+      "fileName": "032-푸른-돌.webp",
+      "title": "푸른 돌",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 99510,
+      "updatedAt": "2026-10-27T13:37:24.486Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/032-푸른-돌.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/033-둥근-화강암.webp",
+      "path": "assets/images/2026/almost-a-tower/033-둥근-화강암.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/033-둥근-화강암.webp",
+      "kind": "image",
+      "fileName": "033-둥근-화강암.webp",
+      "title": "둥근 화강암",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 208652,
+      "updatedAt": "2026-10-27T13:37:24.486Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/033-둥근-화강암.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/034-붉은-쐐기돌.webp",
+      "path": "assets/images/2026/almost-a-tower/034-붉은-쐐기돌.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/034-붉은-쐐기돌.webp",
+      "kind": "image",
+      "fileName": "034-붉은-쐐기돌.webp",
+      "title": "붉은 쐐기돌",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 144114,
+      "updatedAt": "2026-10-27T13:37:24.487Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/034-붉은-쐐기돌.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/035-회색-강돌.webp",
+      "path": "assets/images/2026/almost-a-tower/035-회색-강돌.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/035-회색-강돌.webp",
+      "kind": "image",
+      "fileName": "035-회색-강돌.webp",
+      "title": "회색 강돌",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 98068,
+      "updatedAt": "2026-10-27T13:37:24.487Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/035-회색-강돌.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/036-긴-사암.webp",
+      "path": "assets/images/2026/almost-a-tower/036-긴-사암.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/036-긴-사암.webp",
+      "kind": "image",
+      "fileName": "036-긴-사암.webp",
+      "title": "긴 사암",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 121624,
+      "updatedAt": "2026-10-27T13:37:24.487Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/036-긴-사암.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/037-모난-돌.webp",
+      "path": "assets/images/2026/almost-a-tower/037-모난-돌.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/037-모난-돌.webp",
+      "kind": "image",
+      "fileName": "037-모난-돌.webp",
+      "title": "모난 돌",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 161316,
+      "updatedAt": "2026-10-27T13:37:24.487Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/037-모난-돌.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/038-흰-석영.webp",
+      "path": "assets/images/2026/almost-a-tower/038-흰-석영.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/038-흰-석영.webp",
+      "kind": "image",
+      "fileName": "038-흰-석영.webp",
+      "title": "흰 석영",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 125964,
+      "updatedAt": "2026-10-27T13:37:24.487Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/038-흰-석영.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/039-작은-자갈.webp",
+      "path": "assets/images/2026/almost-a-tower/039-작은-자갈.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/039-작은-자갈.webp",
+      "kind": "image",
+      "fileName": "039-작은-자갈.webp",
+      "title": "작은 자갈",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 137608,
+      "updatedAt": "2026-10-27T13:37:24.487Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/039-작은-자갈.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/040-검은-납작돌.webp",
+      "path": "assets/images/2026/almost-a-tower/040-검은-납작돌.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/040-검은-납작돌.webp",
+      "kind": "image",
+      "fileName": "040-검은-납작돌.webp",
+      "title": "검은 납작돌",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 91598,
+      "updatedAt": "2026-10-27T13:37:24.487Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/040-검은-납작돌.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/041-큰-바위.webp",
+      "path": "assets/images/2026/almost-a-tower/041-큰-바위.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/041-큰-바위.webp",
+      "kind": "image",
+      "fileName": "041-큰-바위.webp",
+      "title": "큰 바위",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 113478,
+      "updatedAt": "2026-10-27T13:37:24.488Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/041-큰-바위.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/042-하얀-판돌.webp",
+      "path": "assets/images/2026/almost-a-tower/042-하얀-판돌.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/042-하얀-판돌.webp",
+      "kind": "image",
+      "fileName": "042-하얀-판돌.webp",
+      "title": "하얀 판돌",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 85970,
+      "updatedAt": "2026-10-27T13:37:24.488Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/042-하얀-판돌.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/043-초록-굽은-돌.webp",
+      "path": "assets/images/2026/almost-a-tower/043-초록-굽은-돌.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/043-초록-굽은-돌.webp",
+      "kind": "image",
+      "fileName": "043-초록-굽은-돌.webp",
+      "title": "초록 굽은 돌",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 104718,
+      "updatedAt": "2026-10-27T13:37:24.488Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/043-초록-굽은-돌.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/044-분홍-돌.webp",
+      "path": "assets/images/2026/almost-a-tower/044-분홍-돌.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/044-분홍-돌.webp",
+      "kind": "image",
+      "fileName": "044-분홍-돌.webp",
+      "title": "분홍 돌",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 125620,
+      "updatedAt": "2026-10-27T13:37:24.488Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/044-분홍-돌.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/045-길쭉한-검은-돌.webp",
+      "path": "assets/images/2026/almost-a-tower/045-길쭉한-검은-돌.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/045-길쭉한-검은-돌.webp",
+      "kind": "image",
+      "fileName": "045-길쭉한-검은-돌.webp",
+      "title": "길쭉한 검은 돌",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 89574,
+      "updatedAt": "2026-10-27T13:37:24.488Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/045-길쭉한-검은-돌.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/046-황토-아치돌.webp",
+      "path": "assets/images/2026/almost-a-tower/046-황토-아치돌.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/046-황토-아치돌.webp",
+      "kind": "image",
+      "fileName": "046-황토-아치돌.webp",
+      "title": "황토 아치돌",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 94604,
+      "updatedAt": "2026-10-27T13:37:24.488Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/046-황토-아치돌.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/047-마름모-석영.webp",
+      "path": "assets/images/2026/almost-a-tower/047-마름모-석영.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/047-마름모-석영.webp",
+      "kind": "image",
+      "fileName": "047-마름모-석영.webp",
+      "title": "마름모 석영",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 129796,
+      "updatedAt": "2026-10-27T13:37:24.488Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/047-마름모-석영.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/048-얇은-층돌.webp",
+      "path": "assets/images/2026/almost-a-tower/048-얇은-층돌.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/048-얇은-층돌.webp",
+      "kind": "image",
+      "fileName": "048-얇은-층돌.webp",
+      "title": "얇은 층돌",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 66282,
+      "updatedAt": "2026-10-27T13:37:24.488Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/048-얇은-층돌.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/049-얼룩돌.webp",
+      "path": "assets/images/2026/almost-a-tower/049-얼룩돌.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/049-얼룩돌.webp",
+      "kind": "image",
+      "fileName": "049-얼룩돌.webp",
+      "title": "얼룩돌",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 138464,
+      "updatedAt": "2026-10-27T13:37:24.489Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/049-얼룩돌.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/050-갈고리돌.webp",
+      "path": "assets/images/2026/almost-a-tower/050-갈고리돌.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/050-갈고리돌.webp",
+      "kind": "image",
+      "fileName": "050-갈고리돌.webp",
+      "title": "갈고리돌",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 83744,
+      "updatedAt": "2026-10-27T13:37:24.489Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/050-갈고리돌.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/051-물방울돌.webp",
+      "path": "assets/images/2026/almost-a-tower/051-물방울돌.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/051-물방울돌.webp",
+      "kind": "image",
+      "fileName": "051-물방울돌.webp",
+      "title": "물방울돌",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "돌"
+      ],
+      "status": "visible",
+      "size": 134120,
+      "updatedAt": "2026-10-27T13:37:24.489Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/051-물방울돌.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/052-나뭇결.webp",
+      "path": "assets/images/2026/almost-a-tower/052-나뭇결.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/052-나뭇결.webp",
+      "kind": "image",
+      "fileName": "052-나뭇결.webp",
+      "title": "나뭇결",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "사물"
+      ],
+      "status": "visible",
+      "size": 119252,
+      "updatedAt": "2026-10-27T13:37:24.489Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/052-나뭇결.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/053-창고-배경.webp",
+      "path": "assets/images/2026/almost-a-tower/053-창고-배경.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/053-창고-배경.webp",
+      "kind": "image",
+      "fileName": "053-창고-배경.webp",
+      "title": "창고 배경",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "배경"
+      ],
+      "status": "visible",
+      "size": 338980,
+      "updatedAt": "2026-10-27T13:37:24.489Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/053-창고-배경.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/054-주방-배경.webp",
+      "path": "assets/images/2026/almost-a-tower/054-주방-배경.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/054-주방-배경.webp",
+      "kind": "image",
+      "fileName": "054-주방-배경.webp",
+      "title": "주방 배경",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "배경"
+      ],
+      "status": "visible",
+      "size": 298384,
+      "updatedAt": "2026-10-27T13:37:24.490Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/054-주방-배경.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/055-작업실-배경.webp",
+      "path": "assets/images/2026/almost-a-tower/055-작업실-배경.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/055-작업실-배경.webp",
+      "kind": "image",
+      "fileName": "055-작업실-배경.webp",
+      "title": "작업실 배경",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "배경"
+      ],
+      "status": "visible",
+      "size": 305038,
+      "updatedAt": "2026-10-27T13:37:24.490Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/055-작업실-배경.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
+      "markdownRootUrl": "https://cha-amu.github.io/storage"
+    },
+    {
+      "id": "asset:assets/images/2026/almost-a-tower/056-마당-배경.webp",
+      "path": "assets/images/2026/almost-a-tower/056-마당-배경.webp",
+      "url": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/056-마당-배경.webp",
+      "kind": "image",
+      "fileName": "056-마당-배경.webp",
+      "title": "마당 배경",
+      "tags": [
+        "이미지",
+        "공든탑",
+        "배경"
+      ],
+      "status": "visible",
+      "size": 274974,
+      "updatedAt": "2026-10-27T13:37:24.490Z",
+      "metadataPath": "assets/images/2026/almost-a-tower/056-마당-배경.md",
+      "markdownBaseUrl": "https://cha-amu.github.io/storage/assets/images/2026/almost-a-tower/",
       "markdownRootUrl": "https://cha-amu.github.io/storage"
     },
     {
