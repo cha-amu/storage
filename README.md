@@ -1,6 +1,6 @@
 # cha-amu storage
 
-Static source and mirror repository for `https://cha-amu.github.io/`.
+Static source and mirror repository for `https://blog.chaamu.net/` (also served as `https://cha-amu.github.io/`).
 
 ## Layout
 

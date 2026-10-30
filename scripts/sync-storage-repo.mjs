@@ -5,7 +5,7 @@ import { basename, dirname, extname, join, relative, resolve } from 'node:path';
 import { execFileSync } from 'node:child_process';
 
 const STORAGE_WORKDIR = process.env.STORAGE_WORKDIR || '.';
-const STORAGE_BASE_URL = (process.env.STORAGE_BASE_URL || 'https://cha-amu.github.io/storage').replace(/\/$/, '');
+const STORAGE_BASE_URL = (process.env.STORAGE_BASE_URL || 'https://blog.chaamu.net/storage').replace(/\/$/, '');
 const DEFAULT_API_URL = 'https://cha-amu-gateway.cha-amu.workers.dev/api';
 const API_URL = (process.env.API_URL || DEFAULT_API_URL).trim();
 const STORAGE_SYNC_SECRET = process.env.STORAGE_SYNC_SECRET || '';

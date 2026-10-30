@@ -40,7 +40,7 @@ jobs:
 
       - name: Sync storage manifests and asset overrides
         env:
-          STORAGE_BASE_URL: https://cha-amu.github.io/storage
+          STORAGE_BASE_URL: https://blog.chaamu.net/storage
           API_URL: ${{ vars.API_URL || 'https://cha-amu-gateway.cha-amu.workers.dev/api' }}
           STORAGE_SYNC_SECRET: ${{ secrets.STORAGE_SYNC_SECRET }}
         run: |

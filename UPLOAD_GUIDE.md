@@ -145,8 +145,8 @@ cha-amu/storage > Actions > Sync storage repo
 사이트에 반영됐는지 확인:
 
 ```txt
-https://cha-amu.github.io/storage/manifests/assets.json
-https://cha-amu.github.io/storage/manifests/posts.json
+https://blog.chaamu.net/storage/manifests/assets.json
+https://blog.chaamu.net/storage/manifests/posts.json
 ```
 
 각 manifest의 `generatedAt`이 최근 시간으로 바뀌고, 새 파일 경로가 `assets` 또는 `posts` 배열에 들어 있으면 storage Pages 쪽 반영은 끝난 것이다. 메인 사이트 `/archive/`는 이 manifest를 읽으므로, 브라우저 캐시 때문에 늦게 보이면 새로고침하면 된다.
