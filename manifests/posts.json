@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-27T13:43:49.444Z",
+  "generatedAt": "2026-10-30T18:51:41.599Z",
   "posts": [
     {
       "id": "042e8cb5-2664-4e37-9798-dbe501e23df2",
       "path": "posts/2026/물건쌓는겜-물리-구현.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/물건쌓는겜-물리-구현.md",
+      "url": "https://blog.chaamu.net/storage/posts/2026/물건쌓는겜-물리-구현.md",
       "title": "물건쌓는겜 물리 구현",
       "excerpt": "그냥 물건쌓는겜 구현했다는 내용...",
       "tags": [
@@ -22,7 +22,7 @@
     {
       "id": "post:posts/2026/222123.md",
       "path": "posts/2026/222123.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/222123.md",
+      "url": "https://blog.chaamu.net/storage/posts/2026/222123.md",
       "title": "풀키우는겜...",
       "excerpt": "만들다만거",
       "tags": [
@@ -37,7 +37,7 @@
     {
       "id": "post:posts/2026/수중-생태계-시뮬레이션-만들기-4.md",
       "path": "posts/2026/수중-생태계-시뮬레이션-만들기-4.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/수중-생태계-시뮬레이션-만들기-4.md",
+      "url": "https://blog.chaamu.net/storage/posts/2026/수중-생태계-시뮬레이션-만들기-4.md",
       "title": "수중 생태계 시뮬레이션 만들기 - 4",
       "excerpt": "처음 만든 송사리 미션이 단기 부화에는 성공했지만 장기 먹이망을 유지하지 못해, 식물플랑크톤과 물벼룩을 중심으로 미션 7을 다시 설계했다.",
       "tags": [
@@ -55,7 +55,7 @@
     {
       "id": "post:posts/2026/서로를-들어-올리며-비둘기-높이까지-날-수-있을까.md",
       "path": "posts/2026/서로를-들어-올리며-비둘기-높이까지-날-수-있을까.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/서로를-들어-올리며-비둘기-높이까지-날-수-있을까.md",
+      "url": "https://blog.chaamu.net/storage/posts/2026/서로를-들어-올리며-비둘기-높이까지-날-수-있을까.md",
       "title": "서로를 들어 올려서 날 수 있을까...",
       "excerpt": "서로를 번갈아 들어 올리면 날 수 있다는 밈을 실현하는 방법",
       "tags": [
@@ -70,7 +70,7 @@
     {
       "id": "post:posts/2026/수중-생태계-시뮬레이션-만들기-3.md",
       "path": "posts/2026/수중-생태계-시뮬레이션-만들기-3.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/수중-생태계-시뮬레이션-만들기-3.md",
+      "url": "https://blog.chaamu.net/storage/posts/2026/수중-생태계-시뮬레이션-만들기-3.md",
       "title": "수중 생태계 시뮬레이션 만들기 - 3",
       "excerpt": "조류의 순성장률을 광합성·호흡으로 분리하고, 체리새우와 미생물의 계산을 실제 질량과 수온에 연결했다.",
       "tags": [
@@ -88,7 +88,7 @@
     {
       "id": "post:posts/2026/한-해를-한-장에-펼치는-플래너-Anniary.md",
       "path": "posts/2026/한-해를-한-장에-펼치는-플래너-Anniary.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/한-해를-한-장에-펼치는-플래너-Anniary.md",
+      "url": "https://blog.chaamu.net/storage/posts/2026/한-해를-한-장에-펼치는-플래너-Anniary.md",
       "title": "연간 플래너, Anniary",
       "excerpt": "월간 달력 대신 한 해 전체를 펼쳐놓고 일정과 메모, 기간과 그림을 함께 관리하는 연간 플래너를 만들었다.",
       "tags": [
@@ -107,7 +107,7 @@
     {
       "id": "post:posts/2026/수중-생태계-시뮬레이션-만들기-2.md",
       "path": "posts/2026/수중-생태계-시뮬레이션-만들기-2.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/수중-생태계-시뮬레이션-만들기-2.md",
+      "url": "https://blog.chaamu.net/storage/posts/2026/수중-생태계-시뮬레이션-만들기-2.md",
       "title": "수중 생태계 시뮬레이션 만들기 - 2",
       "excerpt": "빛과 조류로 시작한 프로토타입에 체리새우와 미생물 물질 순환까지 구현했다.",
       "tags": [
@@ -125,7 +125,7 @@
     {
       "id": "post:posts/2026/타로밀크티-웹을-만들었다.md",
       "path": "posts/2026/타로밀크티-웹을-만들었다.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/타로밀크티-웹을-만들었다.md",
+      "url": "https://blog.chaamu.net/storage/posts/2026/타로밀크티-웹을-만들었다.md",
       "title": "타로웹 만듦...",
       "excerpt": "이전에 그린 78장의 카드와 Cloudflare Workers AI를 이용해, 질문에 맞는 카드를 직접 뽑고 해석받는 웹 타로 앱을 만들었다.",
       "tags": [
@@ -144,7 +144,7 @@
     {
       "id": "944fd92f-4025-47ee-ab18-3fa27c8b5b2a",
       "path": "posts/2026/--1.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/--1.md",
+      "url": "https://blog.chaamu.net/storage/posts/2026/--1.md",
       "title": "수중 생태계 시뮬레이션 만들기 - 1",
       "excerpt": "생물과 환경을 배치해 스스로 순환하는 수조를 만드는 게임. 첫 단계에서 조류, 빛, 구조물을 이용한 두 개의 미션 구현 예정",
       "tags": [
@@ -162,7 +162,7 @@
     {
       "id": "7e14bfe4-36b7-4c78-b0ef-d0a1a1720a96",
       "path": "posts/2026/untitled.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/untitled.md",
+      "url": "https://blog.chaamu.net/storage/posts/2026/untitled.md",
       "title": "아무 글",
       "excerpt": "?",
       "tags": [
@@ -177,7 +177,7 @@
     {
       "id": "post:posts/2026/정적-사이트에-무료-방명록-붙이기.md",
       "path": "posts/2026/정적-사이트에-무료-방명록-붙이기.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/정적-사이트에-무료-방명록-붙이기.md",
+      "url": "https://blog.chaamu.net/storage/posts/2026/정적-사이트에-무료-방명록-붙이기.md",
       "title": "정적 사이트에 무료 방명록 붙이기",
       "excerpt": "GitHub Pages로 만든 개인 사이트에 Google Sheets와 Apps Script를 연결하고, 공개 쓰기 요청을 안전하게 받기 위해 보안 계층을 더한 과정을 정리했다.",
       "tags": [
@@ -196,7 +196,7 @@
     {
       "id": "post:posts/2026/example-draft.md",
       "path": "posts/2026/example-draft.md",
-      "url": "https://cha-amu.github.io/storage/posts/2026/example-draft.md",
+      "url": "https://blog.chaamu.net/storage/posts/2026/example-draft.md",
       "title": "스토리지 포스트 예제",
       "excerpt": "GitHub에서 직접 Markdown 포스트를 작성할 때 참고하는 미공개 예제입니다.",
       "tags": [
